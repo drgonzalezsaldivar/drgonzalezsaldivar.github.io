@@ -590,6 +590,14 @@
     
     
   
+
+  /* ── NAV DROPDOWN ── */
+  document.querySelectorAll('.nav-dropdown').forEach(function(item) {
+    var ul = item.querySelector('ul');
+    item.addEventListener('mouseenter', function() { ul.style.display = 'flex'; });
+    item.addEventListener('mouseleave', function() { ul.style.display = 'none'; });
+  });
+
   /* ── FAQ TOGGLE ── */
   function toggleFaq(item) {
     var body = item.querySelector('.faq-body');
@@ -793,7 +801,7 @@
 
 <!-- NAV -->
 <nav style="top:34px;">
-  <a href="#inicio" class="n-logo">
+  <a href="/" class="n-logo">
     <div style="height:40px;width:200px;display:flex;align-items:center;overflow:hidden;"><svg width="100%" height="100%" style="max-width:200px;max-height:46px;" viewBox="0 0 2782 773" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M256.801 550.252C278.736 569.739 300.467 589.837 320.566 611.16C335.257 626.668 373.721 667.885 375.048 688.29C375.864 700.227 362.6 716.653 355.459 725.835C344.542 739.914 318.118 771.643 299.754 772.97C295.367 773.276 291.49 771.235 289.041 767.563C282.001 751.851 277.104 735.323 269.554 719.815C251.394 682.577 224.053 651.154 197.73 619.628L256.801 550.252Z" fill="#C6A586"/>
 <path d="M110.09 553.415C100.704 563.209 90.4001 573.207 80.2998 583.206L110.09 553.415Z" fill="#597288"/>
@@ -877,11 +885,19 @@
 </svg></div>
   </a>
   <ul class="n-links">
-    <li><a href="#sobre-mi">Sobre mí</a></li>
-    <li><a href="#servicios">Servicios</a></li>
-    <li><a href="#resenas">Pacientes</a></li>
-    <li><a href="#faq">FAQ</a></li>
-    <li><a href="#contacto">Contacto</a></li>
+    <li><a href="/#sobre-mi">Sobre mí</a></li>
+    <li class="nav-dropdown" style="position:relative;">
+      <a href="/#servicios" style="display:flex;align-items:center;gap:.3rem;">Condiciones <span style="font-size:.6rem;">▾</span></a>
+      <ul style="display:none;position:absolute;top:100%;left:0;background:white;border-radius:12px;padding:.6rem;min-width:180px;box-shadow:0 8px 32px rgba(13,33,68,.15);z-index:1000;flex-direction:column;gap:.2rem;">
+        <li style="list-style:none;"><a href="/rodilla" style="text-decoration:none;">🦵 Dolor de rodilla</a></li>
+        <li style="list-style:none;"><a href="/hombro" style="text-decoration:none;">💪 Dolor de hombro</a></li>
+        <li style="list-style:none;"><a href="/cadera" style="text-decoration:none;">🏃 Dolor de cadera</a></li>
+        <li style="list-style:none;"><a href="/tumores-oseos" style="text-decoration:none;">🦴 Tumores óseos</a></li>
+      </ul>
+    </li>
+    <li><a href="/#resenas">Pacientes</a></li>
+    <li><a href="/#faq">FAQ</a></li>
+    <li><a href="/#contacto">Contacto</a></li>
     <li><a href="https://wa.me/528126555222?text=Hola%2C%20quisiera%20agendar%20una%20consulta." class="n-cta" target="_blank" rel="noopener">Agendar cita</a></li>
   </ul>
   <button class="n-toggle" aria-label="Menú"><span></span><span></span><span></span></button>
