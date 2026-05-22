@@ -1,0 +1,21 @@
+# Backups
+index-backup.html
+
+# Internal docs (not for production)
+CLAUDE.md
+DESIGN-SYSTEM.md
+LANDING-PAGE-REPORT.md
+estado_web_abril2026.md
+
+# Archivos privados
+_originals/
+assets/
+LOGOTIPO PERSONAL/
+LOGOTIPOS SEGUROS/
+Logotipos hospitales/
+Sociedades/
+
+# OS
+.DS_Store
+**/.DS_Store
+Thumbs.db
