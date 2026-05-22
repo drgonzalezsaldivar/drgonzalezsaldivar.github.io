@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta name="robots" content="index, follow"/>
   <title>Tumor en el hueso: benigno o maligno — Dr. González Saldívar | Ortopedia Oncológica Monterrey</title>
   <meta name="description" content="Osteosarcoma, tumores óseos benignos y malignos: diagnóstico, señales de alerta y tratamiento para salvar la extremidad. Dr. González Saldívar, Monterrey."/>
   <link rel="canonical" href="https://www.drgonzalezsaldivar.com/blog/tumores-oseos-benignos-malignos"/>
@@ -12,40 +13,48 @@
   <meta property="og:type" content="article"/>
   <meta property="og:url" content="https://www.drgonzalezsaldivar.com/blog/tumores-oseos-benignos-malignos"/>
   <meta property="og:locale" content="es_MX"/>
-  <meta property="og:image" content="https://www.drgonzalezsaldivar.com/img/img_03.jpg"/>
+  <meta property="og:image" content="https://www.drgonzalezsaldivar.com/img/img_03.webp"/>
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary"/>
   <meta name="twitter:title" content="Tumor en el Hueso: Benigno o Maligno — Dr. González Saldívar"/>
   <meta name="twitter:description" content="Cómo diferenciar tumores óseos benignos de malignos, diagnóstico y tratamiento en Monterrey."/>
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg"/>
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
-  <noscript><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap"/></noscript></noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet"/>
   <style>
     :root {
-      --navy:    #0d2144;
-      --navy2:   #1a3a6b;
-      --blue:    #1e5799;
-      --sky:     #e8f0fb;
-      --gold:    #c8922a;
-      --gold-l:  #f0b84a;
-      --white:   #ffffff;
-      --off:     #f7f5f0;
-      --dark:    #0a0f1e;
-      --gray:    #6b7280;
-      --border:  #e2e8f0;
-      --FD: 'Playfair Display', Georgia, serif;
-      --FB: 'Plus Jakarta Sans', sans-serif;
-      --shadow: 0 20px 60px rgba(13,33,68,.12);
-      --shadow2: 0 8px 30px rgba(13,33,68,.08);
+  --navy: #597288; --navy2: #3D5264; --blue: #4A6880;
+  --gold: #C6A586; --gold-l: #B89070; --gold-xl: #7DBACC;
+  --cream: #F0F2F2; --cream2: #E3EAED; --cream3: #D5E0E4;
+  --off: #E3EAED; --sky: #C9D3D4; --white: #FFFFFF;
+  --dark: #1A2630; --gray: #6B7E8A; --gray2: #4A5F6B;
+  --border: #C9D3D4; --green: #25D366;
+  --FD: 'Poppins', system-ui, sans-serif;
+  --FB: 'Source Sans 3', system-ui, sans-serif;
+  --sh1: 0 24px 64px rgba(26,38,48,.11);
+  --sh2: 0 8px 32px rgba(26,38,48,.08);
+  --sh3: 0 2px 14px rgba(26,38,48,.05);
+  --r-sm:10px; --r-md:16px; --r-lg:20px; --r-xl:28px;
+  --spring: cubic-bezier(0.32,0.72,0,1);
+  --expo: cubic-bezier(0.19,1.0,0.22,1.0);
+  --soft: cubic-bezier(0.25,0,0,1);
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body { font-family: var(--FB); background: var(--white); color: var(--dark); overflow-x: hidden; }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+      opacity: 0.022;
+      pointer-events: none;
+      z-index: 9999;
+    }
 
     /* ── NAV ── */
     nav {
@@ -795,6 +804,28 @@
       /* Details accordion text */
       details > div { font-size:.85rem !important; }
     }
+  
+    /* === BLOG HUMANIZACIÓN === */
+    .hero-meta-author { display:flex; align-items:center; gap:.75rem; }
+    .hero-meta-avatar { width:48px; height:48px; border-radius:50%; object-fit:cover; object-position:top center; border:2px solid rgba(198,165,134,.6); flex-shrink:0; }
+    .hero-meta-info { display:flex; flex-direction:column; gap:.15rem; }
+    .hero-meta-name { font-size:.82rem; font-weight:600; color:rgba(255,255,255,.9); }
+    .hero-meta-role { font-size:.72rem; color:rgba(255,255,255,.5); }
+    .author-box { background:var(--cream,#FAF8F5); border:1px solid rgba(198,165,134,.25); border-radius:16px; overflow:hidden; display:grid; grid-template-columns:220px 1fr; margin:3rem 0 2rem; }
+    .author-box-photo { width:100%; height:100%; object-fit:cover; object-position:top center; display:block; aspect-ratio:3/4; }
+    .author-box-body { padding:2rem 2rem 2rem 1.8rem; display:flex; flex-direction:column; justify-content:center; }
+    .author-box-tag { font-size:.68rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:#C6A586; margin-bottom:.5rem; }
+    .author-box-name { font-size:1.15rem; font-weight:700; color:#1B3A52; margin:0 0 .25rem; }
+    .author-box-title { font-size:.8rem; color:#6B7280; margin:0 0 1rem; }
+    .author-box-bio { font-size:.88rem; color:#4B5563; line-height:1.75; margin:0 0 1.2rem; }
+    .author-box-cta { display:inline-flex; align-items:center; gap:.5rem; background:#25D366; color:white; font-size:.82rem; font-weight:700; padding:.6rem 1.2rem; border-radius:999px; text-decoration:none; width:fit-content; transition:opacity .2s; }
+    .author-box-cta:hover { opacity:.88; }
+    @media(max-width:700px) {
+      .author-box { grid-template-columns:1fr; }
+      .author-box-photo { aspect-ratio:16/9; max-height:220px; }
+      .author-box-body { padding:1.4rem; }
+    }
+
   </style>
   <style>
     .page-hero{background:linear-gradient(135deg,#071428 0%,var(--navy) 50%,#0f2448 100%);padding:7rem 5vw 4rem;position:relative;overflow:hidden;}
@@ -1089,6 +1120,24 @@
   }
   /* ══════════════════════════════════════════════ */
 
+  /* ── MOBILE BAR ── */
+  .mobile-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:1000;display:grid;grid-template-columns:1fr 1fr;background:var(--dark);}
+  .mb-btn{display:flex;align-items:center;justify-content:center;gap:.5rem;padding:1rem;font-family:var(--FD);font-weight:600;font-size:.9rem;text-decoration:none;color:white;}
+  .mb-call{background:var(--navy);}
+  .mb-wa{background:var(--green);}
+  .mb-btn svg{width:20px;height:20px;}
+  @media(min-width:961px){.mobile-bar{display:none!important;}}
+
+  /* ── WA FLOAT ── */
+  .wa-float{position:fixed;bottom:2rem;right:2rem;width:56px;height:56px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);z-index:999;animation:pulse-wa 2.5s infinite;}
+  .wa-float svg{width:30px;height:30px;fill:white;}
+  @keyframes pulse-wa{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.4);}50%{box-shadow:0 4px 32px rgba(37,211,102,.7);}}
+  @media(max-width:960px){.wa-float{display:none;}}
+
+  /* ── ARTICLE CTA ── */
+  .article-cta{background:linear-gradient(135deg,#1A2630 0%,var(--navy2) 100%);padding:4rem 5vw;text-align:center;color:white;}
+  .article-cta-inner{max-width:640px;margin:0 auto;}
+
   </style>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -1110,7 +1159,7 @@ fbq('init', '891313025762477');
 fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=891313025762477&ev=PageView&noscript=1"/></noscript>
+src="https://www.facebook.com/tr?id=891313025762477&ev=PageView&noscript=1" alt=""/ alt=" alt=""></noscript>
 <!-- End Meta Pixel -->
   <script type="application/ld+json">
   {
@@ -1149,6 +1198,7 @@ src="https://www.facebook.com/tr?id=891313025762477&ev=PageView&noscript=1"/></n
     "specialty": "Orthopedic Oncology"
   }
   </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Me detectaron algo en el hueso: ¿qué sigue y qué significa?","description":"Si te encontraron una lesión en el hueso, esta guía explica los siguientes pasos, qué estudios necesitas y cuándo acudir con un especialista en oncología ortopédica.","url":"https://www.drgonzalezsaldivar.com/blog/tumores-oseos-benignos-malignos","datePublished":"2024-02-01","dateModified":"2024-02-01","author":{"@type":"Physician","name":"Dr. Juan Carlos González Saldívar","url":"https://www.drgonzalezsaldivar.com","medicalSpecialty":"Orthopedic Oncology"},"publisher":{"@type":"Organization","name":"CorpOs Consultorio Articular","url":"https://www.drgonzalezsaldivar.com"},"about":{"@type":"MedicalCondition","name":"Tumor óseo"},"inLanguage":"es-MX"}</script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -1271,9 +1321,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       Un hallazgo en el hueso no siempre es cáncer. La mayoría de los tumores óseos son benignos — pero el diagnóstico correcto y oportuno es lo que marca la diferencia en el tratamiento.
     </p>
     <div class="hero-meta">
-      <span>👨‍⚕️ Dr. Juan Carlos González Saldívar</span>
-      <span>🏥 Ortopedista Oncológico · Monterrey</span>
-      <span>📖 9 min de lectura</span>
+      <div class="hero-meta-author">
+        <img src="../img/dr-avatar.webp" alt="Dr. Juan Carlos González Saldívar" class="hero-meta-avatar" width="200" height="200"/>
+        <div class="hero-meta-info">
+          <span class="hero-meta-name">Dr. Juan Carlos González Saldívar</span>
+          <span class="hero-meta-role">Ortopedista Oncológico · Monterrey</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1284,7 +1338,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <article>
 <!-- ══ E-E-A-T AUTHOR BADGE ══ -->
 <div style="display:flex;align-items:center;gap:1rem;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.2);border-radius:14px;padding:1rem 1.4rem;margin-bottom:2rem;">
-  <div style="width:48px;height:48px;background:linear-gradient(135deg,#0d1f3c,#1a3356);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;">👨‍⚕️</div>
+  <img src="../img/dr-avatar.webp" alt="Dr. Juan Carlos González Saldívar" width="200" height="200" style="width:48px;height:48px;border-radius:50%;overflow:hidden;flex-shrink:0;object-fit:cover;object-position:top center;display:block;"/>
   <div>
     <p style="font-weight:700;color:var(--navy,#0d1f3c);font-size:.9rem;margin:0 0 .15rem;">Dr. Juan Carlos González Saldívar</p>
     <p style="font-size:.78rem;color:var(--gray,#666);margin:0;">Cirujano Ortopedista · <strong>Alta Especialidad en Oncología Ortopédica</strong> · Cédula 12293070</p>
@@ -1301,7 +1355,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           "La primera reacción cuando detectan 'algo en el hueso' es el miedo. Lo entiendo completamente. Pero la realidad es que la mayoría de los tumores óseos son benignos y tratables. Lo que importa es que el diagnóstico lo haga el especialista correcto — porque de eso depende todo."
         </p>
         <div style="display:flex;align-items:center;gap:.8rem;margin-top:1.2rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,.1);">
-          <div style="width:36px;height:36px;background:rgba(200,146,42,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;">👨‍⚕️</div>
+          <img src="../img/dr-avatar.webp" alt="Dr. Juan Carlos González Saldívar" width="200" height="200" style="width:36px;height:36px;border-radius:50%;overflow:hidden;flex-shrink:0;object-fit:cover;object-position:top center;display:block;"/>
           <div>
             <p style="font-weight:600;color:white;font-size:.83rem;">Dr. Juan Carlos González Saldívar</p>
             <p style="font-size:.72rem;color:rgba(255,255,255,.5);">Ortopedia Oncológica · Plaza Contry D-13, Monterrey</p>
@@ -1516,6 +1570,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 
+<section class="article-cta" aria-labelledby="cta-h2">
+  <div class="article-cta-inner">
+    <p class="s-tag" style="justify-content:center;color:var(--gold);font-family:var(--FD);font-size:.75rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;display:flex;align-items:center;gap:.5rem;margin-bottom:.75rem;">Siguiente paso</p>
+    <h2 id="cta-h2" style="font-family:var(--FD);font-size:clamp(1.4rem,3vw,2rem);font-weight:700;margin-bottom:1rem;color:white;">¿Encontraron un tumor óseo y necesitas orientación?</h2>
+    <p style="color:rgba(255,255,255,.75);max-width:48ch;margin:0 auto .5rem;font-family:var(--FB);">El Dr. González Saldívar atiende en Plaza Contry, Monterrey.<br>Jessy responde las 24 hrs.</p>
+    <a href="https://wa.me/528126555222?text=Hola%2C%20le%C3%AD%20el%20art%C3%ADculo%20sobre%20tumores%20%C3%B3seos%20y%20quisiera%20agendar%20una%20consulta." target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.7rem;background:var(--green);color:white;padding:.9rem 2rem;border-radius:50px;font-family:var(--FD);font-weight:700;font-size:1rem;text-decoration:none;margin:1.5rem 0 .75rem;box-shadow:0 8px 28px rgba(37,211,102,.35);">
+      <svg viewBox="0 0 24 24" fill="currentColor" style="width:22px;height:22px;" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Agendar consulta por WhatsApp
+    </a>
+    <p style="font-size:.78rem;color:rgba(255,255,255,.45);font-family:var(--FB);">Sin compromisos · Primera consulta desde $1,200 MXN</p>
+  </div>
+</section>
+
 <footer>
   <div>
     <div style="height:44px;width:180px;display:flex;align-items:center;overflow:hidden;filter:brightness(0) invert(1) opacity(.7);"><svg width="100%" height="100%" style="max-width:180px;max-height:44px;" viewBox="0 0 2782 773" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1618,5 +1685,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     const docH = document.documentElement.scrollHeight - window.innerHeight;
     el.style.width = (window.scrollY / docH * 100) + '%';
   });
+</script>
+<!-- mobile bar -->
+<div class="mobile-bar" role="navigation" aria-label="Contacto rápido">
+  <a href="tel:+528183877237" class="mb-btn mb-call">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.37 10.81 19.79 19.79 0 01.31 2.18 2 2 0 012.3 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.41 7.91a16 16 0 006.72 6.72l1.28-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    Llamar
+  </a>
+  <a href="https://wa.me/528126555222?text=Hola%2C%20le%C3%AD%20el%20art%C3%ADculo%20sobre%20tumores%20%C3%B3seos%20y%20quisiera%20agendar%20una%20consulta." target="_blank" rel="noopener" class="mb-btn mb-wa">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    WhatsApp
+  </a>
+</div>
+<!-- wa float -->
+<a href="https://wa.me/528126555222?text=Hola%2C%20le%C3%AD%20el%20art%C3%ADculo%20sobre%20tumores%20%C3%B3seos%20y%20quisiera%20agendar%20una%20consulta." class="wa-float" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<script>
+var navToggle,navDrawer;
+function closeDrawer(){if(!navDrawer)return;navDrawer.classList.remove('open');navToggle.classList.remove('open');navToggle.setAttribute('aria-expanded','false');document.body.style.overflow='';}
+(function(){navToggle=document.getElementById('navToggle');navDrawer=document.getElementById('navDrawer');if(!navToggle||!navDrawer)return;navToggle.addEventListener('click',function(){var isOpen=navDrawer.classList.toggle('open');navToggle.classList.toggle('open',isOpen);navToggle.setAttribute('aria-expanded',isOpen?'true':'false');document.body.style.overflow=isOpen?'hidden':'';});navDrawer.addEventListener('click',function(e){if(e.target===navDrawer)closeDrawer();});document.addEventListener('keydown',function(e){if(e.key==='Escape')closeDrawer();});})();
+(function(){document.querySelectorAll('[href*="wa.me"]').forEach(function(el){el.addEventListener('click',function(){try{if(typeof fbq==='function')fbq('track','Lead',{content_name:'WhatsApp',content_category:'consulta'});}catch(e){}try{if(Array.isArray(window.dataLayer))window.dataLayer.push({event:'wa_click',method:'WhatsApp'});}catch(e){}});});})();
 </script>
 </body></html>

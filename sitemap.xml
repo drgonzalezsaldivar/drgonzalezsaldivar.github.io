@@ -4,7 +4,7 @@
   <!-- ── LANDING PRINCIPAL ── -->
   <url>
     <loc>https://www.drgonzalezsaldivar.com/</loc>
-    <lastmod>2026-04-14</lastmod>
+    <lastmod>2026-05-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -12,63 +12,91 @@
   <!-- ── PÁGINAS DE PADECIMIENTO ── -->
   <url>
     <loc>https://www.drgonzalezsaldivar.com/rodilla</loc>
-    <lastmod>2026-04-14</lastmod>
+    <lastmod>2026-05-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.drgonzalezsaldivar.com/hombro</loc>
-    <lastmod>2026-04-14</lastmod>
+    <lastmod>2026-05-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.drgonzalezsaldivar.com/cadera</loc>
-    <lastmod>2026-04-14</lastmod>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.drgonzalezsaldivar.com/tobillo</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.drgonzalezsaldivar.com/hernia-disco</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ── PÁGINAS DE ONCOLOGÍA ── -->
+  <url>
+    <loc>https://www.drgonzalezsaldivar.com/oncologia-ortopedica</loc>
+    <lastmod>2026-05-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.drgonzalezsaldivar.com/tumores-oseos</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-05-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.drgonzalezsaldivar.com/segunda-opinion-oncologica</loc>
-    <lastmod>2026-04-20</lastmod>
+    <loc>https://www.drgonzalezsaldivar.com/sarcomas</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.drgonzalezsaldivar.com/metastasis-osea</loc>
+    <lastmod>2026-05-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.drgonzalezsaldivar.com/hernia-disco</loc>
-    <lastmod>2026-04-14</lastmod>
+    <loc>https://www.drgonzalezsaldivar.com/segunda-opinion-oncologica</loc>
+    <lastmod>2026-05-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
+
+  <!-- ── PROCEDIMIENTOS ── -->
   <url>
-    <loc>https://www.drgonzalezsaldivar.com/oncologia-ortopedica</loc>
-    <lastmod>2026-04-14</lastmod>
+    <loc>https://www.drgonzalezsaldivar.com/infiltraciones</loc>
+    <lastmod>2026-05-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- ── PÁGINAS SEO LOCAL ── -->
   <url>
+    <loc>https://www.drgonzalezsaldivar.com/ortopedista-monterrey-sur</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.drgonzalezsaldivar.com/ortopedista-san-pedro-garza-garcia</loc>
-    <lastmod>2026-04-14</lastmod>
+    <lastmod>2026-05-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.drgonzalezsaldivar.com/traumatologo-zona-tec</loc>
-    <lastmod>2026-04-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.drgonzalezsaldivar.com/ortopedista-monterrey-sur</loc>
-    <lastmod>2026-04-14</lastmod>
+    <lastmod>2026-05-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -76,7 +104,7 @@
   <!-- ── BLOG INDEX ── -->
   <url>
     <loc>https://www.drgonzalezsaldivar.com/blog</loc>
-    <lastmod>2026-04-14</lastmod>
+    <lastmod>2026-05-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -112,5 +140,22 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://www.drgonzalezsaldivar.com/blog/benigno-maligno</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.drgonzalezsaldivar.com/blog/lesion-resonancia</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
+  <url>
+    <loc>https://www.drgonzalezsaldivar.com/dr-gonzalez-saldivar</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog de Ortopedia | Dr. Juan Carlos González Saldívar | CorpOs Monterrey</title>
+  <meta name="robots" content="index, follow"/>
+  <title>Blog de Ortopedia | Dr. Juan Carlos González Saldívar | Monterrey</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg"/>
   <meta name="description" content="Artículos de ortopedia y oncología ortopédica del Dr. González Saldívar en Monterrey. Rodilla, cadera, tumores óseos y más.">
   <link rel="canonical" href="https://www.drgonzalezsaldivar.com/blog">
   <link rel="sitemap" type="application/xml" href="/blog/sitemap.xml">
@@ -30,12 +32,12 @@
   <!-- End Meta Pixel -->
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Blog de Ortopedia | Dr. Juan Carlos González Saldívar | CorpOs Monterrey"/>
+  <meta property="og:title" content="Blog de Ortopedia | Dr. Juan Carlos González Saldívar | Monterrey"/>
   <meta property="og:description" content="Artículos de ortopedia escritos por el Dr. Juan Carlos González Saldívar, especialista en Monterrey. Información confiable sobre rodilla, cadera, tumores óseos y más."/>
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://www.drgonzalezsaldivar.com/blog/"/>
   <meta property="og:locale" content="es_MX"/>
-  <meta property="og:image" content="https://www.drgonzalezsaldivar.com/img/img_03.jpg"/>
+  <meta property="og:image" content="https://www.drgonzalezsaldivar.com/img/img_03.webp"/>
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
 
@@ -43,7 +45,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Blog",
-    "name": "Blog de Ortopedia — CorpOs",
+    "name": "Blog de Ortopedia — Dr. González Saldívar",
     "description": "Artículos de salud ortopédica escritos por el Dr. Juan Carlos González Saldívar, ortopedista oncológico en Monterrey.",
     "url": "https://www.drgonzalezsaldivar.com/blog/",
     "author": {
@@ -54,21 +56,28 @@
   }
   </script>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --navy:  #0d2144;
-      --navy2: #1a3a6b;
-      --gold:  #c8922a;
-      --gold-l:#d4a843;
-      --sky:   #e8f4f8;
-      --gray:  #4a5568;
-      --white: #ffffff;
-      --FB: 'Inter', system-ui, sans-serif;
-      --FD: 'Playfair Display', Georgia, serif;
+      --navy: #597288; --navy2: #3D5264; --blue: #4A6880;
+      --gold: #C6A586; --gold-l: #B89070; --gold-xl: #7DBACC;
+      --cream: #F0F2F2; --cream2: #E3EAED; --cream3: #D5E0E4;
+      --off: #E3EAED; --sky: #C9D3D4; --white: #FFFFFF;
+      --dark: #1A2630; --gray: #6B7E8A; --gray2: #4A5F6B;
+      --border: #C9D3D4; --green: #25D366;
+      --FD: 'Poppins', system-ui, sans-serif;
+      --FB: 'Source Sans 3', system-ui, sans-serif;
+      --sh1: 0 24px 64px rgba(26,38,48,.11);
+      --sh2: 0 8px 32px rgba(26,38,48,.08);
+      --sh3: 0 2px 14px rgba(26,38,48,.05);
+      --r-sm:10px; --r-md:16px; --r-lg:20px; --r-xl:28px;
     }
 
-    body { font-family: var(--FB); color: var(--gray); background: #f8f9fa; }
+    body { font-family: var(--FB); color: var(--gray); background: var(--cream); position: relative; }
+    body::before { content:''; position:fixed; inset:0; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E"); opacity:0.022; pointer-events:none; z-index:9999; }
 
     /* NAV */
     .blog-nav {
@@ -107,7 +116,7 @@
 
     /* HERO */
     .blog-hero {
-      background: var(--navy);
+      background: linear-gradient(135deg, var(--dark) 0%, var(--navy) 55%, var(--navy2) 100%);
       padding: 4rem 5vw 3rem;
       text-align: center;
     }
@@ -141,7 +150,7 @@
     /* AUTHOR BADGE */
     .author-strip {
       background: var(--sky);
-      border-bottom: 1px solid rgba(13,33,68,.08);
+      border-bottom: 1px solid rgba(26,38,48,.08);
       padding: .9rem 5vw;
       display: flex;
       align-items: center;
@@ -151,13 +160,12 @@
     .author-avatar {
       width: 36px;
       height: 36px;
-      background: var(--navy);
       border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1rem;
+      overflow: hidden;
+      object-fit: cover;
+      object-position: top center;
       flex-shrink: 0;
+      display: block;
     }
     .author-strip p {
       font-size: .78rem;
@@ -188,7 +196,7 @@
       content: '';
       flex: 1;
       height: 1px;
-      background: rgba(200,146,42,.25);
+      background: rgba(198,165,134,.25);
     }
 
     .posts-grid {
@@ -263,28 +271,33 @@
 
     /* CTA BOTTOM */
     .blog-cta-section {
-      background: var(--navy);
-      border-radius: 16px;
-      padding: 2.5rem 2rem;
+      background: linear-gradient(135deg, var(--dark) 0%, var(--navy2) 100%);
+      border-radius: var(--r-xl);
+      padding: 3rem 2rem;
       text-align: center;
       margin-top: 3rem;
+      box-shadow: var(--sh1);
     }
     .blog-cta-section h3 {
       font-family: var(--FD);
-      font-size: 1.5rem;
+      font-size: clamp(1.3rem,3vw,1.7rem);
+      font-weight: 700;
       color: white;
       margin-bottom: .6rem;
     }
     .blog-cta-section p {
-      color: rgba(255,255,255,.6);
-      font-size: .88rem;
+      color: rgba(255,255,255,.65);
+      font-size: .9rem;
       margin-bottom: 1.5rem;
+      max-width: 46ch;
+      margin-left: auto;
+      margin-right: auto;
     }
     .blog-cta-btn {
       display: inline-flex;
       align-items: center;
       gap: .5rem;
-      background: #25D366;
+      background: var(--green);
       color: white;
       font-size: .9rem;
       font-weight: 700;
@@ -292,8 +305,20 @@
       border-radius: 50px;
       text-decoration: none;
       transition: background .2s, transform .2s;
+      box-shadow: 0 8px 28px rgba(37,211,102,.35);
     }
     .blog-cta-btn:hover { background: #1ebe5a; transform: translateY(-2px); }
+    /* MOBILE BAR + WA FLOAT */
+    .mobile-bar{position:fixed;bottom:0;left:0;right:0;z-index:1000;display:grid;grid-template-columns:1fr 1fr;background:var(--dark);}
+    .mb-btn{display:flex;align-items:center;justify-content:center;gap:.5rem;padding:1rem;font-family:var(--FD);font-weight:600;font-size:.9rem;text-decoration:none;color:white;}
+    .mb-call{background:var(--navy);}
+    .mb-wa{background:var(--green);}
+    .mb-btn svg{width:20px;height:20px;}
+    @media(min-width:961px){.mobile-bar{display:none!important;}}
+    .wa-float{position:fixed;bottom:2rem;right:2rem;width:56px;height:56px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);z-index:999;animation:pulse-wa 2.5s infinite;}
+    .wa-float svg{width:30px;height:30px;fill:white;}
+    @keyframes pulse-wa{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.4);}50%{box-shadow:0 4px 32px rgba(37,211,102,.7);}}
+    @media(max-width:960px){.wa-float{display:none;}}
 
     /* FOOTER */
     .blog-footer {
@@ -323,7 +348,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a href="/" class="home-link">
     ← Regresar al inicio
   </a>
-  <span style="font-size:.82rem;font-weight:600;color:var(--navy);">Blog · CorpOs</span>
+  <span style="font-size:.82rem;font-weight:600;color:var(--navy);">Blog · Dr. González Saldívar</span>
   <a href="/segunda-opinion-oncologica" style="font-size:.82rem;font-weight:600;color:var(--gold);border:1.5px solid var(--gold);border-radius:4px;padding:.25rem .7rem;text-decoration:none;margin-right:.5rem;">Segunda Opinión</a>
   <a href="https://wa.me/528126555222?text=Hola%2C%20leí%20el%20blog%20y%20quisiera%20agendar%20una%20consulta."
      class="nav-cta" target="_blank" rel="noopener">
@@ -334,16 +359,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- HERO -->
 <section class="blog-hero">
   <div class="tag">✦ Artículos de salud ortopédica</div>
-  <h1>Blog de Ortopedia<br><em style="font-style:italic;color:var(--gold-l);">CorpOs</em></h1>
+  <h1>Blog de Ortopedia<br><em style="font-style:italic;color:var(--gold-l);">Dr. González Saldívar</em></h1>
   <p>Información clínica confiable escrita por el Dr. Juan Carlos González Saldívar, ortopedista oncológico en Monterrey.</p>
 </section>
 
 <!-- AUTHOR STRIP -->
 <div class="author-strip">
-  <div class="author-avatar">👨‍⚕️</div>
+  <img src="../img/dr-avatar.webp" alt="Dr. Juan Carlos González Saldívar" class="author-avatar" width="200" height="200"/>
   <p>
     <strong>Dr. Juan Carlos González Saldívar</strong><br>
-    <span>Ortopedista · Oncología Ortopédica · Cédula 12293070 · CorpOs, Monterrey NL</span>
+    <span>Ortopedista · Oncología Ortopédica · Cédula 12293070 · Monterrey NL</span>
   </p>
 </div>
 
@@ -355,7 +380,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- Post 1: Rodilla -->
     <article class="post-card">
-      <div class="post-card-img" style="background:#e8f4f8;">🦵</div>
+      <div class="post-card-img" style="background:var(--cream2);">🦵</div>
       <div class="post-card-body">
         <div class="post-card-cat">Rodilla</div>
         <div class="post-meta">Dr. González Saldívar · 8 min de lectura</div>
@@ -454,11 +479,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- FOOTER -->
 <footer class="blog-footer">
   <p>
-    <a href="/">CorpOs · Dr. Juan Carlos González Saldívar</a> &nbsp;|&nbsp;
+    <a href="/">Dr. Juan Carlos González Saldívar</a> &nbsp;|&nbsp;
     Ortopedista Oncológico en Monterrey · Plaza Contry D-13, Av. Garza Sada 3551 &nbsp;|&nbsp;
-    <a href="tel:+528183877237">+52 812-655-5222</a>
+    <a href="tel:+528183877237">818 387-7237</a>
   </p>
 </footer>
 
+<!-- mobile bar -->
+<div class="mobile-bar" role="navigation" aria-label="Contacto rápido">
+  <a href="tel:+528183877237" class="mb-btn mb-call">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.37 10.81 19.79 19.79 0 01.31 2.18 2 2 0 012.3 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.41 7.91a16 16 0 006.72 6.72l1.28-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    Llamar
+  </a>
+  <a href="https://wa.me/528126555222?text=Hola%2C%20le%C3%AD%20el%20blog%20y%20quisiera%20agendar%20una%20consulta." target="_blank" rel="noopener" class="mb-btn mb-wa">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    WhatsApp
+  </a>
+</div>
+<!-- wa float -->
+<a href="https://wa.me/528126555222?text=Hola%2C%20le%C3%AD%20el%20blog%20y%20quisiera%20agendar%20una%20consulta." class="wa-float" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
 </body>
 </html>

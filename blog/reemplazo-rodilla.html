@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta name="robots" content="index, follow"/>
   <title>¿Cuándo necesitas un reemplazo de rodilla? — Dr. González Saldívar | Monterrey</title>
   <meta name="description" content="¿Cuándo necesitas prótesis de rodilla? El Dr. González Saldívar explica la cirugía y la recuperación. Ortopedista en Monterrey."/>
   <link rel="canonical" href="https://www.drgonzalezsaldivar.com/blog/reemplazo-rodilla"/>
@@ -12,19 +13,20 @@
   <meta property="og:type" content="article"/>
   <meta property="og:url" content="https://www.drgonzalezsaldivar.com/blog/reemplazo-rodilla"/>
   <meta property="og:locale" content="es_MX"/>
-  <meta property="og:image" content="https://www.drgonzalezsaldivar.com/img/img_03.jpg"/>
+  <meta property="og:image" content="https://www.drgonzalezsaldivar.com/img/img_03.webp"/>
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary"/>
   <meta name="twitter:title" content="¿Cuándo Necesitas Reemplazo de Rodilla? — Dr. González Saldívar"/>
   <meta name="twitter:description" content="Cuándo el desgaste de rodilla requiere prótesis, cómo es la cirugía y qué esperar en recuperación. Ortopedista en Monterrey."/>
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg"/>
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
-  <noscript><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap"/></noscript></noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com"/>
+  <link rel="dns-prefetch" href="https://connect.facebook.net"/>
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -42,58 +44,144 @@
   </script>
   <style>
     :root {
-      --navy:    #0d2144;
-      --navy2:   #1a3a6b;
-      --blue:    #1e5799;
-      --sky:     #e8f0fb;
-      --gold:    #c8922a;
-      --gold-l:  #f0b84a;
-      --white:   #ffffff;
-      --off:     #f7f5f0;
-      --dark:    #0a0f1e;
-      --gray:    #6b7280;
-      --border:  #e2e8f0;
-      --FD: 'Playfair Display', Georgia, serif;
-      --FB: 'Plus Jakarta Sans', sans-serif;
-      --shadow: 0 20px 60px rgba(13,33,68,.12);
-      --shadow2: 0 8px 30px rgba(13,33,68,.08);
+      --navy:    #597288;
+      --navy2:   #3D5264;
+      --blue:    #4A6880;
+      --gold:    #C6A586;
+      --gold-l:  #B89070;
+      --gold-xl: #7DBACC;
+      --cream:   #F0F2F2;
+      --cream2:  #E3EAED;
+      --cream3:  #D5E0E4;
+      --off:     #E3EAED;
+      --sky:     #C9D3D4;
+      --white:   #FFFFFF;
+      --light:   #E3EAED;
+      --dark:    #1A2630;
+      --gray:    #6B7E8A;
+      --gray2:   #4A5F6B;
+      --border:  #C9D3D4;
+      --green:   #25D366;
+      --FD: 'Poppins', system-ui, sans-serif;
+      --FB: 'Source Sans 3', system-ui, sans-serif;
+      --sh1: 0 24px 64px rgba(26,38,48,.11);
+      --sh2: 0 8px 32px rgba(26,38,48,.08);
+      --sh3: 0 2px 14px rgba(26,38,48,.05);
+      --r-sm: 10px;
+      --r-md: 16px;
+      --r-lg: 20px;
+      --r-xl: 28px;
+      --spring: cubic-bezier(0.32, 0.72, 0, 1);
+      --expo:   cubic-bezier(0.19, 1.0, 0.22, 1.0);
+      --soft:   cubic-bezier(0.25, 0, 0, 1);
+    }
+    body::before {
+      content: '';
+      position: fixed; inset: 0; z-index: 9998; pointer-events: none; opacity: 0.022;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.78' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 400px;
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body { font-family: var(--FB); background: var(--white); color: var(--dark); overflow-x: hidden; }
 
-    /* ── NAV ── */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 300;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 1.1rem 5vw;
-      background: rgba(255,255,255,0.95); backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--border);
-      box-shadow: 0 2px 20px rgba(13,33,68,.06);
-      transition: padding .3s;
+    .skip-link {
+      position: absolute; top: -100%; left: 1rem; z-index: 9999;
+      background: var(--navy); color: #fff; padding: .6rem 1.2rem;
+      border-radius: 0 0 8px 8px; font-size: .85rem; font-weight: 600;
+      text-decoration: none; transition: top .2s;
     }
-    .n-logo { display: flex; align-items: center; text-decoration: none; }
-    .n-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
-    .n-links a { font-size: .82rem; font-weight: 500; color: var(--gray); text-decoration: none; transition: color .2s; }
-    .n-links a:hover { color: var(--navy); }
+    .skip-link:focus { top: 0; }
 
+    /* ── NAV ── */
+    .nav {
+      position: fixed; top: .85rem; left: 50%;
+      transform: translateX(-50%);
+      z-index: 400;
+      display: flex; align-items: center; justify-content: space-between;
+      width: min(1120px, calc(100vw - 1.4rem));
+      padding: .55rem .9rem .55rem 1.3rem;
+      background: rgba(240,242,242,.94);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border-radius: 50px;
+      border: 1px solid rgba(198,165,134,.16);
+      box-shadow: 0 4px 32px rgba(26,38,48,.10), inset 0 1px 0 rgba(255,255,255,.65);
+      transition: box-shadow 500ms var(--spring);
+    }
+    .nav:hover { box-shadow: 0 6px 44px rgba(26,38,48,.14), inset 0 1px 0 rgba(255,255,255,.7); }
+    .nav-logo { display: flex; align-items: center; gap: .7rem; text-decoration: none; }
+    .nav-logo-img { height: 38px; width: auto; display: block; flex-shrink: 0; }
+    .nav-logo-text { font-family: var(--FD); font-size: 1rem; font-weight: 600; color: var(--navy); line-height: 1.2; }
+    .nav-logo-sub { font-size: .56rem; font-weight: 600; color: var(--gold); text-transform: uppercase; letter-spacing: .12em; display: block; }
+    .nav-links { display: flex; gap: 1.55rem; list-style: none; align-items: center; }
+    .nav-links a { font-size: .77rem; font-weight: 500; color: var(--gray); text-decoration: none; transition: color 280ms var(--soft); }
+    .nav-links a:hover { color: var(--navy); }
     .nav-segunda {
       color: var(--gold) !important; font-weight: 600 !important;
-      border: 1.5px solid var(--gold); border-radius: 4px;
-      padding: .25rem .6rem !important;
-      transition: background .2s, color .2s !important;
+      border: 1px solid rgba(198,165,134,.32); border-radius: 50px;
+      padding: .46rem 1.15rem !important; font-size: .76rem !important;
+      min-height: 40px; display: inline-flex !important; align-items: center; white-space: nowrap;
+      transition: background 280ms var(--soft), color 280ms, border-color 280ms !important;
     }
-    .nav-segunda:hover { background: var(--gold); color: white !important; }
-    .n-cta {
-      background: var(--navy) !important; color: white !important;
-      padding: .55rem 1.4rem; border-radius: 50px; font-size: .8rem !important;
-      font-weight: 600 !important; letter-spacing: .03em;
-      transition: background .2s, transform .2s !important;
-      box-shadow: 0 4px 14px rgba(13,33,68,.25);
+    .nav-segunda:hover { background: var(--gold); color: white !important; border-color: var(--gold) !important; }
+    .nav-cta {
+      background: var(--navy) !important; color: var(--cream) !important;
+      padding: .48rem 1.2rem; border-radius: 50px;
+      font-size: .76rem !important; font-weight: 600 !important;
+      box-shadow: 0 4px 16px rgba(89,114,136,.22);
+      transition: background 280ms var(--soft), transform 250ms var(--spring), box-shadow 280ms !important;
+      min-height: 40px; display: inline-flex !important; align-items: center;
     }
-    .n-cta:hover { background: var(--navy2) !important; transform: translateY(-1px); }
-    .n-toggle { display: none; background: none; border: none; cursor: pointer; }
-    .n-toggle span { display: block; width: 22px; height: 2px; background: var(--navy); margin: 5px 0; transition: .3s; border-radius: 2px; }
+    .nav-cta:hover { background: var(--navy2) !important; transform: translateY(-1px); box-shadow: 0 6px 22px rgba(89,114,136,.30) !important; }
+    .nav-toggle {
+      display: none; background: none; border: none; cursor: pointer;
+      padding: 6px; border-radius: 50px; min-width: 44px; min-height: 44px;
+      align-items: center; justify-content: center; flex-direction: column; gap: 5px;
+    }
+    .nav-toggle span { display: block; width: 20px; height: 1.5px; background: var(--navy); border-radius: 2px; transition: transform 400ms var(--spring), opacity 300ms; }
+    .nav-toggle.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .nav-toggle.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+    .nav-drawer {
+      display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+      z-index: 300; background: rgba(22,30,40,.55); backdrop-filter: blur(6px);
+    }
+    .nav-drawer.open { display: block; }
+    .nav-drawer-panel {
+      position: absolute; top: 0; right: 0; bottom: 0;
+      width: min(320px, 85vw); background: var(--cream); padding: 5rem 2rem 2rem;
+      box-shadow: -12px 0 60px rgba(0,0,0,.16);
+      display: flex; flex-direction: column; gap: 1.5rem; overflow-y: auto;
+    }
+    .nav-drawer-panel a { font-size: 1rem; font-weight: 600; color: var(--navy); text-decoration: none; padding: .75rem 0; border-bottom: 1px solid var(--border); }
+    .nav-drawer-panel .nav-cta { margin-top: .5rem; justify-content: center; border-radius: 50px; font-size: .9rem !important; }
+    .has-dropdown { position: relative; }
+    .has-dropdown > a { display: flex; align-items: center; gap: .28rem; }
+    .has-dropdown > a::after { content: ''; width: 5px; height: 5px; border-right: 1.2px solid currentColor; border-bottom: 1.2px solid currentColor; transform: rotate(45deg); margin-top: -2px; transition: transform 250ms var(--soft); flex-shrink: 0; }
+    .has-dropdown:hover > a::after { transform: rotate(-135deg); margin-top: 3px; }
+    .nav-dropdown {
+      position: absolute; top: calc(100% + 16px); left: 50%;
+      transform: translateX(-50%) translateY(-6px);
+      background: var(--cream); border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(26,38,48,.14), 0 0 0 1px rgba(198,165,134,.10);
+      min-width: 230px; padding: .6rem 0;
+      opacity: 0; visibility: hidden;
+      transition: opacity 250ms var(--soft), transform 250ms var(--soft), visibility 250ms;
+      z-index: 500;
+    }
+    .has-dropdown:hover .nav-dropdown { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+    .nav-dropdown a { display: block; padding: .5rem 1.2rem; font-size: .79rem; font-weight: 500; color: var(--gray) !important; white-space: nowrap; text-decoration: none; transition: background 150ms, color 150ms !important; border-bottom: none !important; }
+    .nav-dropdown a:hover { background: var(--cream2); color: var(--navy) !important; }
+    .nav-dropdown a.dd-all { font-weight: 700; color: var(--navy) !important; border-bottom: 1px solid var(--border) !important; margin-bottom: .3rem; }
+    .nav-dropdown .dd-label { font-size: .62rem; font-weight: 700; color: var(--gold); letter-spacing: .14em; text-transform: uppercase; padding: .4rem 1.2rem .2rem; display: block; }
+    .drawer-group { border-bottom: 1px solid var(--border); }
+    .drawer-group-btn { display: flex; justify-content: space-between; align-items: center; width: 100%; background: none; border: none; cursor: pointer; font-size: 1rem; font-weight: 600; color: var(--navy); padding: .75rem 0; text-align: left; font-family: var(--FB); }
+    .drawer-chevron { width: 16px; height: 16px; flex-shrink: 0; transition: transform 300ms var(--spring); }
+    .drawer-group.open .drawer-chevron { transform: rotate(180deg); }
+    .drawer-group-links { max-height: 0; overflow: hidden; transition: max-height 350ms var(--spring); }
+    .drawer-group.open .drawer-group-links { max-height: 400px; }
+    .drawer-group-links a { display: block; font-size: .9rem !important; font-weight: 500 !important; color: var(--gray) !important; padding: .55rem 0 .55rem 1rem !important; border-bottom: none !important; }
 
     /* ── HERO ── */
     #inicio {
@@ -669,16 +757,17 @@
 
     /* Page-specific */
     .page-hero {
-      background: var(--navy);
-      padding: 120px 5vw 5rem;
+      background: linear-gradient(135deg, #1A2630 0%, var(--navy) 55%, var(--navy2) 100%);
+      padding: 7.5rem 5vw 4.5rem;
       position: relative;
       overflow: hidden;
     }
     .page-hero::before {
       content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse at 70% 50%, rgba(201,168,76,.08) 0%, transparent 70%);
+      position: absolute; top: -120px; right: -120px;
+      width: 640px; height: 640px;
+      background: radial-gradient(circle, rgba(198,165,134,.14) 0%, transparent 65%);
+      pointer-events: none;
     }
     .breadcrumb {
       font-size: .72rem;
@@ -810,6 +899,28 @@
       /* Details accordion text */
       details > div { font-size:.85rem !important; }
     }
+  
+    /* === BLOG HUMANIZACIÓN === */
+    .hero-meta-author { display:flex; align-items:center; gap:.75rem; }
+    .hero-meta-avatar { width:48px; height:48px; border-radius:50%; object-fit:cover; object-position:top center; border:2px solid rgba(198,165,134,.6); flex-shrink:0; }
+    .hero-meta-info { display:flex; flex-direction:column; gap:.15rem; }
+    .hero-meta-name { font-size:.82rem; font-weight:600; color:rgba(255,255,255,.9); }
+    .hero-meta-role { font-size:.72rem; color:rgba(255,255,255,.5); }
+    .author-box { background:var(--cream,#FAF8F5); border:1px solid rgba(198,165,134,.25); border-radius:16px; overflow:hidden; display:grid; grid-template-columns:220px 1fr; margin:3rem 0 2rem; }
+    .author-box-photo { width:100%; height:100%; object-fit:cover; object-position:top center; display:block; aspect-ratio:3/4; }
+    .author-box-body { padding:2rem 2rem 2rem 1.8rem; display:flex; flex-direction:column; justify-content:center; }
+    .author-box-tag { font-size:.68rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:#C6A586; margin-bottom:.5rem; }
+    .author-box-name { font-size:1.15rem; font-weight:700; color:#1B3A52; margin:0 0 .25rem; }
+    .author-box-title { font-size:.8rem; color:#6B7280; margin:0 0 1rem; }
+    .author-box-bio { font-size:.88rem; color:#4B5563; line-height:1.75; margin:0 0 1.2rem; }
+    .author-box-cta { display:inline-flex; align-items:center; gap:.5rem; background:#25D366; color:white; font-size:.82rem; font-weight:700; padding:.6rem 1.2rem; border-radius:999px; text-decoration:none; width:fit-content; transition:opacity .2s; }
+    .author-box-cta:hover { opacity:.88; }
+    @media(max-width:700px) {
+      .author-box { grid-template-columns:1fr; }
+      .author-box-photo { aspect-ratio:16/9; max-height:220px; }
+      .author-box-body { padding:1.4rem; }
+    }
+
   </style>
   <style>
     /* ── BLOG EXTRAS ── */
@@ -1103,6 +1214,98 @@
   }
   /* ══════════════════════════════════════════════ */
 
+    /* ── CTA SECTION ── */
+    .article-cta {
+      background: linear-gradient(135deg, #1A2630 0%, var(--navy2) 100%);
+      padding: 4.5rem 5vw; text-align: center; margin-top: 0; position: relative; overflow: hidden;
+    }
+    .article-cta::before {
+      content: ''; position: absolute; top: -80px; left: 50%; transform: translateX(-50%);
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(198,165,134,.10) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .article-cta-inner { max-width: 580px; margin: 0 auto; position: relative; z-index: 1; }
+    .article-cta-tag {
+      display: inline-flex; align-items: center; gap: .45rem;
+      font-family: var(--FD); font-size: .66rem; font-weight: 700; color: var(--gold);
+      letter-spacing: .12em; text-transform: uppercase; margin-bottom: 1.2rem;
+    }
+    .article-cta-tag::before { content: ''; width: 5px; height: 5px; background: var(--gold); border-radius: 50%; flex-shrink: 0; opacity: .7; }
+    .article-cta h2 {
+      font-family: var(--FD); font-size: clamp(1.5rem, 3vw, 2.1rem);
+      color: white; font-weight: 700; margin-bottom: .9rem; letter-spacing: -.02em;
+    }
+    .article-cta p { font-size: .9rem; color: rgba(255,255,255,.58); max-width: 460px; margin: 0 auto; line-height: 1.75; }
+    .cta-wa-btn {
+      display: inline-flex; align-items: center; gap: .7rem;
+      background: var(--green); color: white; padding: .92rem 2.2rem;
+      border-radius: 50px; font-weight: 700; font-size: .95rem; text-decoration: none;
+      margin: 1.8rem 0 .8rem; box-shadow: 0 8px 28px rgba(37,211,102,.32);
+      transition: transform 350ms var(--spring), box-shadow 350ms;
+    }
+    .cta-wa-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(37,211,102,.48); }
+    .cta-wa-btn svg { width: 20px; height: 20px; fill: white; flex-shrink: 0; }
+    .cta-sub { font-size: .75rem; color: rgba(255,255,255,.35); }
+
+    /* ── FOOTER ── */
+    footer { background: #0E1A24; border-top: 1px solid rgba(198,165,134,.10); }
+    .f-main { padding: 3.5rem 5vw 2rem; display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 3rem; }
+    .f-brand p { font-size: .79rem; color: rgba(255,255,255,.32); line-height: 1.78; margin: .85rem 0 1.2rem; max-width: 210px; }
+    .f-logo { font-family: var(--FD); font-size: 1.05rem; color: var(--gold-xl); font-weight: 500; display: block; }
+    .f-logo-sub { font-size: .58rem; color: rgba(255,255,255,.24); letter-spacing: .12em; text-transform: uppercase; display: block; margin-top: .2rem; }
+    .f-col-title { font-size: .58rem; font-weight: 700; color: rgba(255,255,255,.2); text-transform: uppercase; letter-spacing: .18em; margin-bottom: 1rem; display: block; }
+    .f-links { display: flex; flex-direction: column; gap: .6rem; }
+    .f-links a { font-size: .8rem; color: rgba(255,255,255,.36); text-decoration: none; transition: color 200ms; }
+    .f-links a:hover { color: var(--gold-xl); }
+    .f-social { display: flex; gap: .65rem; align-items: center; }
+    .f-social a { display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; border: 1px solid rgba(255,255,255,.11); color: rgba(255,255,255,.28); transition: border-color 250ms, color 250ms, transform 300ms var(--spring); text-decoration: none; }
+    .f-social a:hover { border-color: var(--gold-xl); color: var(--gold-xl); transform: translateY(-2px); }
+    .f-social svg { width: 14px; height: 14px; fill: currentColor; }
+    .f-bottom { border-top: 1px solid rgba(255,255,255,.05); padding: 1.2rem 5vw; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .75rem; }
+    .f-copy { font-size: .67rem; color: rgba(255,255,255,.18); }
+    .f-disc { font-size: .63rem; color: rgba(255,255,255,.16); max-width: 380px; line-height: 1.65; text-align: right; }
+
+    /* ── WA FLOAT ── */
+    .wa-float { position: fixed; bottom: 2rem; right: 2rem; z-index: 500; width: 56px; height: 56px; background: var(--green); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 28px rgba(37,211,102,.40); text-decoration: none; transition: transform 350ms var(--spring), box-shadow 350ms; }
+    .wa-float:hover { transform: scale(1.08); box-shadow: 0 12px 40px rgba(37,211,102,.52); }
+    .wa-float svg { width: 26px; height: 26px; fill: white; }
+    .wa-float-pulse { position: absolute; inset: -4px; border-radius: 50%; border: 2px solid rgba(37,211,102,.35); animation: pulse 2.2s infinite; }
+
+    /* ── MOBILE BAR ── */
+    .mobile-bar { display: none; }
+
+    /* ── ANIMATIONS ── */
+    @keyframes pulse { 0%,100% { transform:scale(1); opacity:.38; } 50% { transform:scale(1.12); opacity:.1; } }
+
+    @media (max-width: 960px) {
+      .nav { top: .6rem; border-radius: 20px; padding: .5rem .75rem; }
+      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+      .f-main { grid-template-columns: 1fr 1fr; gap: 2rem; padding: 2.5rem 1.2rem 1.5rem; }
+      .f-brand { grid-column: 1 / -1; }
+      .f-bottom { padding: 1rem 1.2rem; }
+      .f-disc { text-align: left; max-width: 100%; }
+      .wa-float { display: none !important; }
+      body { padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px)); }
+      .mobile-bar { display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 600; border-top: 1px solid rgba(0,0,0,.07); box-shadow: 0 -4px 24px rgba(0,0,0,.10); padding-bottom: env(safe-area-inset-bottom, 0px); background: var(--cream); }
+      .mob-call { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: .65rem .5rem; min-height: 60px; background: var(--cream2); color: var(--navy); text-decoration: none; gap: .1rem; border-right: 1px solid rgba(0,0,0,.06); touch-action: manipulation; transition: background .15s; }
+      .mob-call:active { background: var(--cream3); }
+      .mob-wa { flex: 1.3; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: .65rem .5rem; min-height: 60px; background: var(--green); color: white; text-decoration: none; gap: .1rem; touch-action: manipulation; transition: background .15s; }
+      .mob-wa:active { background: #1fbb5a; }
+      .mob-call svg, .mob-wa svg { width: 20px; height: 20px; flex-shrink: 0; }
+      .mob-call svg { fill: var(--navy); }
+      .mob-wa svg { fill: white; }
+      .mob-label { font-size: .78rem; font-weight: 700; line-height: 1.1; }
+      .mob-sub { font-size: .6rem; opacity: .75; line-height: 1; }
+      .sidebar { position: static; }
+    }
+    @media (max-width: 480px) {
+      .page-hero { padding: 5.5rem 1.2rem 3rem; }
+      .f-main { grid-template-columns: 1fr; }
+      .f-brand { grid-column: auto; }
+    }
+
   </style>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -1124,7 +1327,7 @@ fbq('init', '891313025762477');
 fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=891313025762477&ev=PageView&noscript=1"/></noscript>
+src="https://www.facebook.com/tr?id=891313025762477&ev=PageView&noscript=1" alt=""/ alt=" alt=""></noscript>
 <!-- End Meta Pixel -->
   <script type="application/ld+json">
   {
@@ -1147,15 +1350,94 @@ src="https://www.facebook.com/tr?id=891313025762477&ev=PageView&noscript=1"/></n
   </script>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PGBS76ZX"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+<!-- GTM noscript -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PGBS76ZX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
+<a href="#main" class="skip-link">Saltar al contenido</a>
 
-<nav style="top:34px;">
-  <a href="/" class="n-logo">
-    <div style="height:40px;width:200px;display:flex;align-items:center;overflow:hidden;"><svg width="100%" height="100%" style="max-width:200px;max-height:46px;" viewBox="0 0 2782 773" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- MOBILE BAR -->
+<div class="mobile-bar" role="navigation" aria-label="Contacto rápido">
+  <a href="tel:+528183877237" class="mob-call" aria-label="Llamar al consultorio">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+    <span class="mob-label">Llamar</span>
+    <span class="mob-sub">818 387-7237</span>
+  </a>
+  <a href="https://wa.me/528126555222?text=Hola%2C%20le%C3%AD%20un%20art%C3%ADculo%20en%20el%20blog%20y%20quisiera%20agendar%20una%20consulta." target="_blank" rel="noopener" class="mob-wa" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    <span class="mob-label">WhatsApp</span>
+    <span class="mob-sub">Agendar cita</span>
+  </a>
+</div>
+
+<!-- NAV -->
+<nav class="nav" role="navigation" aria-label="Navegación principal">
+  <a href="/" class="nav-logo" aria-label="Dr. González Saldívar — Inicio">
+    <img src="../img/gonzalez-saldivar-logo.svg" alt="Dr. González Saldívar — Ortopedista Oncológico Monterrey" class="nav-logo-img" width="auto" height="38"/>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/#sobre-mi">Sobre mí</a></li>
+    <li><a href="/#servicios">Servicios</a></li>
+    <li class="has-dropdown">
+      <a href="/#blog">Padecimientos</a>
+      <div class="nav-dropdown">
+        <a class="dd-all" href="/">Ver todos →</a>
+        <span class="dd-label">Padecimientos</span>
+        <a href="/rodilla">Rodilla</a>
+        <a href="/cadera">Cadera</a>
+        <a href="/hombro">Hombro</a>
+        <a href="/hernia-disco">Hernia de Disco</a>
+        <a href="/tobillo">Tobillo</a>
+        <a href="/infiltraciones">Infiltraciones</a>
+      </div>
+    </li>
+    <li class="has-dropdown">
+      <a href="/blog/" style="color:var(--navy);font-weight:600;">Blog</a>
+      <div class="nav-dropdown">
+        <a class="dd-all" href="/blog/">Ver todos los artículos →</a>
+        <span class="dd-label">Artículos recientes</span>
+        <a href="/blog/reemplazo-rodilla">Dolor de rodilla</a>
+        <a href="/blog/dolor-cadera-adultos-jovenes">Dolor de cadera</a>
+        <a href="/blog/tumores-oseos-benignos-malignos">Tumores óseos</a>
+      </div>
+    </li>
+    <li><a href="/#resenas">Reseñas</a></li>
+    <li><a href="/segunda-opinion-oncologica" class="nav-segunda">Segunda Opinión</a></li>
+    <li><a href="https://wa.me/528126555222?text=Hola%2C%20le%C3%AD%20un%20art%C3%ADculo%20en%20el%20blog%20y%20quisiera%20agendar%20una%20consulta." target="_blank" rel="noopener" class="nav-cta">Agendar cita</a></li>
+  </ul>
+  <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navDrawer">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE DRAWER -->
+<div class="nav-drawer" id="navDrawer" role="dialog" aria-modal="true" aria-label="Menú de navegación">
+  <div class="nav-drawer-panel">
+    <a href="/#sobre-mi" onclick="closeDrawer()">Sobre mí</a>
+    <a href="/#servicios" onclick="closeDrawer()">Servicios</a>
+    <div class="drawer-group">
+      <button class="drawer-group-btn" onclick="toggleDrawerGroup(this)">
+        Padecimientos
+        <svg class="drawer-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="drawer-group-links">
+        <a href="/rodilla" onclick="closeDrawer()">Rodilla</a>
+        <a href="/cadera" onclick="closeDrawer()">Cadera</a>
+        <a href="/hombro" onclick="closeDrawer()">Hombro</a>
+        <a href="/hernia-disco" onclick="closeDrawer()">Hernia de Disco</a>
+        <a href="/tobillo" onclick="closeDrawer()">Tobillo</a>
+        <a href="/infiltraciones" onclick="closeDrawer()">Infiltraciones</a>
+      </div>
+    </div>
+    <a href="/blog/" onclick="closeDrawer()">Blog médico</a>
+    <a href="/#resenas" onclick="closeDrawer()">Reseñas</a>
+    <a href="/#contacto" onclick="closeDrawer()">Contacto</a>
+    <a href="/segunda-opinion-oncologica" class="nav-segunda" onclick="closeDrawer()">Segunda Opinión Oncológica</a>
+    <a href="https://wa.me/528126555222?text=Hola%2C%20le%C3%AD%20un%20art%C3%ADculo%20en%20el%20blog%20y%20quisiera%20agendar%20una%20consulta." target="_blank" rel="noopener" class="nav-cta" onclick="closeDrawer()">Agendar cita por WhatsApp</a>
+  </div>
+</div>
+
+<!-- OLD NAV PLACEHOLDER - REMOVED -->
+<nav class="nav" style="display:none;"><a href="/" class="n-logo"><div style="height:40px;width:200px;display:flex;align-items:center;overflow:hidden;"><svg width="100%" height="100%" style="max-width:200px;max-height:46px;" viewBox="0 0 2782 773" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M256.801 550.252C278.736 569.739 300.467 589.837 320.566 611.16C335.257 626.668 373.721 667.885 375.048 688.29C375.864 700.227 362.6 716.653 355.459 725.835C344.542 739.914 318.118 771.643 299.754 772.97C295.367 773.276 291.49 771.235 289.041 767.563C282.001 751.851 277.104 735.323 269.554 719.815C251.394 682.577 224.053 651.154 197.73 619.628L256.801 550.252Z" fill="#C6A586"/>
 <path d="M110.09 553.415C100.704 563.209 90.4001 573.207 80.2998 583.206L110.09 553.415Z" fill="#597288"/>
 <path d="M231.195 17.3829C235.582 19.5254 237.521 21.7699 240.786 25.0346C237.419 23.7083 232.114 20.7496 231.195 17.3829Z" fill="#597288"/>
@@ -1269,9 +1551,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       El desgaste articular no siempre lleva a cirugía — pero cuando sí lo hace, la prótesis total de rodilla puede devolverte la calidad de vida que perdiste. El Dr. González Saldívar te explica todo lo que necesitas saber.
     </p>
     <div class="hero-meta">
-      <span>👨‍⚕️ Dr. Juan Carlos González Saldívar</span>
-      <span>🏥 Ortopedista Oncológico · Monterrey</span>
-      <span>📖 8 min de lectura</span>
+      <div class="hero-meta-author">
+        <img src="../img/dr-avatar.webp" alt="Dr. Juan Carlos González Saldívar" class="hero-meta-avatar" width="200" height="200"/>
+        <div class="hero-meta-info">
+          <span class="hero-meta-name">Dr. Juan Carlos González Saldívar</span>
+          <span class="hero-meta-role">Ortopedista Oncológico · Monterrey</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1285,7 +1571,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <article>
 <!-- ══ E-E-A-T AUTHOR BADGE ══ -->
 <div style="display:flex;align-items:center;gap:1rem;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.2);border-radius:14px;padding:1rem 1.4rem;margin-bottom:2rem;">
-  <div style="width:48px;height:48px;background:linear-gradient(135deg,#0d1f3c,#1a3356);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;">👨‍⚕️</div>
+  <img src="../img/dr-avatar.webp" alt="Dr. Juan Carlos González Saldívar" width="200" height="200" style="width:48px;height:48px;border-radius:50%;overflow:hidden;flex-shrink:0;object-fit:cover;object-position:top center;display:block;"/>
   <div>
     <p style="font-weight:700;color:var(--navy,#0d1f3c);font-size:.9rem;margin:0 0 .15rem;">Dr. Juan Carlos González Saldívar</p>
     <p style="font-size:.78rem;color:var(--gray,#666);margin:0;">Cirujano Ortopedista · <strong>Alta Especialidad en Oncología Ortopédica</strong> · Cédula 12293070</p>
@@ -1303,7 +1589,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           "Muchos pacientes llegan convencidos de que ya es hora de operarse — y a veces la respuesta es sí, pero muchas veces no. Lo primero es entender qué grado de desgaste tienes y qué opciones hay antes de hablar de cirugía."
         </p>
         <div style="display:flex;align-items:center;gap:.8rem;margin-top:1.2rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,.1);">
-          <div style="width:36px;height:36px;background:rgba(200,146,42,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;">👨‍⚕️</div>
+          <img src="../img/dr-avatar.webp" alt="Dr. Juan Carlos González Saldívar" width="200" height="200" style="width:36px;height:36px;border-radius:50%;overflow:hidden;flex-shrink:0;object-fit:cover;object-position:top center;display:block;"/>
           <div>
             <p style="font-weight:600;color:white;font-size:.83rem;">Dr. Juan Carlos González Saldívar</p>
             <p style="font-size:.72rem;color:rgba(255,255,255,.5);">Ortopedista · Plaza Contry D-13, Monterrey</p>
@@ -1323,31 +1609,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <svg viewBox="0 0 680 300" width="100%" style="max-width:680px;display:block;margin:0 auto;" xmlns="http://www.w3.org/2000/svg">
     <rect width="680" height="300" fill="#f8f7f4" rx="10"/>
     <rect x="270" y="20" width="140" height="80" rx="8" fill="#e8edf5" stroke="#122952" stroke-width="1.5"/>
-    <text x="340" y="66" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#0D2144" font-weight="600">Fémur</text>
+    <text x="340" y="66" text-anchor="middle" font-family="Poppins,sans-serif" font-size="11" fill="#3D5264" font-weight="600">Fémur</text>
     <path d="M255,100 Q255,88 270,88 L410,88 Q425,88 425,100 L420,120 Q400,130 340,130 Q280,130 260,120 Z" fill="#7DBACC" opacity="0.9"/>
-    <text x="340" y="113" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#FFFFFF" font-weight="700">Componente femoral (metal)</text>
+    <text x="340" y="113" text-anchor="middle" font-family="Poppins,sans-serif" font-size="10" fill="#FFFFFF" font-weight="700">Componente femoral (metal)</text>
     <rect x="258" y="130" width="164" height="22" rx="4" fill="#C8A96E" opacity="0.9"/>
-    <text x="340" y="145" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#0D2144" font-weight="700">Inserto de polietileno</text>
+    <text x="340" y="145" text-anchor="middle" font-family="Poppins,sans-serif" font-size="10" fill="#3D5264" font-weight="700">Inserto de polietileno</text>
     <rect x="255" y="152" width="170" height="20" rx="4" fill="#7DBACC" opacity="0.75"/>
-    <text x="340" y="166" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#FFFFFF" font-weight="600">Bandeja tibial (metal)</text>
+    <text x="340" y="166" text-anchor="middle" font-family="Poppins,sans-serif" font-size="10" fill="#FFFFFF" font-weight="600">Bandeja tibial (metal)</text>
     <rect x="270" y="172" width="140" height="80" rx="8" fill="#e8edf5" stroke="#122952" stroke-width="1.5"/>
-    <text x="340" y="218" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#0D2144" font-weight="600">Tibia</text>
+    <text x="340" y="218" text-anchor="middle" font-family="Poppins,sans-serif" font-size="11" fill="#3D5264" font-weight="600">Tibia</text>
     <line x1="253" y1="100" x2="180" y2="80" stroke="#6B7280" stroke-width="0.8" stroke-dasharray="3,2"/>
-    <text x="175" y="74" text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#6B7280">Cromo-cobalto</text>
-    <text x="175" y="84" text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#6B7280">o titanio</text>
+    <text x="175" y="74" text-anchor="end" font-family="Poppins,sans-serif" font-size="9" fill="#6B7280">Cromo-cobalto</text>
+    <text x="175" y="84" text-anchor="end" font-family="Poppins,sans-serif" font-size="9" fill="#6B7280">o titanio</text>
     <line x1="258" y1="141" x2="180" y2="141" stroke="#6B7280" stroke-width="0.8" stroke-dasharray="3,2"/>
-    <text x="175" y="137" text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#6B7280">UHMWPE</text>
-    <text x="175" y="147" text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#6B7280">(15-25 años)</text>
+    <text x="175" y="137" text-anchor="end" font-family="Poppins,sans-serif" font-size="9" fill="#6B7280">UHMWPE</text>
+    <text x="175" y="147" text-anchor="end" font-family="Poppins,sans-serif" font-size="9" fill="#6B7280">(15-25 años)</text>
     <path d="M 530,100 A 70,70 0 0 1 530,220" fill="none" stroke="#C8A96E" stroke-width="2" stroke-dasharray="4,3"/>
-    <text x="615" y="155" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#C8A96E" font-weight="700">120°-130°</text>
-    <text x="615" y="167" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#6B7280">rango de movilidad</text>
+    <text x="615" y="155" text-anchor="middle" font-family="Poppins,sans-serif" font-size="9" fill="#C8A96E" font-weight="700">120°-130°</text>
+    <text x="615" y="167" text-anchor="middle" font-family="Poppins,sans-serif" font-size="9" fill="#6B7280">rango de movilidad</text>
     <rect x="30" y="100" width="130" height="72" rx="8" fill="white" stroke="#122952" stroke-width="1" opacity="0.8"/>
-    <text x="95" y="122" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#0D2144" font-weight="700">Rodilla con artrosis</text>
+    <text x="95" y="122" text-anchor="middle" font-family="Poppins,sans-serif" font-size="9" fill="#3D5264" font-weight="700">Rodilla con artrosis</text>
     <ellipse cx="95" cy="148" rx="35" ry="18" fill="#fde8e8" stroke="#E53E3E" stroke-width="1.5"/>
-    <text x="95" y="145" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#E53E3E">Cartílago</text>
-    <text x="95" y="157" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#E53E3E">desgastado</text>
-    <text x="175" y="145" text-anchor="middle" font-family="Inter,sans-serif" font-size="20" fill="#C8A96E">→</text>
-    <text x="340" y="272" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#6B7280">Las prótesis modernas tienen una duración estimada de 20-30 años en pacientes activos con seguimiento del especialista</text>
+    <text x="95" y="145" text-anchor="middle" font-family="Poppins,sans-serif" font-size="8" fill="#E53E3E">Cartílago</text>
+    <text x="95" y="157" text-anchor="middle" font-family="Poppins,sans-serif" font-size="8" fill="#E53E3E">desgastado</text>
+    <text x="175" y="145" text-anchor="middle" font-family="Poppins,sans-serif" font-size="20" fill="#C8A96E">→</text>
+    <text x="340" y="272" text-anchor="middle" font-family="Poppins,sans-serif" font-size="9" fill="#6B7280">Las prótesis modernas tienen una duración estimada de 20-30 años en pacientes activos con seguimiento del especialista</text>
   </svg>
           <figcaption>Esquema de los componentes de una prótesis total de rodilla: femoral, tibial y rotuliano</figcaption>
         </figure>
