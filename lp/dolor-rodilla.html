@@ -6,143 +6,532 @@
 <link rel="icon" href="../img/favicon.ico" type="image/x-icon"/>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PGBS76ZX');</script>
 <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','891313025762477');fbq('track','PageView');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
-:root{--navy:#597288;--navy2:#3D5264;--gold:#C6A586;--gold-xl:#7DBACC;--cream:#F0F2F2;--cream2:#E3EAED;--dark:#1A2630;--gray:#6B7E8A;--gray2:#4A5F6B;--border:#C9D3D4;--green:#25D366;--white:#fff;--FD:'Poppins',system-ui,sans-serif;--FB:'Source Sans 3',system-ui,sans-serif;--sh1:0 24px 64px rgba(26,38,48,.11);--sh2:0 8px 32px rgba(26,38,48,.08);--r-sm:10px;--r-md:16px;--r-lg:20px;--r-xl:28px;--spring:cubic-bezier(0.32,0.72,0,1);--expo:cubic-bezier(0.19,1.0,0.22,1.0);}
+/* ── TOKENS (igual que index.html) ── */
+:root{
+  --navy:#597288;--navy2:#3D5264;--blue:#4A6880;
+  --gold:#C6A586;--gold-l:#B89070;--gold-xl:#7DBACC;
+  --cream:#F0F2F2;--cream2:#E3EAED;--cream3:#D5E0E4;
+  --off:#E3EAED;--sky:#C9D3D4;--white:#FFFFFF;--light:#E3EAED;
+  --dark:#1A2630;--gray:#6B7E8A;--gray2:#4A5F6B;--border:#C9D3D4;--green:#25D366;
+  --FD:'Poppins',system-ui,sans-serif;--FB:'Source Sans 3',system-ui,sans-serif;
+  --sh1:0 24px 64px rgba(26,38,48,.11);--sh2:0 8px 32px rgba(26,38,48,.08);--sh3:0 2px 14px rgba(26,38,48,.05);
+  --r-sm:10px;--r-md:16px;--r-lg:20px;--r-xl:28px;
+  --spring:cubic-bezier(0.32,0.72,0,1);--expo:cubic-bezier(0.19,1.0,0.22,1.0);--soft:cubic-bezier(0.25,0,0,1);
+}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:var(--FB);background:var(--cream);color:var(--dark);line-height:1.6;overflow-x:hidden;}
-body::before{content:'';position:fixed;inset:0;z-index:9998;pointer-events:none;opacity:.028;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");background-size:400px;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--FB);background:var(--cream);color:var(--dark);overflow-x:hidden;line-height:1.6;}
+body::before{content:'';position:fixed;inset:0;z-index:9998;pointer-events:none;opacity:.028;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.78' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)'/%3E%3C/svg%3E");background-size:400px;}
+img{max-width:100%;display:block;}
 a{color:inherit;text-decoration:none;}
-.lp-nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(240,242,242,.96);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:.75rem 5vw;display:flex;align-items:center;justify-content:space-between;}
-.lp-nav img{height:38px;width:auto;}
-.lp-nav-cta{background:var(--green);color:#fff;padding:.55rem 1.2rem;border-radius:50px;font-family:var(--FD);font-size:.78rem;font-weight:700;display:flex;align-items:center;gap:.4rem;transition:transform .25s var(--spring);}.lp-nav-cta:hover{transform:translateY(-1px);}
-/* HERO — urgency style */
-.lp-hero{background:var(--navy);padding:7rem 5vw 5rem;position:relative;overflow:hidden;min-height:85vh;display:flex;align-items:center;}
-.lp-hero::before{content:'';position:absolute;top:-30%;left:-15%;width:600px;height:600px;background:radial-gradient(circle,rgba(125,186,204,.12) 0%,transparent 65%);pointer-events:none;}
-.lp-hero::after{content:'';position:absolute;top:-30%;right:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(198,165,134,.1) 0%,transparent 65%);pointer-events:none;}
-.lp-hero-inner{max-width:680px;margin:0 auto;position:relative;z-index:1;}
-.lp-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(37,211,102,.15);border:1px solid rgba(37,211,102,.3);color:#4ade80;font-family:var(--FD);font-size:.68rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:.4rem 1rem;border-radius:50px;margin-bottom:1rem;}
-.lp-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:#4ade80;animation:pulse 1.5s infinite;}
-@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.3;}}
-.lp-eyebrow{display:inline-flex;align-items:center;gap:.5rem;background:rgba(198,165,134,.15);border:1px solid rgba(198,165,134,.3);color:var(--gold);font-family:var(--FD);font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:.4rem 1rem;border-radius:50px;margin-bottom:1.5rem;}
-.lp-h1{font-family:var(--FD);font-size:clamp(2rem,4.5vw,3.6rem);font-weight:700;color:#fff;line-height:1.06;letter-spacing:-.03em;margin-bottom:1.25rem;}
-.lp-h1 em{color:var(--gold);font-style:normal;}
-.lp-desc{font-size:1rem;color:rgba(240,242,242,.82);line-height:1.75;margin-bottom:1.5rem;max-width:560px;}
-/* URGENCY CHECKLIST */
-.lp-checks{list-style:none;display:flex;flex-direction:column;gap:.6rem;margin-bottom:2.5rem;}
-.lp-checks li{display:flex;align-items:center;gap:.6rem;font-family:var(--FD);font-size:.82rem;color:rgba(240,242,242,.9);}
-.lp-checks li::before{content:'✓';width:18px;height:18px;border-radius:50%;background:var(--gold);color:#fff;font-size:.6rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.lp-btns{display:flex;flex-wrap:wrap;gap:.75rem;}
-.btn-wa-lg{display:inline-flex;align-items:center;gap:.6rem;background:var(--green);color:#fff;border-radius:50px;padding:1rem 2rem;font-family:var(--FD);font-weight:700;font-size:.9rem;box-shadow:0 12px 36px rgba(37,211,102,.32);transition:transform 350ms var(--spring),box-shadow 350ms;}
-.btn-wa-lg:hover{transform:translateY(-3px);box-shadow:0 18px 44px rgba(37,211,102,.42);}
-.btn-tel{display:inline-flex;align-items:center;gap:.6rem;border:1.5px solid rgba(255,255,255,.35);color:#fff;border-radius:50px;padding:.95rem 1.75rem;font-family:var(--FD);font-weight:600;font-size:.88rem;transition:all 350ms var(--spring);}
-.btn-tel:hover{background:rgba(255,255,255,.1);}
-/* TRUST */
-.lp-trust{background:var(--white);border-bottom:1px solid var(--border);padding:1rem 5vw;display:flex;align-items:center;justify-content:center;gap:0;flex-wrap:wrap;}
-.lp-trust-item{display:flex;align-items:center;gap:.5rem;font-family:var(--FD);font-size:.72rem;font-weight:500;color:var(--gray2);padding:.4rem 1.2rem;}
-.lp-trust-item:not(:last-child){border-right:1px solid var(--border);}
-/* CONDITIONS */
-.lp-conditions{padding:5rem 5vw;background:var(--cream);}
-.cond-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;max-width:960px;margin:2rem auto 0;}
-.cond-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r-lg);padding:1.5rem;display:flex;gap:1rem;align-items:flex-start;box-shadow:0 2px 14px rgba(26,38,48,.05);}
-.cond-dot{width:10px;height:10px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:.35rem;}
-.cond-card h3{font-family:var(--FD);font-size:.88rem;font-weight:600;color:var(--dark);margin-bottom:.3rem;}
-.cond-card p{font-size:.78rem;color:var(--gray);line-height:1.5;}
-/* WHY */
-.lp-why{padding:5rem 5vw;background:var(--navy);}
-.why-inner{max-width:760px;margin:0 auto;text-align:center;}
-.why-title{font-family:var(--FD);font-size:clamp(1.6rem,3vw,2.4rem);font-weight:700;color:#fff;margin-bottom:1rem;}
-.why-desc{font-size:.9rem;color:rgba(240,242,242,.75);line-height:1.75;margin-bottom:2.5rem;}
-.why-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:2.5rem;}
-.why-stat{text-align:center;padding:1.5rem;background:rgba(255,255,255,.06);border-radius:var(--r-lg);border:1px solid rgba(255,255,255,.08);}
-.why-stat-num{font-family:var(--FD);font-size:2.5rem;font-weight:700;color:var(--gold);line-height:1;}
-.why-stat-label{font-size:.75rem;color:rgba(240,242,242,.6);margin-top:.4rem;}
-/* CTA */
-.lp-cta{padding:5rem 5vw;background:var(--cream2);text-align:center;}
-.lp-cta h2{font-family:var(--FD);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;color:var(--dark);margin-bottom:1rem;}
-.lp-cta p{font-size:.9rem;color:var(--gray);margin-bottom:2rem;max-width:500px;margin-left:auto;margin-right:auto;}
-.lp-footer{background:var(--navy);padding:2rem 5vw;text-align:center;}
-.lp-footer p{font-size:.75rem;color:rgba(240,242,242,.5);}
+::selection{background:var(--gold);color:white;}
+
+/* SCROLL REVEAL */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .65s var(--expo),transform .65s var(--expo);}
+.reveal.visible{opacity:1;transform:none;}
+.reveal-l{opacity:0;transform:translateX(-28px);transition:opacity .65s var(--expo),transform .65s var(--expo);}
+.reveal-l.visible{opacity:1;transform:none;}
+.reveal-r{opacity:0;transform:translateX(28px);transition:opacity .65s var(--expo),transform .65s var(--expo);}
+.reveal-r.visible{opacity:1;transform:none;}
+.d1{transition-delay:.1s;}.d2{transition-delay:.2s;}.d3{transition-delay:.3s;}.d4{transition-delay:.4s;}.d5{transition-delay:.5s;}.d6{transition-delay:.6s;}
+
+/* ── NAV — Floating Island (igual que index) ── */
+.lp-nav{
+  position:fixed;top:.85rem;left:50%;transform:translateX(-50%);
+  z-index:400;display:flex;align-items:center;justify-content:space-between;
+  width:min(1120px,calc(100vw - 1.4rem));
+  padding:.55rem .9rem .55rem 1.3rem;
+  background:rgba(240,242,242,.94);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
+  border-radius:50px;border:1px solid rgba(198,165,134,.16);
+  box-shadow:0 4px 32px rgba(26,38,48,.10),inset 0 1px 0 rgba(255,255,255,.65);
+  transition:box-shadow 500ms var(--spring);
+}
+.lp-nav img{height:40px;width:auto;}
+.nav-cta{
+  background:var(--green)!important;color:#fff!important;
+  padding:.48rem 1.2rem;border-radius:50px;
+  font-family:var(--FD);font-size:.76rem!important;font-weight:700!important;
+  display:inline-flex!important;align-items:center;gap:.4rem;
+  box-shadow:0 6px 20px rgba(37,211,102,.28);
+  transition:transform 280ms var(--spring),box-shadow 280ms;min-height:40px;
+}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(37,211,102,.38);}
+
+/* FLOATING WA — desktop only */
+.wa-float{position:fixed;bottom:32px;right:24px;z-index:997;width:60px;height:60px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 32px rgba(37,211,102,.55);animation:waBounce 5s ease-in-out infinite;}
+.wa-float::before{content:'';position:absolute;inset:-6px;border-radius:50%;background:rgba(37,211,102,.28);animation:waPulse 2s infinite;}
+.wa-float::after{content:'';position:absolute;inset:-14px;border-radius:50%;background:rgba(37,211,102,.14);animation:waPulse 2s .75s infinite;}
+.wa-label{position:absolute;right:68px;background:#25a244;color:#fff;font-family:var(--FD);font-size:.74rem;font-weight:700;padding:.38rem .9rem;border-radius:50px;white-space:nowrap;opacity:0;transform:translateX(6px);transition:opacity .25s,transform .25s;box-shadow:0 4px 16px rgba(37,211,102,.4);pointer-events:none;}
+.wa-float:hover .wa-label{opacity:1;transform:translateX(0);}
+.wa-float:hover{transform:scale(1.08);animation-play-state:paused;}
+@keyframes waPulse{0%{transform:scale(1);opacity:.85;}70%{transform:scale(1.55);opacity:0;}100%{transform:scale(1.55);opacity:0;}}
+@keyframes waBounce{0%,100%{transform:translateY(0);}8%{transform:translateY(-7px);}16%{transform:translateY(0);}24%{transform:translateY(-3px);}32%{transform:translateY(0);}}
+
+/* ── HERO split (igual que index) ── */
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:100dvh;padding-top:80px;position:relative;overflow:hidden;}
+.hero-left{
+  display:flex;flex-direction:column;justify-content:center;
+  padding:4rem 3.5rem 4rem 5vw;
+  background:var(--navy);position:relative;overflow:hidden;
+}
+.hero-left::before{content:'';position:absolute;top:-100px;right:-100px;width:520px;height:520px;background:radial-gradient(ellipse at 60% 40%,rgba(198,165,134,.18) 0%,transparent 65%);pointer-events:none;}
+.hero-left::after{content:'';position:absolute;bottom:-80px;left:-80px;width:360px;height:360px;background:radial-gradient(circle,rgba(61,82,100,.38) 0%,transparent 70%);pointer-events:none;}
+.hero-tag{display:inline-flex;align-items:center;gap:.5rem;background:rgba(198,165,134,.10);border:1px solid rgba(198,165,134,.22);color:var(--gold-xl);font-family:var(--FD);font-size:.64rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:.32rem .88rem;border-radius:50px;margin-bottom:1.4rem;width:fit-content;}
+.hero-tag::before{content:'';width:5px;height:5px;background:var(--gold-xl);border-radius:50%;flex-shrink:0;animation:dot-pulse 1.5s infinite;}
+@keyframes dot-pulse{0%,100%{opacity:1;}50%{opacity:.25;}}
+.hero-h1{font-family:var(--FD);font-size:clamp(2rem,3.6vw,3.8rem);font-weight:700;line-height:1.05;color:#fff;margin-bottom:.6rem;letter-spacing:-.03em;}
+.hero-h1 em{color:var(--gold);font-style:normal;}
+.hero-spec{font-size:.72rem;font-weight:500;color:rgba(255,255,255,.36);letter-spacing:.18em;text-transform:uppercase;margin-bottom:1.6rem;}
+.hero-desc{font-size:.88rem;line-height:1.9;color:rgba(255,255,255,.6);max-width:390px;margin-bottom:1.8rem;}
+.hero-checks{list-style:none;display:flex;flex-direction:column;gap:.55rem;margin-bottom:2rem;}
+.hero-checks li{display:flex;align-items:center;gap:.65rem;font-family:var(--FD);font-size:.78rem;color:rgba(255,255,255,.82);}
+.hero-checks li::before{content:'✓';min-width:18px;height:18px;border-radius:50%;background:var(--gold);color:var(--dark);font-size:.6rem;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.hero-btns{display:flex;gap:.7rem;flex-wrap:wrap;margin-bottom:2rem;}
+.btn-wa{display:inline-flex;align-items:center;gap:.5rem;background:var(--green);color:#fff;padding:.82rem 1.5rem;border-radius:50px;font-family:var(--FD);font-size:.82rem;font-weight:700;box-shadow:0 8px 28px rgba(37,211,102,.28);transition:transform 350ms var(--spring),box-shadow 350ms;min-height:48px;}
+.btn-wa:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(37,211,102,.40);}
+.btn-wa svg{width:16px;height:16px;fill:#fff;flex-shrink:0;}
+.btn-outline{display:inline-flex;align-items:center;gap:.5rem;border:1px solid rgba(255,255,255,.18);color:rgba(255,255,255,.88);padding:.82rem 1.4rem;border-radius:50px;font-family:var(--FD);font-size:.82rem;font-weight:500;transition:border-color 300ms,background 300ms;min-height:48px;backdrop-filter:blur(4px);}
+.btn-outline:hover{border-color:rgba(255,255,255,.44);background:rgba(255,255,255,.07);}
+.hero-schedule{background:rgba(198,165,134,.08);border:1px solid rgba(198,165,134,.20);border-radius:var(--r-sm);padding:.82rem 1.1rem;width:fit-content;}
+.hero-schedule-label{font-size:.61rem;color:var(--gold-xl);font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.25rem;}
+.hero-schedule-val{font-size:.76rem;color:rgba(255,255,255,.62);}
+
+/* HERO RIGHT — carousel */
+.hero-right{position:relative;overflow:hidden;background:var(--cream3);}
+.carousel{position:relative;width:100%;height:100%;}
+.carousel-track{position:relative;width:100%;height:100%;}
+.carousel-slide{position:absolute;inset:0;opacity:0;transition:opacity 1s var(--soft);}
+.carousel-slide.active{opacity:1;}
+.carousel-slide img{width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform 8s ease-out;}
+.carousel-slide.active img{transform:scale(1.04);}
+.carousel-slide img{transform:scale(1);}
+.carousel-overlay{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(12,8,2,.88) 0%,transparent 55%);padding:2.5rem 1.5rem 5rem;}
+.carousel-name{font-family:var(--FD);font-size:1rem;font-weight:500;color:#fff;margin-bottom:.1rem;}
+.carousel-sub{font-size:.64rem;color:var(--gold-xl);letter-spacing:.1em;text-transform:uppercase;}
+.carousel-dots{position:absolute;bottom:3.5rem;left:50%;transform:translateX(-50%);display:flex;gap:.4rem;z-index:10;}
+.carousel-dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.28);border:none;cursor:pointer;padding:0;transition:background 400ms var(--spring),transform 400ms var(--spring);min-width:6px;}
+.carousel-dot.active{background:var(--gold-xl);transform:scale(1.5);}
+.carousel-prev,.carousel-next{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.08);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.14);color:#fff;width:36px;height:36px;border-radius:50%;cursor:pointer;z-index:10;display:flex;align-items:center;justify-content:center;transition:background 250ms,transform 250ms var(--spring);font-size:1.2rem;padding:0;line-height:1;}
+.carousel-prev:hover,.carousel-next:hover{background:rgba(255,255,255,.18);}
+.carousel-prev{left:.8rem;}.carousel-next{right:.8rem;}
+.hero-badge-star{position:absolute;top:1.3rem;right:1.3rem;z-index:20;background:rgba(240,242,242,.96);border-radius:var(--r-sm);padding:.48rem .82rem;box-shadow:0 8px 28px rgba(0,0,0,.18),inset 0 1px 0 rgba(255,255,255,.8);display:flex;align-items:center;gap:.45rem;border:1px solid rgba(198,165,134,.14);}
+.hero-badge-star-icon{color:#E8A020;font-size:.9rem;}
+.hero-badge-star p{font-size:.74rem;font-weight:700;color:var(--navy);line-height:1;}
+.hero-badge-star span{font-size:.59rem;color:var(--gray);}
+.hero-badge-avail{position:absolute;bottom:5rem;left:-1rem;z-index:20;background:rgba(89,114,136,.95);border:1px solid rgba(198,165,134,.22);border-radius:var(--r-md);padding:.7rem 1.1rem;box-shadow:0 8px 32px rgba(0,0,0,.35);}
+.hero-badge-avail-label{font-size:.59rem;color:var(--gold-xl);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.18rem;}
+.hero-badge-avail-val{font-size:.95rem;font-weight:700;color:#fff;font-family:var(--FD);}
+.hero-badge-avail-sub{font-size:.59rem;color:rgba(255,255,255,.42);}
+
+/* ── TRUST BAR ── */
+.trust-bar{background:var(--cream);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:.85rem 5vw;display:flex;align-items:center;justify-content:center;gap:0;flex-wrap:wrap;}
+.trust-item{display:flex;align-items:center;gap:.48rem;padding:.35rem 1.6rem;position:relative;}
+.trust-item:not(:last-child)::after{content:'';position:absolute;right:0;top:20%;bottom:20%;width:1px;background:var(--border);}
+.trust-item svg{width:14px;height:14px;stroke:var(--gold);flex-shrink:0;fill:none;stroke-width:1.8;}
+.trust-item span{font-size:.71rem;font-weight:500;color:var(--navy);}
+.trust-rating{background:var(--cream2);border-radius:50px;padding:.22rem .75rem;display:flex;align-items:center;gap:.32rem;border:1px solid var(--border);}
+.trust-rating-star{color:#E8A020;font-size:.78rem;}
+.trust-rating-num{font-weight:700;color:var(--dark);font-size:.71rem;}
+.trust-rating-lbl{color:var(--gray);font-size:.63rem;}
+
+/* ── SEGUROS BAR ── */
+.seguros-bar{background:var(--white);border-bottom:1px solid var(--border);padding:.9rem 5vw;display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:wrap;}
+.seguros-label{font-family:var(--FD);font-size:.65rem;font-weight:700;color:var(--gray);letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;}
+.seguros-logos{display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap;justify-content:center;}
+.seguros-logos img{height:24px;width:auto;object-fit:contain;filter:grayscale(1);opacity:.55;transition:opacity .2s,filter .2s;}
+.seguros-logos img:hover{filter:grayscale(0);opacity:1;}
+.seguros-divider{width:1px;height:28px;background:var(--border);flex-shrink:0;}
+
+/* ── SECTION BASE ── */
+.section{padding:6rem 5vw;}
+.section-inner{max-width:1100px;margin:0 auto;}
+.s-tag{display:inline-flex;align-items:center;gap:.45rem;font-family:var(--FD);font-size:.68rem;font-weight:600;color:var(--gold);margin-bottom:1rem;letter-spacing:.1em;text-transform:uppercase;}
+.s-tag::before{content:'';width:5px;height:5px;background:var(--gold);border-radius:50%;flex-shrink:0;opacity:.7;}
+.s-title{font-family:var(--FD);font-size:clamp(1.75rem,3vw,2.6rem);font-weight:700;color:var(--navy);line-height:1.12;margin-bottom:.8rem;letter-spacing:-.02em;}
+.s-title em{font-style:italic;color:var(--gold);}
+.s-lead{font-size:.92rem;color:var(--gray);line-height:1.88;max-width:500px;}
+.divider{width:36px;height:1.5px;background:var(--gold);border-radius:2px;margin:1.4rem 0;opacity:.65;}
+
+/* ── CONDITIONS GRID ── */
+.cond-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem;margin-top:2.5rem;}
+.cond-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r-lg);padding:1.5rem;display:flex;gap:1rem;align-items:flex-start;box-shadow:var(--sh3);transition:transform .3s var(--spring),box-shadow .3s;}
+.cond-card:hover{transform:translateY(-4px);box-shadow:var(--sh2);}
+.cond-icon{width:40px;height:40px;border-radius:var(--r-sm);background:var(--cream2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.1rem;}
+.cond-card h3{font-family:var(--FD);font-size:.88rem;font-weight:600;color:var(--navy);margin-bottom:.3rem;}
+.cond-card p{font-size:.78rem;color:var(--gray);line-height:1.55;}
+
+/* ── ABOUT / DOCTOR ── */
+.about{background:var(--cream2);}
+.about-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:3rem;align-items:stretch;}
+.about-photos{position:relative;padding:.5rem;background:var(--cream2);border:1px solid var(--border);border-radius:calc(var(--r-xl) + .5rem);box-shadow:var(--sh1);display:flex;flex-direction:column;}
+.about-photo-main{flex:1;width:100%;min-height:0;object-fit:cover;object-position:top center;border-radius:var(--r-xl);display:block;}
+.about-content p{font-size:.9rem;line-height:1.95;color:var(--gray);margin-bottom:1.1rem;}
+.about-creds{margin-top:1.75rem;display:flex;flex-direction:column;gap:.6rem;}
+.about-cred{display:flex;align-items:center;gap:.9rem;background:var(--white);border-radius:var(--r-sm);padding:.8rem 1rem;border:1px solid var(--border);transition:transform 300ms var(--spring),box-shadow 300ms;}
+.about-cred:hover{transform:translateX(4px);box-shadow:var(--sh3);}
+.about-cred-icon{width:34px;height:34px;background:var(--navy);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.about-cred-icon svg{width:16px;height:16px;stroke:rgba(255,255,255,.85);fill:none;stroke-width:1.8;}
+.about-cred-title{font-size:.8rem;font-weight:600;color:var(--navy);display:block;}
+.about-cred-sub{font-size:.7rem;color:var(--gray);display:block;margin-top:.08rem;}
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.75rem 0;}
+.stat-box{text-align:center;background:var(--white);border:1px solid var(--border);border-radius:var(--r-md);padding:1.25rem .75rem;box-shadow:var(--sh3);}
+.stat-num{font-family:var(--FD);font-size:2rem;font-weight:700;color:var(--navy);line-height:1;}
+.stat-lbl{font-size:.66rem;color:var(--gray);margin-top:.3rem;text-transform:uppercase;letter-spacing:.08em;}
+.hosp-logos{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.25rem;align-items:center;}
+.hosp-logos img{height:28px;width:auto;object-fit:contain;opacity:.6;filter:grayscale(1);transition:opacity .2s;}
+.hosp-logos img:hover{opacity:1;filter:grayscale(0);}
+
+/* ── SERVICES (navy bg) ── */
+.services{background:var(--navy);position:relative;overflow:hidden;padding:6rem 5vw;}
+.services::before{content:'';position:absolute;top:-200px;right:-200px;width:700px;height:700px;background:radial-gradient(circle,rgba(198,165,134,.06) 0%,transparent 60%);pointer-events:none;}
+.services .s-tag{color:var(--gold-xl);}
+.services .s-tag::before{background:var(--gold-xl);}
+.services .s-title{color:#fff;}
+.services .s-title em{color:var(--gold-xl);}
+.services .s-lead{color:rgba(255,255,255,.45);}
+
+/* ── TESTIMONIALS ── */
+.test-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.4rem;margin-top:2.5rem;}
+.test-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r-lg);padding:1.75rem;box-shadow:var(--sh3);transition:transform .3s var(--spring);}
+.test-card:hover{transform:translateY(-3px);}
+.test-stars{color:#E8A020;font-size:.95rem;margin-bottom:.85rem;}
+.test-text{font-size:.87rem;color:var(--dark);line-height:1.72;margin-bottom:1.2rem;font-style:italic;}
+.test-author{display:flex;align-items:center;gap:.7rem;}
+.test-avatar{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--FD);font-size:.82rem;font-weight:700;color:#fff;flex-shrink:0;}
+.test-name{font-family:var(--FD);font-size:.8rem;font-weight:700;color:var(--dark);}
+.test-date{font-size:.7rem;color:var(--gray);}
+.test-google{display:flex;align-items:center;gap:.35rem;margin-top:1rem;padding-top:.9rem;border-top:1px solid var(--border);font-family:var(--FD);font-size:.65rem;color:var(--gray);}
+
+/* ── FAQ ── */
+.faq-list{max-width:700px;margin:2.5rem auto 0;}
+.faq-item{border:1px solid var(--border);border-radius:var(--r-md);background:var(--white);margin-bottom:.75rem;overflow:hidden;box-shadow:var(--sh3);}
+.faq-q{width:100%;text-align:left;display:flex;justify-content:space-between;align-items:center;padding:1.2rem 1.5rem;font-family:var(--FD);font-size:.88rem;font-weight:600;color:var(--navy);background:none;border:none;cursor:pointer;gap:1rem;transition:color .2s;}
+.faq-q:hover{color:var(--gold);}
+.faq-icon{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:var(--cream2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;transition:background .25s,border-color .25s;}
+.faq-icon svg{transition:transform .3s var(--spring);}
+.faq-item.open .faq-icon{background:var(--navy);border-color:var(--navy);}
+.faq-item.open .faq-icon svg{stroke:#fff;transform:rotate(180deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s var(--expo);}
+.faq-a-inner{padding:0 1.5rem 1.25rem;font-size:.86rem;color:var(--gray);line-height:1.75;}
+.faq-item.open .faq-a{max-height:300px;}
+
+/* ── CTA FINAL ── */
+.lp-cta{background:var(--navy);padding:6rem 5vw;text-align:center;position:relative;overflow:hidden;}
+.lp-cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(198,165,134,.08) 0%,transparent 60%);pointer-events:none;}
+.lp-cta h2{font-family:var(--FD);font-size:clamp(1.8rem,3vw,2.8rem);font-weight:700;color:#fff;margin-bottom:1rem;position:relative;}
+.lp-cta p{font-size:.95rem;color:rgba(255,255,255,.6);margin-bottom:2.5rem;max-width:500px;margin-left:auto;margin-right:auto;line-height:1.85;}
+.btns-center{display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center;}
+.btn-wa-lg{display:inline-flex;align-items:center;gap:.65rem;background:var(--green);color:#fff;border-radius:50px;padding:1rem 2rem;font-family:var(--FD);font-weight:700;font-size:.9rem;box-shadow:0 14px 40px rgba(37,211,102,.32);transition:transform 350ms var(--spring),box-shadow 350ms;min-height:52px;}
+.btn-wa-lg:hover{transform:translateY(-3px);box-shadow:0 20px 50px rgba(37,211,102,.42);}
+.btn-wa-lg svg{fill:#fff;flex-shrink:0;}
+.btn-phone{display:inline-flex;align-items:center;gap:.5rem;border:1.5px solid rgba(255,255,255,.25);color:#fff;border-radius:50px;padding:.95rem 1.75rem;font-family:var(--FD);font-weight:600;font-size:.88rem;transition:all 300ms var(--spring);min-height:52px;}
+.btn-phone:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.45);}
+
+/* FOOTER */
+.lp-footer{background:var(--dark);padding:2rem 5vw;text-align:center;}
+.lp-footer p{font-size:.7rem;color:rgba(240,242,242,.35);}
 .lp-footer a{color:var(--gold);}
+
+/* MOBILE BAR */
 .mobile-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:998;display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--border);background:var(--cream);}
-.mobile-bar a{display:flex;align-items:center;justify-content:center;gap:.5rem;padding:.9rem;font-family:var(--FD);font-size:.78rem;font-weight:600;}
-.mobile-bar .mb-call{color:var(--navy);border-right:1px solid var(--border);}.mobile-bar .mb-wa{background:var(--green);color:#fff;}
-@media(min-width:961px){.mobile-bar{display:none!important;}}
-@media(max-width:960px){.lp-hero{min-height:auto;padding:6rem 1.2rem 4rem;}.lp-conditions,.lp-why,.lp-cta{padding:3.5rem 1.2rem;}.lp-trust{padding:.6rem 1rem;}.lp-trust-item{font-size:.68rem;padding:.3rem .7rem;}.mobile-bar{display:grid;}.why-stats{grid-template-columns:repeat(3,1fr);gap:.75rem;}}
-@media(max-width:640px){.lp-trust{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;justify-content:flex-start;}.lp-trust::-webkit-scrollbar{display:none;}.lp-trust-item{flex-shrink:0;}.why-stats{grid-template-columns:1fr 1fr;}}
-@media(max-width:480px){.lp-h1{font-size:2rem;}.lp-btns{flex-direction:column;}.btn-wa-lg,.btn-tel{width:100%;justify-content:center;}.why-stats{grid-template-columns:1fr;}.cond-grid{grid-template-columns:1fr;}}
+.mobile-bar a{display:flex;align-items:center;justify-content:center;gap:.5rem;padding:.9rem;font-family:var(--FD);font-size:.78rem;font-weight:700;}
+.mobile-bar .mb-call{color:var(--navy);border-right:1px solid var(--border);}
+.mobile-bar .mb-wa{background:var(--green);color:#fff;}
+
+/* RESPONSIVE */
+@media(min-width:961px){.mobile-bar{display:none!important;}.wa-float{display:flex;}}
+@media(max-width:960px){
+  .hero{grid-template-columns:1fr;min-height:auto;padding-top:70px;}
+  .hero-left{padding:4rem 1.5rem 3rem;}
+  .hero-right{height:50vw;min-height:200px;max-height:260px;}
+  .section,.lp-cta,.about{padding:3.5rem 1.4rem;}
+  .about-grid{grid-template-columns:1fr;}
+  .mobile-bar{display:grid;}
+  .wa-float{display:none;}
+  .lp-nav{top:.5rem;}
+  .carousel-overlay{padding-bottom:4rem;}
+  body{padding-bottom:calc(56px + env(safe-area-inset-bottom,0px));}
+}
+@media(max-width:640px){
+  .trust-bar{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;justify-content:flex-start;}
+  .trust-bar::-webkit-scrollbar{display:none;}
+  .trust-item{flex-shrink:0;}
+  .seguros-bar{gap:.8rem;}
+  .stat-row{grid-template-columns:repeat(3,1fr);}
+}
+@media(max-width:480px){
+  .hero-h1{font-size:2rem;}
+  .hero-right{height:44vw;min-height:170px;}
+  .hero-btns,.btns-center{flex-direction:column;}
+  .btn-wa,.btn-outline,.btn-wa-lg,.btn-phone{width:100%;justify-content:center;}
+  .cond-grid{grid-template-columns:1fr;}
+  .stat-row{grid-template-columns:1fr 1fr;}
+}
 </style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PGBS76ZX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- MOBILE BAR -->
 <div class="mobile-bar">
-  <a href="tel:+528183877237" class="mb-call"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .96h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91A16 16 0 0015.1 17.92l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>Llamar</a>
-  <a href="https://wa.me/528126555222?text=Hola%2C%20tengo%20dolor%20de%20rodilla%20y%20quisiera%20agendar%20una%20consulta." class="mb-wa" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>WhatsApp</a>
+  <a href="tel:+528183877237" class="mb-call">
+    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .96h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91A16 16 0 0015.1 17.92l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+    Llamar
+  </a>
+  <a href="https://wa.me/528126555222?text=Hola%2C%20tengo%20dolor%20de%20rodilla%20y%20quisiera%20agendar%20una%20consulta." class="mb-wa" target="_blank" rel="noopener">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    WhatsApp
+  </a>
 </div>
+
+<!-- FLOATING WA -->
+<a href="https://wa.me/528126555222?text=Hola%2C%20tengo%20dolor%20de%20rodilla%20y%20quisiera%20agendar%20una%20consulta." class="wa-float" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+  <span class="wa-label">Escríbenos</span>
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- NAV FLOATING ISLAND -->
 <nav class="lp-nav">
-  <a href="/"><img src="../img/gonzalez-saldivar-logo.svg" alt="Dr. González Saldívar" width="140" height="38"/></a>
-  <a href="https://wa.me/528126555222?text=Hola%2C%20tengo%20dolor%20de%20rodilla%20y%20quisiera%20agendar%20una%20consulta." class="lp-nav-cta" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Agendar Cita</a>
+  <a href="/"><img src="../img/gonzalez-saldivar-logo.svg" alt="Dr. González Saldívar" width="140" height="40"/></a>
+  <a href="https://wa.me/528126555222?text=Hola%2C%20tengo%20dolor%20de%20rodilla%20y%20quisiera%20agendar%20una%20consulta." class="nav-cta" target="_blank" rel="noopener">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    Agendar Cita
+  </a>
 </nav>
-<section class="lp-hero">
-  <div class="lp-hero-inner">
-    <div class="lp-badge">Disponibilidad esta semana</div>
-    <div class="lp-eyebrow">Ortopedista en Contry · Zona Tec · San Pedro</div>
-    <h1 class="lp-h1">Dolor de Rodilla en Monterrey — <em>Diagnóstico el Mismo Día</em></h1>
-    <p class="lp-desc">No sigas aguantando. El dolor de rodilla tiene solución — desde menisco hasta artritis avanzada, el Dr. González Saldívar evalúa tu caso y te da un plan claro desde la primera consulta.</p>
-    <ul class="lp-checks">
-      <li>Ortopedista especialista en rodilla — no médico general</li>
+
+<!-- HERO -->
+<section class="hero">
+  <!-- LEFT: content -->
+  <div class="hero-left">
+    <div class="hero-tag">Ortopedista en Contry · Zona Tec · San Pedro</div>
+    <h1 class="hero-h1">Dolor de Rodilla en Monterrey — <em>Diagnóstico el Mismo Día</em></h1>
+    <p class="hero-spec">Ortopedista Especialista · Cédula 9481533</p>
+    <p class="hero-desc">No sigas aguantando. El dolor de rodilla tiene solución — desde menisco hasta artritis avanzada. El Dr. González Saldívar evalúa tu caso y te da un plan claro desde la primera consulta.</p>
+    <ul class="hero-checks">
+      <li>Ortopedista especialista — no médico general</li>
       <li>Diagnóstico por imagen interpretado en consultorio</li>
-      <li>Artroscopía, PRP o ácido hialurónico según tu caso</li>
-      <li>Acepta GNP, AXA, MAPFRE, Allianz, MetLife y más</li>
+      <li>Siempre buscamos el enfoque más conservador posible</li>
+      <li>Acepta GNP, AXA, MAPFRE, MetLife y más</li>
     </ul>
-    <div class="lp-btns">
-      <a href="https://wa.me/528126555222?text=Hola%2C%20tengo%20dolor%20de%20rodilla%20y%20quisiera%20agendar%20una%20consulta." class="btn-wa-lg" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Agendar por WhatsApp</a>
-      <a href="tel:+528183877237" class="btn-tel"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .96h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91A16 16 0 0015.1 17.92l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>818 387-7237</a>
+    <div class="hero-btns">
+      <a href="https://wa.me/528126555222?text=Hola%2C%20tengo%20dolor%20de%20rodilla%20y%20quisiera%20agendar%20una%20consulta." class="btn-wa" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Agendar por WhatsApp
+      </a>
+      <a href="tel:+528183877237" class="btn-outline">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .96h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91A16 16 0 0015.1 17.92l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        818 387-7237
+      </a>
+    </div>
+    <div class="hero-schedule">
+      <div class="hero-schedule-label">Disponibilidad</div>
+      <div class="hero-schedule-val">Lun–Vie 10:00–19:30 · Sáb 10:00–13:00</div>
+    </div>
+  </div>
+
+  <!-- RIGHT: photo carousel -->
+  <div class="hero-right">
+    <div class="carousel" id="heroCarousel">
+      <div class="carousel-track">
+        <div class="carousel-slide active"><img src="../img/CropOs-17.jpg" alt="Dr. González explorando rodilla de paciente" loading="eager"/></div>
+        <div class="carousel-slide"><img src="../img/CropOs-15.jpg" alt="Dr. González Saldívar evaluando articulación de rodilla" loading="lazy"/></div>
+        <div class="carousel-slide"><img src="../img/CropOs-18.jpg" alt="Exploración física de rodilla en consultorio" loading="lazy"/></div>
+        <div class="carousel-slide"><img src="../img/CropOs-16.jpg" alt="Dr. González revisando movilidad de rodilla" loading="lazy"/></div>
+        <div class="carousel-slide"><img src="../img/CropOs-19.jpg" alt="Ortopedista oncólogo Monterrey — consulta rodilla" loading="lazy"/></div>
+      </div>
+      <div class="carousel-overlay">
+        <p class="carousel-name">Dr. Juan Carlos González Saldívar</p>
+        <p class="carousel-sub">Ortopedista · Oncólogo Ortopédico · CMOT</p>
+      </div>
+      <button class="carousel-prev" aria-label="Anterior" onclick="carouselMove(-1)">‹</button>
+      <button class="carousel-next" aria-label="Siguiente" onclick="carouselMove(1)">›</button>
+      <div class="carousel-dots" id="carouselDots"></div>
+    </div>
+    <div class="hero-badge-star">
+      <span class="hero-badge-star-icon">★</span>
+      <div><p>5.0 <span>Google Maps</span></p></div>
+    </div>
+    <div class="hero-badge-avail">
+      <div class="hero-badge-avail-label">Consulta desde</div>
+      <div class="hero-badge-avail-val">$1,200</div>
+      <div class="hero-badge-avail-sub">MXN · Primera cita</div>
     </div>
   </div>
 </section>
-<div class="lp-trust">
-  <div class="lp-trust-item"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Cédula 9481533</div>
-  <div class="lp-trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>5.0 Google</div>
-  <div class="lp-trust-item"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>Consulta desde $1,200</div>
-  <div class="lp-trust-item"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>Seguros Médicos</div>
-  <div class="lp-trust-item"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>CMOT Certificado</div>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Cédula 9481533</span></div>
+  <div class="trust-item"><div class="trust-rating"><span class="trust-rating-star">★</span><span class="trust-rating-num">5.0</span><span class="trust-rating-lbl">Google Maps</span></div></div>
+  <div class="trust-item"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg><span>Consulta $1,200 MXN</span></div>
+  <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg><span>CMOT Certificado</span></div>
+  <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M20 7H4a2 2 0 00-2 2v6a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/><circle cx="12" cy="12" r="2"/></svg><span>Seguros médicos</span></div>
 </div>
-<section class="lp-conditions">
-  <div style="text-align:center;margin-bottom:.5rem;">
-    <p style="font-family:var(--FD);font-size:.68rem;font-weight:600;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;">Tratamos</p>
-    <h2 style="font-family:var(--FD);font-size:clamp(1.5rem,2.8vw,2.2rem);font-weight:700;color:var(--dark);margin-top:.5rem;">¿Qué Causa tu Dolor de Rodilla?</h2>
+
+<!-- SEGUROS -->
+<div class="seguros-bar">
+  <span class="seguros-label">Trabajamos con tu seguro</span>
+  <div class="seguros-divider"></div>
+  <div class="seguros-logos">
+    <img src="../img/seguros/gnp.svg" alt="GNP Seguros" height="24"/>
+    <img src="../img/seguros/axa.svg" alt="AXA Seguros" height="24"/>
+    <img src="../img/seguros/mapfre.svg" alt="MAPFRE" height="24"/>
+    <img src="../img/seguros/metlife.webp" alt="MetLife" height="24"/>
+    <img src="../img/seguros/monterrey.webp" alt="Seguros Monterrey" height="24"/>
+    <img src="../img/seguros/bupa.svg" alt="Bupa" height="24"/>
   </div>
-  <div class="cond-grid">
-    <div class="cond-card"><div class="cond-dot"></div><div><h3>Lesión de Menisco</h3><p>Dolor al girar la rodilla, bloqueo articular, chasquido. Se trata con artroscopía de mínima invasión.</p></div></div>
-    <div class="cond-card"><div class="cond-dot"></div><div><h3>Rotura de Ligamento Cruzado</h3><p>Inestabilidad, rodilla "suelta". Reconstrucción artroscópica con injerto autólogo para retorno deportivo.</p></div></div>
-    <div class="cond-card"><div class="cond-dot"></div><div><h3>Artritis / Gonartrosis</h3><p>Desgaste del cartílago, dolor al subir escaleras. Desde infiltraciones hasta prótesis total de rodilla.</p></div></div>
-    <div class="cond-card"><div class="cond-dot"></div><div><h3>Bursitis y Tendinitis</h3><p>Inflamación de bolsas sinoviales o tendones. Manejo con infiltración dirigida y fisioterapia.</p></div></div>
-    <div class="cond-card"><div class="cond-dot"></div><div><h3>Condromalacia Rotuliana</h3><p>Dolor detrás de la rótula al subir escaleras o estar sentado. Frecuente en jóvenes y deportistas.</p></div></div>
-    <div class="cond-card"><div class="cond-dot"></div><div><h3>Fractura de Rótula</h3><p>Incapacidad de extender la rodilla. Cirugía de fijación con resultados predecibles y rápida recuperación.</p></div></div>
-  </div>
-</section>
-<section class="lp-why">
-  <div class="why-inner">
-    <h2 class="why-title">Más de 500 Pacientes Atendidos en Monterrey</h2>
-    <p class="why-desc">El Dr. González Saldívar es ortopedista especializado en rodilla con subespecialidad en Oncología Ortopédica. Ubicado en las colonias más accesibles de Monterrey.</p>
-    <div class="why-stats">
-      <div class="why-stat"><div class="why-stat-num">500+</div><div class="why-stat-label">Pacientes atendidos</div></div>
-      <div class="why-stat"><div class="why-stat-num">8</div><div class="why-stat-label">Años de experiencia</div></div>
-      <div class="why-stat"><div class="why-stat-num">5.0★</div><div class="why-stat-label">Google Maps</div></div>
+</div>
+
+<!-- CONDITIONS -->
+<section class="section">
+  <div class="section-inner">
+    <div class="reveal">
+      <div class="s-tag">Tratamos</div>
+      <h2 class="s-title">¿Qué Causa tu Dolor de Rodilla?</h2>
+      <div class="divider"></div>
+      <p class="s-lead">El diagnóstico correcto es el primer paso. No todos los dolores de rodilla son iguales — y no todos requieren cirugía.</p>
     </div>
-    <a href="https://wa.me/528126555222?text=Hola%2C%20tengo%20dolor%20de%20rodilla%20y%20quisiera%20agendar%20una%20consulta." class="btn-wa-lg" target="_blank" rel="noopener" style="display:inline-flex;"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Agenda Hoy — Sin Esperas Largas</a>
+    <div class="cond-grid">
+      <div class="cond-card reveal d1"><div class="cond-icon">🦴</div><div><h3>Lesión de Menisco</h3><p>Dolor al girar la rodilla, bloqueo articular, chasquido. Se trata con artroscopía de mínima invasión.</p></div></div>
+      <div class="cond-card reveal d2"><div class="cond-icon">⚡</div><div><h3>Rotura de Ligamento Cruzado</h3><p>Inestabilidad, rodilla "suelta". Reconstrucción artroscópica con injerto para retorno deportivo.</p></div></div>
+      <div class="cond-card reveal d3"><div class="cond-icon">🔬</div><div><h3>Artritis / Gonartrosis</h3><p>Desgaste del cartílago. Desde infiltraciones hasta prótesis total de rodilla según el caso.</p></div></div>
+      <div class="cond-card reveal d4"><div class="cond-icon">💉</div><div><h3>Bursitis y Tendinitis</h3><p>Inflamación de bolsas sinoviales o tendones. Infiltración dirigida y fisioterapia.</p></div></div>
+      <div class="cond-card reveal d5"><div class="cond-icon">🏃</div><div><h3>Condromalacia Rotuliana</h3><p>Dolor detrás de la rótula al subir escaleras. Frecuente en jóvenes y deportistas.</p></div></div>
+      <div class="cond-card reveal d6"><div class="cond-icon">🩹</div><div><h3>Fractura de Rótula</h3><p>Incapacidad de extender la rodilla. Fijación quirúrgica con rápida recuperación.</p></div></div>
+    </div>
   </div>
 </section>
+
+<!-- DOCTOR / ABOUT -->
+<section class="section about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-photos reveal-l">
+        <img class="about-photo-main" src="../img/dr-author-box.webp" alt="Dr. Juan Carlos González Saldívar — Ortopedista Monterrey"/>
+      </div>
+      <div class="reveal-r">
+        <div class="s-tag">Tu Especialista</div>
+        <h2 class="s-title">Dr. Juan Carlos González Saldívar</h2>
+        <div class="divider"></div>
+        <p class="about-content" style="font-size:.9rem;line-height:1.95;color:var(--gray);margin-bottom:1rem;">Médico especialista en Ortopedia y Traumatología con subespecialidad en Oncología Ortopédica. Formado en el Hospital Christus Muguerza Alta Especialidad con fellowship en cirugía oncológica ósea. Atiende tanto patología degenerativa común — rodilla, cadera — como casos oncológicos complejos.</p>
+        <div class="stat-row">
+          <div class="stat-box"><div class="stat-num counter" data-target="500">0</div><div class="stat-lbl">Pacientes</div></div>
+          <div class="stat-box"><div class="stat-num counter" data-target="6">0</div><div class="stat-lbl">Años exp.</div></div>
+          <div class="stat-box"><div class="stat-num">5.0★</div><div class="stat-lbl">Google</div></div>
+        </div>
+        <div class="about-creds">
+          <div class="about-cred"><div class="about-cred-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><span class="about-cred-title">Cédula Profesional 9481533</span><span class="about-cred-sub">SEP — Registro oficial verificable</span></div></div>
+          <div class="about-cred"><div class="about-cred-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg></div><div><span class="about-cred-title">CMOT Certificado</span><span class="about-cred-sub">Consejo Mexicano de Ortopedia y Traumatología</span></div></div>
+          <div class="about-cred"><div class="about-cred-icon"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><div><span class="about-cred-title">Alta Especialidad en Oncología Ortopédica</span><span class="about-cred-sub">Tec Salud — Monterrey, NL</span></div></div>
+        </div>
+        <div class="hosp-logos">
+          <img src="../img/hosp-muguerza.webp" alt="Hospital Muguerza" height="28"/>
+          <img src="../img/hosp-zambrano.webp" alt="Hospital Zambrano" height="28"/>
+          <img src="../img/hosp-doctos.webp" alt="Hospital Doctores" height="28"/>
+          <img src="../img/hosp-clinic.webp" alt="Clínica" height="28"/>
+        </div>
+        <div style="margin-top:2rem;">
+          <a href="https://wa.me/528126555222?text=Hola%2C%20tengo%20dolor%20de%20rodilla%20y%20quisiera%20agendar%20una%20consulta." class="btn-wa" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Agendar Consulta
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section" style="background:var(--cream2);">
+  <div class="section-inner">
+    <div class="reveal" style="text-align:center;">
+      <div class="s-tag" style="justify-content:center;display:inline-flex;">Opiniones Reales</div>
+      <h2 class="s-title" style="text-align:center;">Lo Que Dicen Nuestros Pacientes</h2>
+    </div>
+    <div class="test-grid">
+      <div class="test-card reveal d1">
+        <div class="test-stars">★★★★★</div>
+        <p class="test-text">"La atención del Doc. ha sido muy buena. Me ha dado mucha claridad en lo que es la lesión y cómo será la recuperación. 100% recomendado."</p>
+        <div class="test-author"><div class="test-avatar" style="background:#e37400;">H</div><div><div class="test-name">Hector Moreira</div><div class="test-date">mar 2023 · Google Maps</div></div></div>
+        <div class="test-google"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>Reseña verificada en Google</div>
+      </div>
+      <div class="test-card reveal d2">
+        <div class="test-stars">★★★★★</div>
+        <p class="test-text">"Fui a consulta por un dolor en la parte posterior de mi pierna derecha. Diagnóstico preciso, explicación muy clara del tratamiento a seguir. Excelente atención."</p>
+        <div class="test-author"><div class="test-avatar" style="background:#6a1b9a;">A</div><div><div class="test-name">Aldo Monroy</div><div class="test-date">jul 2023 · Google Maps</div></div></div>
+        <div class="test-google"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>Reseña verificada en Google</div>
+      </div>
+      <div class="test-card reveal d3">
+        <div class="test-stars">★★★★★</div>
+        <p class="test-text">"¡Excelente! Trato profesional y humano, sus explicaciones claras y precisas, muy acertado en tiempos de diagnóstico y pronósticos de rehabilitación."</p>
+        <div class="test-author"><div class="test-avatar" style="background:#c5221f;">L</div><div><div class="test-name">Lucy Zapata</div><div class="test-date">mar 2023 · Google Maps</div></div></div>
+        <div class="test-google"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>Reseña verificada en Google</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+  <div class="section-inner">
+    <div class="reveal" style="text-align:center;">
+      <div class="s-tag" style="justify-content:center;display:inline-flex;">Preguntas Frecuentes</div>
+      <h2 class="s-title" style="text-align:center;">Todo Lo Que Debes Saber</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal"><button class="faq-q" onclick="toggleFaq(this)">¿Cuánto dura la consulta inicial?<span class="faq-icon"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span></button><div class="faq-a"><div class="faq-a-inner">La primera consulta dura 40–60 minutos. Se revisan estudios previos, exploración física completa y se explica el diagnóstico y plan de tratamiento.</div></div></div>
+      <div class="faq-item reveal"><button class="faq-q" onclick="toggleFaq(this)">¿Acepta mi seguro médico?<span class="faq-icon"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span></button><div class="faq-a"><div class="faq-a-inner">Sí — GNP, AXA, MAPFRE, Allianz, MetLife, Seguros Monterrey y más. Confirma tu póliza al agendar por WhatsApp.</div></div></div>
+      <div class="faq-item reveal"><button class="faq-q" onclick="toggleFaq(this)">¿Necesito traer estudios previos?<span class="faq-icon"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span></button><div class="faq-a"><div class="faq-a-inner">Si tienes radiografías o resonancia magnética, tráelos. Si no, no te preocupes — el doctor puede solicitar los estudios necesarios en el hospital.</div></div></div>
+      <div class="faq-item reveal"><button class="faq-q" onclick="toggleFaq(this)">¿Toda rodilla operada necesita prótesis?<span class="faq-icon"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span></button><div class="faq-a"><div class="faq-a-inner">No. La gran mayoría son artroscópicas (mínima invasión). La prótesis se reserva para artritis severa cuando otras opciones se han agotado.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
 <section class="lp-cta">
-  <h2>El dolor de rodilla no mejora solo — actúa hoy</h2>
-  <p>Mientras más esperas, mayor el desgaste. Un diagnóstico temprano puede evitar la cirugía mayor. Agenda tu cita en minutos por WhatsApp.</p>
-  <div class="lp-btns" style="justify-content:center;">
-    <a href="https://wa.me/528126555222?text=Hola%2C%20tengo%20dolor%20de%20rodilla%20y%20quisiera%20agendar%20una%20consulta." class="btn-wa-lg" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Agendar Ahora</a>
-    <a href="tel:+528183877237" class="btn-tel" style="border-color:var(--navy);color:var(--navy);">818 387-7237</a>
+  <h2 class="reveal">El dolor de rodilla no mejora solo — actúa hoy</h2>
+  <p class="reveal">Mientras más esperas, mayor el desgaste. Un diagnóstico temprano puede evitar la cirugía mayor.</p>
+  <div class="btns-center reveal">
+    <a href="https://wa.me/528126555222?text=Hola%2C%20tengo%20dolor%20de%20rodilla%20y%20quisiera%20agendar%20una%20consulta." class="btn-wa-lg" target="_blank" rel="noopener">
+      <svg width="20" height="20" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Agendar Ahora
+    </a>
+    <a href="tel:+528183877237" class="btn-phone">
+      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .96h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91A16 16 0 0015.1 17.92l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+      818 387-7237
+    </a>
   </div>
 </section>
+
 <footer class="lp-footer">
+  <a href="../index.html" style="display:inline-block;margin-bottom:.6rem;color:var(--gold);font-family:var(--FD);font-size:.78rem;font-weight:600;text-decoration:none;opacity:.8;transition:opacity .2s;">← Conoce más sobre el Dr. González Saldívar en nuestro sitio</a>
   <p>© 2025 CorpOs Consultorio Articular — Dr. Juan Carlos González Saldívar · Cédula 9481533 · <a href="/">drgonzalezsaldivar.com</a></p>
 </footer>
+
+<script>
+/* CAROUSEL */
+let current=0;
+const slides=document.querySelectorAll('.carousel-slide');
+const dotsContainer=document.getElementById('carouselDots');
+slides.forEach((_,i)=>{const d=document.createElement('button');d.className='carousel-dot'+(i===0?' active':'');d.setAttribute('aria-label','Slide '+(i+1));d.onclick=()=>goTo(i);dotsContainer.appendChild(d);});
+function goTo(n){slides[current].classList.remove('active');dotsContainer.children[current].classList.remove('active');current=(n+slides.length)%slides.length;slides[current].classList.add('active');dotsContainer.children[current].classList.add('active');}
+function carouselMove(dir){goTo(current+dir);}
+setInterval(()=>carouselMove(1),5000);
+
+/* SCROLL REVEAL */
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:.1});
+document.querySelectorAll('.reveal,.reveal-l,.reveal-r').forEach(el=>obs.observe(el));
+
+/* COUNTERS */
+function animCounter(el){const t=+el.dataset.target,dur=1800,s=performance.now();const step=ts=>{const p=Math.min((ts-s)/dur,1),v=1-Math.pow(1-p,3);el.textContent=Math.floor(v*t)+(p>=1?'+':'');if(p<1)requestAnimationFrame(step);};requestAnimationFrame(step);}
+const cObs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting&&!e.target.dataset.counted){e.target.dataset.counted='1';animCounter(e.target);}});},{threshold:.5});
+document.querySelectorAll('.counter').forEach(el=>cObs.observe(el));
+
+/* FAQ */
+function toggleFaq(btn){const it=btn.closest('.faq-item');const open=it.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(i=>i.classList.remove('open'));if(!open)it.classList.add('open');}
+</script>
 </body></html>

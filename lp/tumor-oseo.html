@@ -4,144 +4,725 @@
 <meta name="description" content="¿Te encontraron un tumor óseo en Monterrey? Oncólogo ortopédico certificado CMOT. Evaluación urgente, biopsia y plan de tratamiento. Cédula 9481533."/>
 <meta name="robots" content="noindex,nofollow"/>
 <link rel="icon" href="../img/favicon.ico" type="image/x-icon"/>
+<!-- GTM -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PGBS76ZX');</script>
+<!-- Meta Pixel -->
 <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','891313025762477');fbq('track','PageView');</script>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
-:root{--navy:#597288;--navy2:#3D5264;--gold:#C6A586;--gold-xl:#7DBACC;--cream:#F0F2F2;--cream2:#E3EAED;--dark:#1A2630;--gray:#6B7E8A;--gray2:#4A5F6B;--border:#C9D3D4;--green:#25D366;--white:#fff;--FD:'Poppins',system-ui,sans-serif;--FB:'Source Sans 3',system-ui,sans-serif;--sh2:0 8px 32px rgba(26,38,48,.08);--r-sm:10px;--r-md:16px;--r-lg:20px;--r-xl:28px;--spring:cubic-bezier(0.32,0.72,0,1);--expo:cubic-bezier(0.19,1.0,0.22,1.0);}
+:root{
+  --navy:#597288;--navy2:#3D5264;--blue:#4A6880;
+  --gold:#C6A586;--gold-l:#B89070;--gold-xl:#7DBACC;
+  --cream:#F0F2F2;--cream2:#E3EAED;--cream3:#D5E0E4;
+  --dark:#1A2630;--gray:#6B7E8A;--gray2:#4A5F6B;--border:#C9D3D4;--green:#25D366;
+  --red:#ef4444;--red-soft:#fca5a5;--red-bg:rgba(239,68,68,.12);--red-border:rgba(239,68,68,.3);
+  --FD:'Poppins',system-ui,sans-serif;--FB:'Source Sans 3',system-ui,sans-serif;
+  --sh1:0 24px 64px rgba(26,38,48,.14);--sh2:0 8px 32px rgba(26,38,48,.08);--sh3:0 2px 12px rgba(26,38,48,.06);
+  --r-sm:10px;--r-md:16px;--r-lg:20px;--r-xl:28px;
+  --soft:cubic-bezier(0.32,0.72,0,1);--expo:cubic-bezier(0.19,1.0,0.22,1.0);
+}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
 body{font-family:var(--FB);background:var(--cream);color:var(--dark);line-height:1.6;overflow-x:hidden;}
-body::before{content:'';position:fixed;inset:0;z-index:9998;pointer-events:none;opacity:.028;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");background-size:400px;}
+body::before{content:'';position:fixed;inset:0;z-index:9998;pointer-events:none;opacity:.022;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");background-size:400px;}
 a{color:inherit;text-decoration:none;}
-.lp-nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(240,242,242,.96);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:.75rem 5vw;display:flex;align-items:center;justify-content:space-between;}
-.lp-nav img{height:38px;width:auto;}
-.lp-nav-cta{background:var(--navy);color:#fff;padding:.55rem 1.2rem;border-radius:50px;font-family:var(--FD);font-size:.78rem;font-weight:700;display:flex;align-items:center;gap:.4rem;transition:background .25s;}.lp-nav-cta:hover{background:var(--navy2);}
-/* HERO — alta urgencia, tono serio */
-.lp-hero{background:var(--navy);padding:7rem 5vw 5rem;position:relative;overflow:hidden;min-height:90vh;display:flex;align-items:center;}
-.lp-hero::before{content:'';position:absolute;top:-20%;right:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(198,165,134,.13) 0%,transparent 65%);pointer-events:none;}
-.lp-hero-inner{max-width:680px;margin:0 auto;position:relative;z-index:1;}
-.lp-urgency{display:inline-flex;align-items:center;gap:.5rem;background:rgba(239,68,68,.15);border:1px solid rgba(239,68,68,.35);color:#fca5a5;font-family:var(--FD);font-size:.68rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:.4rem 1rem;border-radius:50px;margin-bottom:1rem;}
-.lp-urgency::before{content:'';width:6px;height:6px;border-radius:50%;background:#f87171;animation:urgPulse 1.2s infinite;}
-@keyframes urgPulse{0%,100%{opacity:1;}50%{opacity:.2;}}
-.lp-eyebrow{display:inline-flex;align-items:center;gap:.5rem;background:rgba(198,165,134,.15);border:1px solid rgba(198,165,134,.3);color:var(--gold);font-family:var(--FD);font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:.4rem 1rem;border-radius:50px;margin-bottom:1.5rem;margin-left:.5rem;}
-.lp-h1{font-family:var(--FD);font-size:clamp(2rem,4.5vw,3.4rem);font-weight:700;color:#fff;line-height:1.06;letter-spacing:-.03em;margin-bottom:1.25rem;}
-.lp-h1 em{color:var(--gold);font-style:normal;}
-.lp-desc{font-size:1rem;color:rgba(240,242,242,.82);line-height:1.75;margin-bottom:1.5rem;max-width:560px;}
-.lp-callout{background:rgba(198,165,134,.12);border:1px solid rgba(198,165,134,.25);border-radius:var(--r-md);padding:1.25rem 1.5rem;margin-bottom:2.5rem;}
-.lp-callout p{font-size:.86rem;color:rgba(240,242,242,.88);line-height:1.7;}
-.lp-callout strong{color:var(--gold);}
-.lp-btns{display:flex;flex-wrap:wrap;gap:.75rem;}
-.btn-wa-lg{display:inline-flex;align-items:center;gap:.6rem;background:var(--green);color:#fff;border-radius:50px;padding:1rem 2rem;font-family:var(--FD);font-weight:700;font-size:.9rem;box-shadow:0 12px 36px rgba(37,211,102,.32);transition:transform 350ms var(--spring),box-shadow 350ms;}
-.btn-wa-lg:hover{transform:translateY(-3px);box-shadow:0 18px 44px rgba(37,211,102,.42);}
-.btn-tel{display:inline-flex;align-items:center;gap:.6rem;border:1.5px solid rgba(255,255,255,.35);color:#fff;border-radius:50px;padding:.95rem 1.75rem;font-family:var(--FD);font-weight:600;font-size:.88rem;transition:all 350ms var(--spring);}
-.btn-tel:hover{background:rgba(255,255,255,.1);}
-/* TRUST */
-.lp-trust{background:var(--white);border-bottom:1px solid var(--border);padding:1rem 5vw;display:flex;align-items:center;justify-content:center;gap:0;flex-wrap:wrap;}
-.lp-trust-item{display:flex;align-items:center;gap:.5rem;font-family:var(--FD);font-size:.72rem;font-weight:500;color:var(--gray2);padding:.4rem 1.2rem;}
-.lp-trust-item:not(:last-child){border-right:1px solid var(--border);}
-/* WHAT WE TREAT */
-.lp-what{padding:5rem 5vw;background:var(--cream);}
-.what-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem;max-width:960px;margin:2rem auto 0;}
-.what-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r-lg);padding:1.75rem;box-shadow:var(--sh2);}
-.what-card-tag{font-family:var(--FD);font-size:.62rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gray);margin-bottom:.75rem;}
-.what-card h3{font-family:var(--FD);font-size:.95rem;font-weight:700;color:var(--dark);margin-bottom:.5rem;}
-.what-card p{font-size:.82rem;color:var(--gray);line-height:1.6;}
-/* PROCESS */
-.lp-process{padding:5rem 5vw;background:var(--navy);}
-.proc-inner{max-width:720px;margin:0 auto;text-align:center;}
-.proc-title{font-family:var(--FD);font-size:clamp(1.5rem,2.8vw,2.2rem);font-weight:700;color:#fff;margin-bottom:.75rem;}
-.proc-desc{font-size:.9rem;color:rgba(240,242,242,.72);margin-bottom:2.5rem;}
-.proc-steps{display:flex;flex-direction:column;gap:.75rem;text-align:left;}
-.proc-step{display:flex;gap:1rem;align-items:flex-start;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-md);padding:1.25rem 1.5rem;}
-.proc-step-num{font-family:var(--FD);font-size:1.5rem;font-weight:700;color:var(--gold);opacity:.7;flex-shrink:0;line-height:1;width:32px;text-align:center;}
-.proc-step h4{font-family:var(--FD);font-size:.9rem;font-weight:600;color:#fff;margin-bottom:.25rem;}
-.proc-step p{font-size:.82rem;color:rgba(240,242,242,.68);line-height:1.6;}
-/* CTA */
-.lp-cta{padding:5rem 5vw;background:var(--cream2);text-align:center;}
-.lp-cta h2{font-family:var(--FD);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;color:var(--dark);margin-bottom:1rem;}
-.lp-cta p{font-size:.9rem;color:var(--gray);margin-bottom:2rem;max-width:520px;margin-left:auto;margin-right:auto;}
-.lp-footer{background:var(--navy);padding:2rem 5vw;text-align:center;}
-.lp-footer p{font-size:.75rem;color:rgba(240,242,242,.5);}
-.lp-footer a{color:var(--gold);}
-.mobile-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:998;display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--border);background:var(--cream);}
-.mobile-bar a{display:flex;align-items:center;justify-content:center;gap:.5rem;padding:.9rem;font-family:var(--FD);font-size:.78rem;font-weight:600;}
-.mobile-bar .mb-call{color:var(--navy);border-right:1px solid var(--border);}.mobile-bar .mb-wa{background:var(--green);color:#fff;}
-@media(min-width:961px){.mobile-bar{display:none!important;}}
-@media(max-width:960px){.lp-hero{min-height:auto;padding:6rem 1.2rem 4rem;}.lp-what,.lp-process,.lp-cta{padding:3.5rem 1.2rem;}.lp-trust{padding:.6rem 1rem;}.lp-trust-item{font-size:.68rem;padding:.3rem .7rem;}.mobile-bar{display:grid;}}
-@media(max-width:640px){.lp-trust{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;justify-content:flex-start;}.lp-trust::-webkit-scrollbar{display:none;}.lp-trust-item{flex-shrink:0;}.what-grid{grid-template-columns:1fr;}}
-@media(max-width:480px){.lp-h1{font-size:2rem;}.lp-btns{flex-direction:column;}.btn-wa-lg,.btn-tel{width:100%;justify-content:center;}}
+img{max-width:100%;height:auto;display:block;}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s var(--expo),transform .7s var(--expo);}
+.reveal.visible{opacity:1;transform:none;}
+.reveal-left{opacity:0;transform:translateX(-32px);transition:opacity .7s var(--expo),transform .7s var(--expo);}
+.reveal-left.visible{opacity:1;transform:none;}
+.reveal-right{opacity:0;transform:translateX(32px);transition:opacity .7s var(--expo),transform .7s var(--expo);}
+.reveal-right.visible{opacity:1;transform:none;}
+.reveal-d1{transition-delay:.1s;}.reveal-d2{transition-delay:.2s;}.reveal-d3{transition-delay:.3s;}.reveal-d4{transition-delay:.4s;}
+
+/* NAV — floating pill, identical to index.html */
+.lp-nav{
+  position:fixed;top:.85rem;left:50%;transform:translateX(-50%);
+  width:min(1120px,calc(100vw - 1.4rem));
+  padding:.55rem .9rem .55rem 1.3rem;
+  background:rgba(240,242,242,.94);backdrop-filter:blur(24px);
+  border-radius:50px;border:1px solid rgba(198,165,134,.16);
+  box-shadow:0 4px 32px rgba(26,38,48,.10),inset 0 1px 0 rgba(255,255,255,.65);
+  display:flex;align-items:center;justify-content:space-between;z-index:1000;
+  transition:background .35s,box-shadow .35s;
+}
+.lp-nav.scrolled{background:rgba(240,242,242,.98);box-shadow:0 4px 40px rgba(26,38,48,.14),inset 0 1px 0 rgba(255,255,255,.65);}
+.lp-nav img{height:36px;width:auto;}
+.lp-nav-right{display:flex;align-items:center;gap:.6rem;}
+.lp-nav-tel{font-family:var(--FD);font-size:.78rem;font-weight:600;color:var(--navy2);padding:.45rem 1rem;border-radius:50px;border:1px solid var(--border);}
+.lp-nav-cta{background:var(--red);color:#fff;padding:.55rem 1.3rem;border-radius:50px;font-family:var(--FD);font-size:.78rem;font-weight:700;display:flex;align-items:center;gap:.4rem;transition:transform .25s var(--soft),box-shadow .25s;}
+.lp-nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(239,68,68,.35);}
+
+/* HERO — split 50/50 */
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:100dvh;padding-top:80px;}
+.hero-left{background:var(--navy);display:flex;flex-direction:column;justify-content:center;padding:4rem 3.5rem 4rem 5vw;position:relative;overflow:hidden;}
+.hero-left::before{content:'';position:absolute;top:-20%;right:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(198,165,134,.12) 0%,transparent 65%);pointer-events:none;}
+.hero-left::after{content:'';position:absolute;bottom:-5%;left:-5%;width:400px;height:400px;background:radial-gradient(circle,rgba(239,68,68,.06) 0%,transparent 65%);pointer-events:none;}
+.hero-right{position:relative;overflow:hidden;background:var(--cream3);}
+
+/* Carousel */
+.carousel-slide{position:absolute;inset:0;opacity:0;transition:opacity 1s var(--soft);}
+.carousel-slide.active{opacity:1;}
+.carousel-slide img{width:100%;height:100%;object-fit:cover;object-position:top center;}
+.carousel-dots{position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);display:flex;gap:.45rem;z-index:5;}
+.carousel-dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.4);border:none;cursor:pointer;padding:0;transition:background .3s,transform .3s;}
+.carousel-dot.active{background:#fff;transform:scale(1.3);}
+
+/* Urgency badge */
+.urgency-bar{display:inline-flex;align-items:center;gap:.5rem;background:var(--red-bg);border:1px solid var(--red-border);color:var(--red-soft);font-family:var(--FD);font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.4rem 1rem;border-radius:50px;margin-bottom:1rem;}
+.urgency-dot{width:6px;height:6px;border-radius:50%;background:#f87171;animation:urgPulse 1.2s infinite;flex-shrink:0;}
+@keyframes urgPulse{0%,100%{opacity:1;}50%{opacity:.15;}}
+
+/* Hero content */
+.eyebrow{display:inline-flex;align-items:center;gap:.5rem;background:rgba(198,165,134,.15);border:1px solid rgba(198,165,134,.3);color:var(--gold);font-family:var(--FD);font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:.4rem 1rem;border-radius:50px;margin-bottom:1.5rem;}
+.eyebrow::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold);}
+.hero-h1{font-family:var(--FD);font-size:clamp(1.85rem,3vw,3.1rem);font-weight:800;color:#fff;line-height:1.07;letter-spacing:-.03em;margin-bottom:1.2rem;}
+.hero-h1 em{color:var(--gold);font-style:normal;}
+.hero-desc{font-size:.97rem;color:rgba(240,242,242,.82);line-height:1.77;margin-bottom:2rem;max-width:520px;}
+.hero-btns{display:flex;flex-wrap:wrap;gap:.75rem;}
+.btn-wa-lg{display:inline-flex;align-items:center;gap:.65rem;background:var(--green);color:#fff;border-radius:50px;padding:1.05rem 2rem;font-family:var(--FD);font-weight:700;font-size:.9rem;box-shadow:0 14px 40px rgba(37,211,102,.35);transition:transform 350ms var(--soft),box-shadow 350ms;}
+.btn-wa-lg:hover{transform:translateY(-3px);box-shadow:0 20px 50px rgba(37,211,102,.45);}
+.btn-outline{display:inline-flex;align-items:center;gap:.5rem;border:1.5px solid rgba(198,165,134,.5);color:rgba(240,242,242,.9);border-radius:50px;padding:1.05rem 1.8rem;font-family:var(--FD);font-weight:600;font-size:.88rem;transition:border-color .25s,background .25s;}
+.btn-outline:hover{border-color:var(--gold);background:rgba(198,165,134,.08);}
+.btn-urgente{display:inline-flex;align-items:center;gap:.65rem;background:var(--red);color:#fff;border-radius:50px;padding:1.05rem 2rem;font-family:var(--FD);font-weight:700;font-size:.9rem;box-shadow:0 14px 40px rgba(239,68,68,.3);transition:transform 350ms var(--soft),box-shadow 350ms;}
+.btn-urgente:hover{transform:translateY(-3px);box-shadow:0 20px 50px rgba(239,68,68,.4);}
+.hero-badge{display:inline-flex;align-items:center;gap:.4rem;font-size:.75rem;color:rgba(240,242,242,.6);margin-top:1.25rem;}
+.hero-badge svg{flex-shrink:0;}
+
+/* TRUST BAR */
+.trust-bar{background:#fff;border-bottom:1px solid var(--border);padding:.9rem 5vw;display:flex;align-items:center;justify-content:center;gap:0;flex-wrap:wrap;}
+.trust-item{display:flex;align-items:center;gap:.55rem;padding:.45rem 2rem;font-family:var(--FD);font-size:.75rem;font-weight:600;color:var(--gray2);position:relative;}
+.trust-item:not(:last-child)::after{content:'';position:absolute;right:0;top:50%;transform:translateY(-50%);height:18px;width:1px;background:var(--border);}
+.trust-icon{width:28px;height:28px;border-radius:50%;background:rgba(89,114,136,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+
+/* SEGUROS BAR */
+.seguros-bar{background:var(--cream2);border-bottom:1px solid var(--border);padding:1rem 5vw;display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:wrap;}
+.seguros-label{font-family:var(--FD);font-size:.72rem;font-weight:600;color:var(--gray);text-transform:uppercase;letter-spacing:.08em;white-space:nowrap;}
+.seguros-divider{width:1px;height:20px;background:var(--border);}
+.seguros-logos{display:flex;align-items:center;gap:1.8rem;flex-wrap:wrap;}
+.seguros-logos img{height:24px;width:auto;object-fit:contain;filter:grayscale(1);opacity:.55;transition:opacity .2s,filter .2s;}
+.seguros-logos img:hover{filter:grayscale(0);opacity:1;}
+
+/* SECTION BASE */
+section{padding:5rem 5vw;}
+.section-label{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--FD);font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);margin-bottom:1rem;}
+.section-label::before{content:'';width:24px;height:2px;background:var(--gold);}
+.section-title{font-family:var(--FD);font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:800;color:var(--dark);line-height:1.1;letter-spacing:-.025em;margin-bottom:1rem;}
+.section-title em{color:var(--navy);font-style:normal;}
+.section-sub{color:var(--gray);font-size:.97rem;max-width:580px;line-height:1.75;}
+
+/* WARNING BOX */
+.warning-box{background:rgba(234,88,12,.13);border:1px solid rgba(234,88,12,.4);border-left:4px solid #ea580c;border-radius:var(--r-md);padding:1.25rem 1.5rem;display:flex;gap:1rem;align-items:flex-start;margin:2rem 0;}
+.warning-icon{font-size:1.3rem;flex-shrink:0;line-height:1;}
+.warning-text{font-family:var(--FD);font-size:.88rem;font-weight:600;color:#9a3412;line-height:1.6;}
+.warning-text strong{font-weight:800;color:#7c2d12;}
+
+/* TUMORES GRID */
+.tumores-section{background:#fff;}
+.tumores-cols{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:3rem;}
+.tumor-group{background:var(--cream);border:1px solid var(--border);border-radius:var(--r-lg);padding:2rem 1.75rem;position:relative;overflow:hidden;}
+.tumor-group::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;}
+.tumor-group.maligno::before{background:linear-gradient(90deg,var(--red),#f97316);}
+.tumor-group.benigno::before{background:linear-gradient(90deg,var(--navy),var(--gold-xl));}
+.tumor-group-label{display:inline-flex;align-items:center;gap:.4rem;font-family:var(--FD);font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.3rem .8rem;border-radius:50px;margin-bottom:1.25rem;}
+.tumor-group.maligno .tumor-group-label{background:var(--red-bg);color:#dc2626;border:1px solid var(--red-border);}
+.tumor-group.benigno .tumor-group-label{background:rgba(89,114,136,.1);color:var(--navy2);border:1px solid rgba(89,114,136,.2);}
+.tumor-group h3{font-family:var(--FD);font-size:1.1rem;font-weight:700;color:var(--dark);margin-bottom:1rem;}
+.tumor-list{display:flex;flex-direction:column;gap:.6rem;}
+.tumor-item{display:flex;align-items:center;gap:.65rem;font-size:.87rem;color:var(--gray2);line-height:1.5;}
+.tumor-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+.tumor-group.maligno .tumor-dot{background:var(--red);}
+.tumor-group.benigno .tumor-dot{background:var(--navy);}
+
+/* PROCESO */
+.proceso-section{background:var(--cream2);}
+.proceso-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;margin-top:3rem;}
+.proceso-step{background:#fff;border-radius:var(--r-lg);padding:2rem 1.75rem;border:1px solid var(--border);position:relative;}
+.paso-num{font-family:var(--FD);font-size:3rem;font-weight:800;color:rgba(89,114,136,.12);line-height:1;margin-bottom:.75rem;}
+.proceso-step h3{font-family:var(--FD);font-size:.98rem;font-weight:700;color:var(--dark);margin-bottom:.5rem;}
+.proceso-step p{font-size:.86rem;color:var(--gray);line-height:1.7;}
+.proceso-step .step-tag{display:inline-block;background:rgba(89,114,136,.1);color:var(--navy2);font-family:var(--FD);font-size:.65rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.2rem .65rem;border-radius:50px;margin-bottom:.75rem;}
+
+/* SPLIT SECTION */
+.split-section{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;}
+.split-section.reverse{direction:rtl;}
+.split-section.reverse > *{direction:ltr;}
+.split-img-wrap{position:relative;border-radius:var(--r-xl);overflow:hidden;aspect-ratio:4/5;}
+.split-img-wrap img{width:100%;height:100%;object-fit:cover;object-position:top center;}
+.split-img-wrap .img-badge{position:absolute;bottom:1.5rem;left:1.5rem;background:rgba(26,38,48,.75);backdrop-filter:blur(12px);border-radius:var(--r-md);padding:.75rem 1.1rem;border:1px solid rgba(255,255,255,.12);}
+.img-badge p{font-family:var(--FD);font-size:.72rem;font-weight:600;color:#fff;line-height:1.4;}
+.img-badge span{font-size:.62rem;color:rgba(255,255,255,.55);}
+.split-content{display:flex;flex-direction:column;gap:1.5rem;}
+.creds-list{display:flex;flex-direction:column;gap:.75rem;margin-top:.5rem;}
+.cred-item{display:flex;align-items:flex-start;gap:.75rem;}
+.cred-dot{width:8px;height:8px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:.45rem;}
+.cred-text{font-size:.9rem;color:var(--gray2);line-height:1.6;}
+.cred-text strong{color:var(--dark);}
+
+/* TESTIMONIALS */
+.testimonials-section{background:#fff;}
+.testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:3rem;}
+.testi-card{background:var(--cream);border:1px solid var(--border);border-radius:var(--r-lg);padding:2rem 1.75rem;}
+.testi-stars{display:flex;gap:.2rem;margin-bottom:1rem;}
+.testi-star{color:var(--gold);font-size:1rem;}
+.testi-text{font-size:.9rem;color:var(--gray2);line-height:1.75;margin-bottom:1.25rem;font-style:italic;}
+.testi-author{display:flex;align-items:center;gap:.75rem;}
+.testi-avatar{width:40px;height:40px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;font-family:var(--FD);font-weight:700;color:#fff;font-size:.88rem;flex-shrink:0;}
+.testi-name{font-family:var(--FD);font-size:.82rem;font-weight:600;color:var(--dark);}
+.testi-detail{font-size:.75rem;color:var(--gray);}
+.testi-google{display:flex;align-items:center;gap:.35rem;margin-top:1rem;padding-top:.9rem;border-top:1px solid var(--border);font-family:var(--FD);font-size:.65rem;color:var(--gray);}
+
+/* STAT COUNTER */
+.stats-bar{background:var(--navy);padding:3rem 5vw;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:2rem;}
+.stat-item{text-align:center;}
+.stat-num{font-family:var(--FD);font-size:clamp(2rem,4vw,3rem);font-weight:800;color:#fff;line-height:1;}
+.stat-num span{color:var(--gold);}
+.stat-label{font-size:.82rem;color:rgba(240,242,242,.65);margin-top:.3rem;}
+
+/* FAQ */
+.faq-section{background:var(--cream2);}
+.faq-list{max-width:760px;margin:3rem auto 0;display:flex;flex-direction:column;gap:.75rem;}
+.faq-item{background:#fff;border:1px solid var(--border);border-radius:var(--r-md);overflow:hidden;}
+.faq-q{width:100%;background:none;border:none;cursor:pointer;padding:1.3rem 1.75rem;display:flex;align-items:center;justify-content:space-between;font-family:var(--FD);font-size:.95rem;font-weight:600;color:var(--dark);text-align:left;gap:1rem;}
+.faq-icon{width:24px;height:24px;border-radius:50%;background:rgba(89,114,136,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform .3s,background .3s;}
+.faq-item.open .faq-icon{transform:rotate(45deg);background:var(--navy);color:#fff;}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s var(--expo),padding .3s;}
+.faq-item.open .faq-a{max-height:300px;padding:0 1.75rem 1.5rem;}
+.faq-a p{font-size:.9rem;color:var(--gray2);line-height:1.75;}
+
+/* CTA FINAL */
+.cta-final{background:var(--navy2);padding:5rem 5vw;text-align:center;position:relative;overflow:hidden;}
+.cta-final::before{content:'';position:absolute;top:-40%;left:50%;transform:translateX(-50%);width:800px;height:800px;background:radial-gradient(circle,rgba(239,68,68,.07) 0%,transparent 60%);pointer-events:none;}
+.cta-final h2{font-family:var(--FD);font-size:clamp(1.6rem,3vw,2.6rem);font-weight:800;color:#fff;margin-bottom:1rem;line-height:1.15;}
+.cta-final p{color:rgba(240,242,242,.72);max-width:520px;margin:0 auto 2.5rem;line-height:1.75;font-size:.97rem;}
+.cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
+
+/* FLOATING WA */
+.wa-float{position:fixed;bottom:90px;right:22px;z-index:997;width:60px;height:60px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 32px rgba(37,211,102,.55);animation:waBounce 5s ease-in-out infinite;}
+.wa-float::before{content:'';position:absolute;inset:-6px;border-radius:50%;background:rgba(37,211,102,.28);animation:waPulse 2s infinite;}
+.wa-float::after{content:'';position:absolute;inset:-14px;border-radius:50%;background:rgba(37,211,102,.14);animation:waPulse 2s .75s infinite;}
+.wa-label{position:absolute;right:68px;background:#25a244;color:#fff;font-family:var(--FD);font-size:.74rem;font-weight:700;padding:.38rem .9rem;border-radius:50px;white-space:nowrap;opacity:0;transform:translateX(6px);transition:opacity .25s,transform .25s;box-shadow:0 4px 16px rgba(37,211,102,.4);pointer-events:none;}
+.wa-float:hover .wa-label{opacity:1;transform:translateX(0);}
+.wa-float:hover{transform:scale(1.08);animation-play-state:paused;}
+@keyframes waPulse{0%{transform:scale(1);opacity:.85;}70%{transform:scale(1.55);opacity:0;}100%{transform:scale(1.55);opacity:0;}}
+@keyframes waBounce{0%,100%{transform:translateY(0);}8%{transform:translateY(-7px);}16%{transform:translateY(0);}24%{transform:translateY(-3px);}32%{transform:translateY(0);}}
+
+/* SOCIEDADES */
+.socie-section{background:var(--cream2);padding:4rem 5vw;}
+.socie-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:2.5rem;}
+.socie-card{background:#fff;border:1px solid var(--border);border-radius:var(--r-lg);padding:2rem 1.5rem;display:flex;flex-direction:column;align-items:center;gap:1rem;text-align:center;transition:transform .3s var(--soft),box-shadow .3s;}
+.socie-card:hover{transform:translateY(-4px);box-shadow:var(--sh2);}
+.socie-logo{height:72px;width:auto;object-fit:contain;max-width:140px;}
+.socie-name{font-family:var(--FD);font-size:.8rem;font-weight:700;color:var(--dark);line-height:1.4;}
+.socie-type{font-size:.72rem;color:var(--gray);margin-top:.15rem;}
+@media(max-width:700px){.socie-grid{grid-template-columns:1fr 1fr;}}
+
+/* MOBILE BAR */
+.mobile-bar-lp{display:none;position:fixed;bottom:0;left:0;right:0;z-index:998;grid-template-columns:1fr 1fr;border-top:1px solid rgba(0,0,0,.08);background:var(--cream);box-shadow:0 -4px 20px rgba(0,0,0,.12);padding-bottom:env(safe-area-inset-bottom,0px);}
+.mobile-bar-lp a{display:flex;align-items:center;justify-content:center;gap:.45rem;padding:.9rem .5rem;font-family:var(--FD);font-size:.82rem;font-weight:700;min-height:56px;text-decoration:none;touch-action:manipulation;}
+.mobile-bar-lp .mbl-call{color:var(--navy);border-right:1px solid var(--border);}
+.mobile-bar-lp .mbl-wa{background:var(--red);color:#fff;}
+.mobile-bar-lp .mbl-call:active{background:var(--cream2);}
+.mobile-bar-lp .mbl-wa:active{background:#b91c1c;}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;min-height:auto;}
+  .hero-right{height:50vw;min-height:200px;max-height:260px;}
+  .hero-left{padding:4.5rem 6vw 3rem;}
+  .split-section{grid-template-columns:1fr;gap:2.5rem;}
+  .split-section.reverse{direction:ltr;}
+  .split-img-wrap{aspect-ratio:16/9;}
+  .tumores-cols{grid-template-columns:1fr;}
+  .lp-nav-tel{display:none;}
+  .stats-bar{grid-template-columns:1fr 1fr;}
+  .seguros-bar{gap:1rem;}
+  .seguros-divider{display:none;}
+  .wa-float{display:none!important;}
+  .mobile-bar-lp{display:grid;}
+  body{padding-bottom:calc(56px + env(safe-area-inset-bottom,0px));}
+}
+@media(max-width:600px){
+  section{padding:3rem 4.5vw;}
+  .trust-bar{gap:0;}
+  .trust-item{padding:.4rem 1.1rem;font-size:.7rem;}
+  .proceso-grid{grid-template-columns:1fr;}
+  .stats-bar{grid-template-columns:1fr 1fr;}
+  .hero-btns{flex-direction:column;}
+  .btn-wa-lg,.btn-urgente,.btn-outline{width:100%;justify-content:center;}
+  .cta-btns{flex-direction:column;align-items:center;}
+}
+@media(max-width:480px){
+  .hero-h1{font-size:1.95rem;}
+  .hero-right{height:44vw;min-height:170px;}
+}
 </style>
 </head>
 <body>
+<!-- GTM noscript -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PGBS76ZX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<div class="mobile-bar">
-  <a href="tel:+528183877237" class="mb-call"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .96h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91A16 16 0 0015.1 17.92l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>Llamar</a>
-  <a href="https://wa.me/528126555222?text=Hola%2C%20me%20encontraron%20un%20tumor%20%C3%B3seo%20y%20quisiera%20una%20evaluaci%C3%B3n%20urgente." class="mb-wa" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>WhatsApp</a>
-</div>
-<nav class="lp-nav">
-  <a href="/"><img src="../img/gonzalez-saldivar-logo.svg" alt="Dr. González Saldívar" width="140" height="38"/></a>
-  <a href="https://wa.me/528126555222?text=Hola%2C%20me%20encontraron%20un%20tumor%20%C3%B3seo%20y%20quisiera%20una%20evaluaci%C3%B3n%20urgente." class="lp-nav-cta" target="_blank" rel="noopener">Evaluación Urgente</a>
+
+<!-- FLOATING WA -->
+<a href="https://wa.me/528126555222?text=Hola%2C%20me%20encontraron%20un%20tumor%20%C3%B3seo%20y%20quisiera%20una%20evaluaci%C3%B3n%20urgente." class="wa-float" aria-label="Escríbenos por WhatsApp" target="_blank" rel="noopener">
+  <span class="wa-label">Escríbenos</span>
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- NAV -->
+<nav class="lp-nav" id="lpNav">
+  <a href="../index.html"><img src="../img/logo-gonzalez-saldivar.svg" alt="Dr. González Saldívar" loading="eager" width="160" height="40"/></a>
+  <div class="lp-nav-right">
+    <a href="tel:+528183877237" class="lp-nav-tel">📞 818 387-7237</a>
+    <a href="https://wa.me/528126555222?text=Hola%2C%20me%20encontraron%20un%20tumor%20%C3%B3seo%20y%20quisiera%20una%20evaluaci%C3%B3n%20urgente." class="lp-nav-cta" target="_blank" rel="noopener">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Evaluación Urgente
+    </a>
+  </div>
 </nav>
-<section class="lp-hero">
-  <div class="lp-hero-inner">
-    <div style="display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin-bottom:1.5rem;">
-      <div class="lp-urgency">Evaluación urgente disponible</div>
-      <div class="lp-eyebrow">Oncólogo Ortopédico — CMOT</div>
+
+<!-- HERO -->
+<section class="hero" aria-label="Tumor óseo Monterrey — oncólogo ortopédico">
+  <div class="hero-left">
+    <div class="urgency-bar">
+      <div class="urgency-dot"></div>
+      <span>Atención prioritaria disponible</span>
     </div>
-    <h1 class="lp-h1">Te Encontraron un Tumor Óseo — <em>Actúa Ahora</em></h1>
-    <p class="lp-desc">Un tumor óseo no diagnosticado a tiempo puede cambiar las opciones de tratamiento. El Dr. González Saldívar es oncólogo ortopédico certificado, especializado en tumores benignos y malignos del hueso.</p>
-    <div class="lp-callout"><p><strong>Lo que necesitas saber:</strong> La mayoría de los tumores óseos son benignos. Pero el diagnóstico preciso — quién hace la biopsia y cómo — puede ser la diferencia entre conservar el miembro o no. No esperes.</p></div>
-    <div class="lp-btns">
-      <a href="https://wa.me/528126555222?text=Hola%2C%20me%20encontraron%20un%20tumor%20%C3%B3seo%20y%20quisiera%20una%20evaluaci%C3%B3n%20urgente." class="btn-wa-lg" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Evaluación Urgente</a>
-      <a href="tel:+528183877237" class="btn-tel"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .96h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91A16 16 0 0015.1 17.92l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>818 387-7237</a>
+    <div class="eyebrow">
+      <span>Oncología Ortopédica · Monterrey NL</span>
     </div>
+    <h1 class="hero-h1">¿Te encontraron<br>un <em>Tumor Óseo</em>?<br>Actúa ya.</h1>
+    <p class="hero-desc">El tiempo importa. El Dr. González Saldívar —oncólogo ortopédico certificado CMOT en Monterrey— evalúa tu caso con prioridad para darte un diagnóstico certero y un plan de tratamiento claro.</p>
+    <div class="warning-box">
+      <span class="warning-icon">⚠️</span>
+      <p class="warning-text"><strong>Importante:</strong> Una biopsia de tumor óseo debe realizarla el mismo cirujano que operará. Una biopsia mal planeada puede comprometer la cirugía definitiva o la preservación del miembro.</p>
+    </div>
+    <div class="hero-btns">
+      <a href="https://wa.me/528126555222?text=Hola%2C%20me%20encontraron%20un%20tumor%20%C3%B3seo%20y%20quisiera%20una%20evaluaci%C3%B3n%20urgente." class="btn-urgente" target="_blank" rel="noopener">
+        🚨 Evaluación Urgente
+      </a>
+      <a href="tel:+528183877237" class="btn-outline">📞 Llamar ahora</a>
+    </div>
+    <p class="hero-badge">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(240,242,242,.5)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      Cédula Prof. 9481533 · Certificado CMOT
+    </p>
+  </div>
+  <div class="hero-right" aria-hidden="true">
+    <div class="carousel-slide active"><img src="../img/CropOs-33.jpg" alt="Dr. González Saldívar — Oncólogo Ortopédico Monterrey" loading="eager"/></div>
+    <div class="carousel-slide"><img src="../img/CropOs-36.jpg" alt="Dr. González Saldívar bata médica oncología" loading="lazy"/></div>
+    <div class="carousel-slide"><img src="../img/CropOs-43.jpg" alt="Dr. González en consulta oncológica con paciente" loading="lazy"/></div>
+    <div class="carousel-slide"><img src="../img/CropOs-39.jpg" alt="Dr. González Saldívar — especialista tumores óseos NL" loading="lazy"/></div>
+    <div class="carousel-slide"><img src="../img/CropOs-4.jpg" alt="Ortopedista oncólogo certificado CMOT Monterrey" loading="lazy"/></div>
+    <div class="carousel-dots" id="carouselDots"></div>
   </div>
 </section>
-<div class="lp-trust">
-  <div class="lp-trust-item"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Cédula 9481533</div>
-  <div class="lp-trust-item"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>CMOT Certificado</div>
-  <div class="lp-trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>5.0 Google</div>
-  <div class="lp-trust-item"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>Videoconsulta disponible</div>
-  <div class="lp-trust-item"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>Seguros Médicos</div>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item">
+    <div class="trust-icon">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    </div>
+    Certificado CMOT
+  </div>
+  <div class="trust-item">
+    <div class="trust-icon">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+    </div>
+    +15 Años en Tumores Óseos
+  </div>
+  <div class="trust-item">
+    <div class="trust-icon">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+    </div>
+    Cirugía con Conservación de Miembro
+  </div>
+  <div class="trust-item">
+    <div class="trust-icon">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+    </div>
+    Equipo Multidisciplinario
+  </div>
 </div>
-<section class="lp-what">
-  <div style="text-align:center;margin-bottom:.5rem;">
-    <p style="font-family:var(--FD);font-size:.68rem;font-weight:600;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;">Especialidad</p>
-    <h2 style="font-family:var(--FD);font-size:clamp(1.5rem,2.8vw,2.2rem);font-weight:700;color:var(--dark);margin-top:.5rem;">Tipos de Tumor Óseo que Tratamos</h2>
+
+<!-- SEGUROS BAR -->
+<div class="seguros-bar">
+  <span class="seguros-label">Trabajamos con tu seguro</span>
+  <div class="seguros-divider"></div>
+  <div class="seguros-logos">
+    <img src="../img/seguros/gnp.svg" alt="GNP Seguros" height="24"/>
+    <img src="../img/seguros/axa.svg" alt="AXA Seguros" height="24"/>
+    <img src="../img/seguros/mapfre.svg" alt="MAPFRE" height="24"/>
+    <img src="../img/seguros/metlife.webp" alt="MetLife" height="24"/>
+    <img src="../img/seguros/monterrey.webp" alt="Seguros Monterrey" height="24"/>
+    <img src="../img/seguros/bupa.svg" alt="Bupa" height="24"/>
   </div>
-  <div class="what-grid">
-    <div class="what-card"><div class="what-card-tag">Malignos — Primarios</div><h3>Osteosarcoma</h3><p>El tumor maligno óseo más frecuente. Afecta principalmente a adolescentes. Tratamiento con quimioterapia + cirugía de preservación de miembro.</p></div>
-    <div class="what-card"><div class="what-card-tag">Malignos — Primarios</div><h3>Sarcoma de Ewing</h3><p>Tumor agresivo que puede afectar cualquier hueso. Requiere tratamiento multidisciplinario: quimio, radioterapia y cirugía oncológica.</p></div>
-    <div class="what-card"><div class="what-card-tag">Malignos — Primarios</div><h3>Condrosarcoma</h3><p>Tumor del cartílago que afecta principalmente a adultos mayores. La cirugía es el tratamiento principal. Resistente a quimio y radio.</p></div>
-    <div class="what-card"><div class="what-card-tag">Malignos — Secundarios</div><h3>Metástasis Ósea</h3><p>Cáncer de mama, próstata, pulmón, riñón o tiroides que se extiende al hueso. Tratamiento paliativo para prevenir fractura y controlar dolor.</p></div>
-    <div class="what-card"><div class="what-card-tag">Benignos</div><h3>Tumor de Células Gigantes</h3><p>Tumor benigno localmente agresivo. Tratamiento quirúrgico con curetaje, cemento y, en algunos casos, denosumab preoperatorio.</p></div>
-    <div class="what-card"><div class="what-card-tag">Benignos</div><h3>Quiste Óseo / Osteoma</h3><p>Lesiones benignas que pueden causar dolor o fractura patológica. Muchas se manejan con observación; otras requieren cirugía mínima.</p></div>
-  </div>
-</section>
-<section class="lp-process">
-  <div class="proc-inner">
-    <h2 class="proc-title">¿Cómo Actuar Ante un Tumor Óseo?</h2>
-    <p class="proc-desc">El orden correcto de los pasos es crítico. Una biopsia mal planeada puede cambiar el pronóstico del paciente.</p>
-    <div class="proc-steps">
-      <div class="proc-step"><div class="proc-step-num">1</div><div><h4>Evaluación con el Oncólogo Ortopédico</h4><p>Antes de hacer cualquier biopsia, el especialista revisa imagen (RMN, TAC, gammagrama), clínica y decide el tipo de biopsia más apropiado.</p></div></div>
-      <div class="proc-step"><div class="proc-step-num">2</div><div><h4>Biopsia Planificada</h4><p>Percutánea guiada por imagen o incisional según el caso. La trayectoria se diseña para que no comprometa la cirugía definitiva.</p></div></div>
-      <div class="proc-step"><div class="proc-step-num">3</div><div><h4>Diagnóstico Histológico + Estadificación</h4><p>Reporte de patología con estudios complementarios. TAC de tórax y gammagrama para estadificación completa.</p></div></div>
-      <div class="proc-step"><div class="proc-step-num">4</div><div><h4>Plan de Tratamiento Multidisciplinario</h4><p>Coordinación con oncólogo médico y radioterapeuta. Cirugía de preservación de miembro cuando es oncológicamente posible.</p></div></div>
+</div>
+
+<!-- TUMORES TIPOS -->
+<section class="tumores-section">
+  <div style="max-width:1120px;margin:0 auto;">
+    <span class="section-label reveal">Diagnósticos más frecuentes</span>
+    <h2 class="section-title reveal reveal-d1">Tipos de <em>tumores óseos</em> que tratamos</h2>
+    <p class="section-sub reveal reveal-d2">Cada tumor tiene características distintas. El diagnóstico histopatológico exacto determina el tratamiento correcto.</p>
+    <div class="tumores-cols">
+      <div class="tumor-group maligno reveal reveal-d1">
+        <span class="tumor-group-label">🔴 Tumores Malignos</span>
+        <h3>Requieren atención urgente</h3>
+        <div class="tumor-list">
+          <div class="tumor-item"><div class="tumor-dot"></div>Osteosarcoma (el más frecuente en adolescentes)</div>
+          <div class="tumor-item"><div class="tumor-dot"></div>Sarcoma de Ewing</div>
+          <div class="tumor-item"><div class="tumor-dot"></div>Condrosarcoma</div>
+          <div class="tumor-item"><div class="tumor-dot"></div>Fibrosarcoma óseo</div>
+          <div class="tumor-item"><div class="tumor-dot"></div>Metástasis óseas (pulmón, mama, próstata, riñón)</div>
+          <div class="tumor-item"><div class="tumor-dot"></div>Mieloma múltiple óseo</div>
+        </div>
+      </div>
+      <div class="tumor-group benigno reveal reveal-d2">
+        <span class="tumor-group-label">🔵 Tumores Benignos</span>
+        <h3>Vigilancia y tratamiento electivo</h3>
+        <div class="tumor-list">
+          <div class="tumor-item"><div class="tumor-dot"></div>Osteocondroma (exostosis)</div>
+          <div class="tumor-item"><div class="tumor-dot"></div>Quiste óseo simple</div>
+          <div class="tumor-item"><div class="tumor-dot"></div>Quiste óseo aneurismático</div>
+          <div class="tumor-item"><div class="tumor-dot"></div>Tumor de células gigantes</div>
+          <div class="tumor-item"><div class="tumor-dot"></div>Encondroma</div>
+          <div class="tumor-item"><div class="tumor-dot"></div>Osteoma osteoide</div>
+        </div>
+      </div>
     </div>
-    <div style="margin-top:2rem;">
-      <a href="https://wa.me/528126555222?text=Hola%2C%20me%20encontraron%20un%20tumor%20%C3%B3seo%20y%20quisiera%20una%20evaluaci%C3%B3n%20urgente." class="btn-wa-lg" target="_blank" rel="noopener" style="display:inline-flex;"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Solicitar Evaluación Urgente</a>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stat-item reveal">
+    <div class="stat-num"><span class="count" data-target="6">0</span><span>+</span></div>
+    <div class="stat-label">Años en oncología ortopédica</div>
+  </div>
+  <div class="stat-item reveal reveal-d1">
+    <div class="stat-num"><span class="count" data-target="300">0</span><span>+</span></div>
+    <div class="stat-label">Cirugías oncológicas realizadas</div>
+  </div>
+  <div class="stat-item reveal reveal-d2">
+    <div class="stat-num"><span class="count" data-target="92">0</span><span>%</span></div>
+    <div class="stat-label">Conservación de miembro</div>
+  </div>
+  <div class="stat-item reveal reveal-d3">
+    <div class="stat-num"><span>5–7</span></div>
+    <div class="stat-label">Días resultado biopsia</div>
+  </div>
+</div>
+
+<!-- PROCESO -->
+<section class="proceso-section">
+  <div style="max-width:1120px;margin:0 auto;">
+    <span class="section-label reveal">Tu camino con nosotros</span>
+    <h2 class="section-title reveal reveal-d1">Del diagnóstico al <em>tratamiento</em>: 4 pasos</h2>
+    <p class="section-sub reveal reveal-d2">Un proceso ordenado y transparente para que nunca te sientas perdido.</p>
+    <div class="proceso-grid">
+      <div class="proceso-step reveal reveal-d1">
+        <div class="paso-num">01</div>
+        <span class="step-tag">Urgente</span>
+        <h3>Primera Consulta</h3>
+        <p>El Dr. González revisa tus estudios de imagen, realiza exploración física completa y determina el nivel de urgencia de tu caso. Citas prioritarias disponibles.</p>
+      </div>
+      <div class="proceso-step reveal reveal-d2">
+        <div class="paso-num">02</div>
+        <span class="step-tag">Diagnóstico</span>
+        <h3>Biopsia Oncológica</h3>
+        <p>Si se requiere, la biopsia se planea y ejecuta con trayecto oncológico correcto. Nunca delegar esto a otro médico —el trayecto de biopsia define el éxito quirúrgico.</p>
+      </div>
+      <div class="proceso-step reveal reveal-d3">
+        <div class="paso-num">03</div>
+        <span class="step-tag">Resultado</span>
+        <h3>Diagnóstico Definitivo</h3>
+        <p>Con el resultado histopatológico en mano, el Dr. González explica en detalle qué tiene, qué opciones existen y cuál es la mejor ruta para tu caso específico.</p>
+      </div>
+      <div class="proceso-step reveal reveal-d4">
+        <div class="paso-num">04</div>
+        <span class="step-tag">Tratamiento</span>
+        <h3>Plan Multidisciplinario</h3>
+        <p>Coordinación con oncólogos médicos, radioterapeutas y patólogos. Cirugía con conservación de miembro cuando es oncológicamente posible.</p>
+      </div>
     </div>
   </div>
 </section>
-<section class="lp-cta">
-  <h2>El tiempo es el factor más crítico en un tumor óseo</h2>
-  <p>Cada semana de retraso puede cambiar el estadio del tumor y las opciones de tratamiento. Si tienes una lesión ósea sospechosa, actúa hoy. El Dr. González Saldívar prioriza casos urgentes.</p>
-  <div class="lp-btns" style="justify-content:center;">
-    <a href="https://wa.me/528126555222?text=Hola%2C%20me%20encontraron%20un%20tumor%20%C3%B3seo%20y%20quisiera%20una%20evaluaci%C3%B3n%20urgente." class="btn-wa-lg" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>WhatsApp — Respuesta en Minutos</a>
-    <a href="tel:+528183877237" class="btn-tel" style="border-color:var(--navy);color:var(--navy);">Llamar: 818 387-7237</a>
+
+<!-- DOCTOR SECTION -->
+<section style="background:#fff;padding:5rem 5vw;">
+  <div style="max-width:1120px;margin:0 auto;">
+    <div class="split-section reveal">
+      <div class="split-img-wrap">
+        <img src="../img/dr-author-box.webp" alt="Dr. Juan Carlos González Saldívar — Oncólogo Ortopédico Monterrey" loading="lazy"/>
+        <div class="img-badge">
+          <p>Dr. Juan Carlos González Saldívar</p>
+          <span>Oncólogo Ortopédico · Cédula 9481533</span>
+        </div>
+      </div>
+      <div class="split-content">
+        <span class="section-label">El especialista correcto</span>
+        <h2 class="section-title">Referencia en <em>Oncología Ortopédica</em> en el noreste de México</h2>
+        <p style="color:var(--gray);line-height:1.75;font-size:.97rem;">No todos los ortopedistas tratan tumores óseos. Se requiere una sub-especialidad específica en oncología musculoesquelética. El Dr. González Saldívar dedicó su formación y carrera entera a este campo.</p>
+        <div class="creds-list">
+          <div class="cred-item">
+            <div class="cred-dot"></div>
+            <p class="cred-text"><strong>Certificado por el Consejo Mexicano de Ortopedia y Traumatología (CMOT)</strong> — máxima certificación en la especialidad.</p>
+          </div>
+          <div class="cred-item">
+            <div class="cred-dot"></div>
+            <p class="cred-text"><strong>Sub-especialidad en Oncología Ortopédica</strong> en centros de referencia de México y el extranjero.</p>
+          </div>
+          <div class="cred-item">
+            <div class="cred-dot"></div>
+            <p class="cred-text"><strong>Pionero en cirugía de conservación de miembro</strong> en Nuevo León con técnicas de reconstrucción avanzada.</p>
+          </div>
+        </div>
+        <a href="https://wa.me/528126555222?text=Hola%2C%20me%20encontraron%20un%20tumor%20%C3%B3seo%20y%20quisiera%20una%20evaluaci%C3%B3n%20urgente." class="btn-urgente" style="align-self:flex-start;margin-top:.5rem;" target="_blank" rel="noopener">
+          🚨 Solicitar Evaluación Urgente
+        </a>
+      </div>
+    </div>
   </div>
 </section>
-<footer class="lp-footer">
-  <p>© 2025 CorpOs Consultorio Articular — Dr. Juan Carlos González Saldívar · Cédula 9481533 · <a href="/">drgonzalezsaldivar.com</a></p>
-</footer>
-</body></html>
+
+<!-- SOCIEDADES -->
+<section class="socie-section">
+  <div style="max-width:1120px;margin:0 auto;">
+    <span class="section-label reveal">Membresías y certificaciones</span>
+    <h2 class="section-title reveal reveal-d1">Miembro de sociedades <em>internacionales</em></h2>
+    <div class="socie-grid">
+      <div class="socie-card reveal reveal-d1">
+        <img src="../img/asociaciones/femecot.webp" alt="FEMECOT" class="socie-logo" loading="lazy"/>
+        <div>
+          <p class="socie-name">FEMECOT</p>
+          <p class="socie-type">Federación Mexicana de Colegios de Ortopedia y Traumatología</p>
+        </div>
+      </div>
+      <div class="socie-card reveal reveal-d2">
+        <img src="../img/asociaciones/isols.svg" alt="ISOLS" class="socie-logo" loading="lazy"/>
+        <div>
+          <p class="socie-name">ISOLS</p>
+          <p class="socie-type">International Society of Limb Salvage</p>
+        </div>
+      </div>
+      <div class="socie-card reveal reveal-d3">
+        <img src="../img/asociaciones/slatme.svg" alt="SLATME" class="socie-logo" loading="lazy"/>
+        <div>
+          <p class="socie-name">SLATME</p>
+          <p class="socie-type">Sociedad Latinoamericana de Tumores Músculo-Esqueléticos</p>
+        </div>
+      </div>
+      <div class="socie-card reveal reveal-d4">
+        <img src="../img/asociaciones/smoose.svg" alt="SMOOSE" class="socie-logo" loading="lazy"/>
+        <div>
+          <p class="socie-name">SMOOSE</p>
+          <p class="socie-type">Sociedad Mexicana de Oncología Ortopédica y Sarcomas del Esqueleto</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS — pendiente reviews reales -->
+<section class="testimonials-section">
+  <div style="max-width:1120px;margin:0 auto;">
+    <span class="section-label reveal">Lo que dicen los pacientes</span>
+    <h2 class="section-title reveal reveal-d1">Opiniones de <em>pacientes reales</em></h2>
+    <div class="testimonials-grid reveal reveal-d2">
+      <div class="testi-card">
+        <div class="testi-stars"><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span></div>
+        <p class="testi-text">"Agradezco a Dios por permitirnos conocer al doctor Juan Carlos. Operó a mi hija de un tumor en su brazo derecho, le puso un injerto que ya tiene unido a su hueso y ya lleva el 90% de la funcionalidad. Es muy humano, paciente y un excelente ser humano."</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:#597288;">M</div>
+          <div><div class="testi-name">Martín Infante</div><div class="testi-detail">Hace 3 días · Google Maps</div></div>
+        </div>
+        <div class="testi-google"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>Reseña verificada en Google</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars"><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span></div>
+        <p class="testi-text">"¡Excelente! Trato profesional y humano, sus explicaciones claras y precisas, muy acertado en tiempos de diagnóstico y pronósticos de rehabilitación."</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:#c5221f;">L</div>
+          <div><div class="testi-name">Lucy Zapata</div><div class="testi-detail">mar 2023 · Google Maps</div></div>
+        </div>
+        <div class="testi-google"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>Reseña verificada en Google</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars"><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span></div>
+        <p class="testi-text">"La atención del Doc. ha sido muy buena. Me ha dado mucha claridad en lo que es la lesión y cómo será la recuperación. 100% recomendado."</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:#e37400;">H</div>
+          <div><div class="testi-name">Hector Moreira</div><div class="testi-detail">mar 2023 · Google Maps</div></div>
+        </div>
+        <div class="testi-google"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>Reseña verificada en Google</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div style="max-width:1120px;margin:0 auto;">
+    <span class="section-label reveal">Preguntas frecuentes</span>
+    <h2 class="section-title reveal reveal-d1" style="text-align:center;">Las dudas más <em>comunes</em></h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">
+          ¿Todo tumor óseo es cáncer?
+          <span class="faq-icon">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+          </span>
+        </button>
+        <div class="faq-a"><p>No. La mayoría de los tumores óseos son benignos y no representan riesgo vital. Sin embargo, algunos pueden crecer, causar fracturas o transformarse. Solo la biopsia histopatológica permite saber con certeza si es benigno o maligno y qué tratamiento requiere.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          ¿Por qué es tan importante quién hace la biopsia?
+          <span class="faq-icon">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+          </span>
+        </button>
+        <div class="faq-a"><p>Una biopsia mal planeada puede contaminar tejidos adyacentes, imposibilitar la resección completa del tumor o, en el peor caso, obligar a una amputación que de otra forma no habría sido necesaria. La biopsia debe realizarla el mismo cirujano oncólogo que hará la cirugía definitiva.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          ¿Qué estudios debo llevar a la primera consulta?
+          <span class="faq-icon">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+          </span>
+        </button>
+        <div class="faq-a"><p>Radiografías de la zona afectada, resonancia magnética (RMN) con y sin contraste, TAC si tienes, y cualquier reporte de patología previo. Si no tienes estudios, no te preocupes — podemos ordenarlos desde aquí.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          ¿Cuánto tiempo lleva el proceso diagnóstico completo?
+          <span class="faq-icon">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+          </span>
+        </button>
+        <div class="faq-a"><p>Desde la primera consulta hasta el diagnóstico histopatológico completo: aproximadamente 2 semanas. Consulta inicial → biopsia (3–5 días después) → resultado (5–7 días) → consulta de seguimiento con plan de tratamiento.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          ¿Siempre se requiere cirugía?
+          <span class="faq-icon">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+          </span>
+        </button>
+        <div class="faq-a"><p>No siempre. Algunos tumores benignos se pueden observar periódicamente. Otros requieren cirugía mínima. Los tumores malignos generalmente requieren cirugía + quimioterapia o radioterapia, según el tipo y estadio. El plan se define caso por caso.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          ¿Cuál es la diferencia entre un ortopedista general y un oncólogo ortopédico?
+          <span class="faq-icon">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+          </span>
+        </button>
+        <div class="faq-a"><p>El oncólogo ortopédico tiene 2–3 años adicionales de formación específica en tumores del sistema musculoesquelético. Esta sub-especialidad incluye principios oncológicos, técnicas de resección con márgenes, y reconstrucción. Es fundamental para el tratamiento correcto de tumores óseos.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          ¿Cómo funciona con mi seguro de gastos médicos?
+          <span class="faq-icon">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+          </span>
+        </button>
+        <div class="faq-a"><p>La consulta se paga en mostrador y puede reembolsarse con tu seguro según tu póliza. Para procedimientos mayores —biopsia, cirugía oncológica— trabajamos directamente con GNP, AXA, MAPFRE, MetLife, Seguros Monterrey y Bupa. Contáctanos y te orientamos sobre tu cobertura específica.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <div style="position:relative;z-index:2;max-width:640px;margin:0 auto;">
+    <span class="section-label reveal" style="justify-content:center;color:rgba(198,165,134,.8);">No esperes</span>
+    <h2 class="reveal reveal-d1">El tiempo es crítico.<br>Contacta hoy.</h2>
+    <p class="reveal reveal-d2">Una evaluación temprana marca la diferencia entre conservar o no el miembro afectado. Tenemos citas prioritarias para casos oncológicos en Monterrey y área metropolitana.</p>
+    <div class="cta-btns reveal reveal-d3">
+      <a href="https://wa.me/528126555222?text=Hola%2C%20me%20encontraron%20un%20tumor%20%C3%B3seo%20y%20quisiera%20una%20evaluaci%C3%B3n%20urgente." class="btn-urgente" target="_blank" rel="noopener">
+        🚨 Evaluación Urgente por WhatsApp
+      </a>
+      <a href="tel:+528183877237" class="btn-outline">📞 818 387-7237</a>
+    </div>
+    <p style="margin-top:1.8rem;"><a href="../index.html" style="color:rgba(198,165,134,.65);font-family:var(--FD);font-size:.78rem;font-weight:500;text-decoration:none;border-bottom:1px solid rgba(198,165,134,.3);padding-bottom:.15rem;transition:color .2s;" onmouseover="this.style.color='rgba(198,165,134,1)'" onmouseout="this.style.color='rgba(198,165,134,.65)'">← Conoce más sobre el Dr. González Saldívar en nuestro sitio</a></p>
+  </div>
+</section>
+
+<script>
+// NAV scroll
+const nav=document.getElementById('lpNav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>60);},{passive:true});
+
+// CAROUSEL
+const slides=document.querySelectorAll('.carousel-slide');
+const dotsWrap=document.getElementById('carouselDots');
+let cur=0,timer;
+slides.forEach((_,i)=>{
+  const d=document.createElement('button');
+  d.className='carousel-dot'+(i===0?' active':'');
+  d.setAttribute('aria-label','Foto '+(i+1));
+  d.addEventListener('click',()=>goTo(i));
+  dotsWrap.appendChild(d);
+});
+function goTo(n){
+  slides[cur].classList.remove('active');
+  dotsWrap.children[cur].classList.remove('active');
+  cur=n;
+  slides[cur].classList.add('active');
+  dotsWrap.children[cur].classList.add('active');
+}
+function next(){goTo((cur+1)%slides.length);}
+timer=setInterval(next,4200);
+document.querySelector('.hero-right').addEventListener('mouseenter',()=>clearInterval(timer));
+document.querySelector('.hero-right').addEventListener('mouseleave',()=>{timer=setInterval(next,4200);});
+
+// REVEAL
+const io=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});
+},{threshold:.12});
+document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>io.observe(el));
+
+// COUNTERS
+const cio=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const el=e.target;
+      const target=+el.dataset.target;
+      const dur=1800;
+      let cur2=0;
+      const tick=()=>{cur2+=target/60;if(cur2<target){el.textContent=Math.round(cur2);requestAnimationFrame(tick);}else el.textContent=target;};
+      tick();cio.unobserve(el);
+    }
+  });
+},{threshold:.5});
+document.querySelectorAll('.count').forEach(el=>cio.observe(el));
+
+// FAQ
+document.querySelectorAll('.faq-q').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const item=btn.parentElement;
+    const isOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i=>i.classList.remove('open'));
+    if(!isOpen)item.classList.add('open');
+  });
+});
+</script>
+
+<!-- MOBILE BOTTOM BAR -->
+<nav class="mobile-bar-lp" role="navigation" aria-label="Contacto urgente">
+  <a href="tel:+528183877237" class="mbl-call">
+    <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .96h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91A16 16 0 0015.1 17.92l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+    Llamar
+  </a>
+  <a href="https://wa.me/528126555222?text=Hola%2C%20me%20encontraron%20un%20tumor%20%C3%B3seo%20y%20quisiera%20una%20evaluaci%C3%B3n%20urgente." class="mbl-wa" target="_blank" rel="noopener">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    Evaluación Urgente
+  </a>
+</nav>
+</body>
+</html>

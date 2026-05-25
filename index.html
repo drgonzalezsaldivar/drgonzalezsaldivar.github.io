@@ -767,6 +767,7 @@
       display: flex; align-items: center; justify-content: center;
       font-size: .85rem; font-weight: 700; color: white; font-family: var(--FB);
     }
+    .review-avatar--m  { background: #597288; }
     .review-avatar--j  { background: #1a73e8; }
     .review-avatar--jm { background: #188038; }
     .review-avatar--l  { background: #c5221f; }
@@ -997,19 +998,15 @@
     .f-disc { font-size: .63rem; color: rgba(255,255,255,.16); max-width: 380px; line-height: 1.65; text-align: right; }
 
     /* ── FLOATING WA ── */
-    .wa-float {
-      position: fixed; bottom: 2rem; right: 2rem; z-index: 500;
-      width: 56px; height: 56px; background: var(--green); border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 8px 28px rgba(37,211,102,.40); text-decoration: none;
-      transition: transform 350ms var(--spring), box-shadow 350ms;
-    }
-    .wa-float:hover { transform: scale(1.08); box-shadow: 0 12px 40px rgba(37,211,102,.52); }
-    .wa-float svg { width: 26px; height: 26px; fill: white; }
-    .wa-float-pulse {
-      position: absolute; inset: -4px; border-radius: 50%;
-      border: 2px solid rgba(37,211,102,.35); animation: pulse 2.2s infinite;
-    }
+    .wa-float{position:fixed;bottom:90px;right:22px;z-index:997;width:60px;height:60px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 32px rgba(37,211,102,.55);animation:waBounce 5s ease-in-out infinite;text-decoration:none;}
+    .wa-float::before{content:'';position:absolute;inset:-6px;border-radius:50%;background:rgba(37,211,102,.28);animation:waPulse 2s infinite;}
+    .wa-float::after{content:'';position:absolute;inset:-14px;border-radius:50%;background:rgba(37,211,102,.14);animation:waPulse 2s .75s infinite;}
+    .wa-label{position:absolute;right:68px;background:#25a244;color:#fff;font-family:var(--FD);font-size:.74rem;font-weight:700;padding:.38rem .9rem;border-radius:50px;white-space:nowrap;opacity:0;transform:translateX(6px);transition:opacity .25s,transform .25s;box-shadow:0 4px 16px rgba(37,211,102,.4);pointer-events:none;}
+    .wa-float:hover .wa-label{opacity:1;transform:translateX(0);}
+    .wa-float:hover{transform:scale(1.08);animation-play-state:paused;}
+    .wa-float svg{width:26px;height:26px;fill:white;}
+    @keyframes waPulse{0%{transform:scale(1);opacity:.85;}70%{transform:scale(1.55);opacity:0;}100%{transform:scale(1.55);opacity:0;}}
+    @keyframes waBounce{0%,100%{transform:translateY(0);}8%{transform:translateY(-7px);}16%{transform:translateY(0);}24%{transform:translateY(-3px);}32%{transform:translateY(0);}}
 
     /* ── MOBILE CTA BAR ── */
     .mobile-bar { display: none; }
@@ -1101,8 +1098,9 @@
       .nav-toggle { display: flex; }
 
       .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 72px; }
-      .hero-right { order: -1; height: 65vw; min-height: 260px; max-height: 400px; }
-      .hero-left  { padding: 2.2rem 1.4rem 3rem; }
+      /* content-priority: text first, photo after — user sees H1+CTA without scrolling */
+      .hero-right { order: 2; height: 50vw; min-height: 200px; max-height: 260px; }
+      .hero-left  { padding: 1.6rem 1.4rem 2.5rem; }
       /* Isotipo como watermark de fondo — NO tapa contenido */
       .hero-isotipo {
         display: flex;
@@ -1204,7 +1202,8 @@
     }
 
     @media (max-width: 480px) {
-      .hero-h1   { font-size: 1.9rem; }
+      .hero-h1   { font-size: 2rem; }
+      .hero-right { height: 44vw; min-height: 170px; max-height: 220px; }
       .hero-btns { flex-direction: column; }
       .hero-btns a { width: 100%; justify-content: center; }
       .why-cards { grid-template-columns: 1fr; }
@@ -1851,14 +1850,31 @@
     </div>
     <div class="reviews-grid" id="reviewsGrid">
 
-      <!-- Reseña 1: Jaime Elizondo -->
+      <!-- Reseña 1: Martín Infante — tumor óseo, cirugía + injerto -->
       <article class="review-card reveal" itemscope itemtype="https://schema.org/Review">
+        <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Physician" hidden><meta itemprop="name" content="Dr. Juan Carlos González Saldívar"/><meta itemprop="url" content="https://www.drgonzalezsaldivar.com"/></div>
+        <div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating" hidden><meta itemprop="ratingValue" content="5"/><meta itemprop="bestRating" content="5"/></div>
+        <div class="review-stars" aria-label="5 estrellas">★★★★★</div>
+        <p class="review-text" itemprop="reviewBody">"Agradezco a Dios por permitirnos conocer al doctor Juan Carlos. Operó a mi hija de un tumor en su brazo derecho, le puso un injerto que ya tiene unido a su hueso y ya lleva el 90% de la funcionalidad de su brazo. Es muy humano y paciente, le da una excelente atención. Es un excelente doctor y ser humano."</p>
+        <div class="review-footer">
+          <div class="review-avatar review-avatar--m">M</div>
+          <div>
+            <p class="review-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Martín Infante</span></p>
+            <p class="review-date">Hace 3 días · Local Guide</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Reseña 2: Jaime Elizondo -->
+      <article class="review-card reveal" itemscope itemtype="https://schema.org/Review">
+        <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Physician" hidden><meta itemprop="name" content="Dr. Juan Carlos González Saldívar"/><meta itemprop="url" content="https://www.drgonzalezsaldivar.com"/></div>
+        <div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating" hidden><meta itemprop="ratingValue" content="5"/><meta itemprop="bestRating" content="5"/></div>
         <div class="review-stars" aria-label="5 estrellas">★★★★★</div>
         <p class="review-text" itemprop="reviewBody">"Claro y preciso al aterrizar términos médicos para poderlos entender. Diagnóstico certero de acuerdo con mi padecimiento y me ofreció un abanico de opciones para el tratamiento. ¡Fantástico doctor!"</p>
         <div class="review-footer">
           <div class="review-avatar review-avatar--j">J</div>
           <div>
-            <p class="review-author" itemprop="author">Jaime Elizondo</p>
+            <p class="review-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Jaime Elizondo</span></p>
             <p class="review-date">nov 2023 · Local Guide</p>
           </div>
         </div>
@@ -1866,12 +1882,14 @@
 
       <!-- Reseña 2: Jose Maria González Canales -->
       <article class="review-card reveal reveal-d1" itemscope itemtype="https://schema.org/Review">
+        <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Physician" hidden><meta itemprop="name" content="Dr. Juan Carlos González Saldívar"/><meta itemprop="url" content="https://www.drgonzalezsaldivar.com"/></div>
+        <div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating" hidden><meta itemprop="ratingValue" content="5"/><meta itemprop="bestRating" content="5"/></div>
         <div class="review-stars" aria-label="5 estrellas">★★★★★</div>
         <p class="review-text" itemprop="reviewBody">"Visita a la hora señalada. Muy profesional. Para definir el diagnóstico, se auxilió de preguntas y pruebas físicas de los síntomas y muy atinado en su diagnóstico. Muy atinado en sus instrucciones para la recuperación y disponible a resolver dudas."</p>
         <div class="review-footer">
           <div class="review-avatar review-avatar--jm">J</div>
           <div>
-            <p class="review-author" itemprop="author">Jose Maria González C.</p>
+            <p class="review-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Jose Maria González C.</span></p>
             <p class="review-date">mar 2023</p>
           </div>
         </div>
@@ -1879,12 +1897,14 @@
 
       <!-- Reseña 3: Lucy Zapata -->
       <article class="review-card reveal reveal-d2" itemscope itemtype="https://schema.org/Review">
+        <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Physician" hidden><meta itemprop="name" content="Dr. Juan Carlos González Saldívar"/><meta itemprop="url" content="https://www.drgonzalezsaldivar.com"/></div>
+        <div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating" hidden><meta itemprop="ratingValue" content="5"/><meta itemprop="bestRating" content="5"/></div>
         <div class="review-stars" aria-label="5 estrellas">★★★★★</div>
         <p class="review-text" itemprop="reviewBody">"¡Excelente! Trato profesional y humano, sus explicaciones claras y precisas, muy acertado en tiempos de diagnóstico y pronósticos de rehabilitación."</p>
         <div class="review-footer">
           <div class="review-avatar review-avatar--l">L</div>
           <div>
-            <p class="review-author" itemprop="author">Lucy Zapata</p>
+            <p class="review-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Lucy Zapata</span></p>
             <p class="review-date">mar 2023</p>
           </div>
         </div>
@@ -1892,12 +1912,14 @@
 
       <!-- Reseña 4: Hector Moreira -->
       <article class="review-card reveal reveal-d1" itemscope itemtype="https://schema.org/Review">
+        <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Physician" hidden><meta itemprop="name" content="Dr. Juan Carlos González Saldívar"/><meta itemprop="url" content="https://www.drgonzalezsaldivar.com"/></div>
+        <div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating" hidden><meta itemprop="ratingValue" content="5"/><meta itemprop="bestRating" content="5"/></div>
         <div class="review-stars" aria-label="5 estrellas">★★★★★</div>
         <p class="review-text" itemprop="reviewBody">"La atención del Doc. ha sido muy buena. Me ha dado mucha claridad en lo que es la lesión y cómo será la recuperación. 100% recomendado."</p>
         <div class="review-footer">
           <div class="review-avatar review-avatar--h">H</div>
           <div>
-            <p class="review-author" itemprop="author">Hector Moreira</p>
+            <p class="review-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Hector Moreira</span></p>
             <p class="review-date">mar 2023</p>
           </div>
         </div>
@@ -1905,12 +1927,14 @@
 
       <!-- Reseña 5: Aldo Monroy -->
       <article class="review-card reveal reveal-d2" itemscope itemtype="https://schema.org/Review">
+        <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Physician" hidden><meta itemprop="name" content="Dr. Juan Carlos González Saldívar"/><meta itemprop="url" content="https://www.drgonzalezsaldivar.com"/></div>
+        <div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating" hidden><meta itemprop="ratingValue" content="5"/><meta itemprop="bestRating" content="5"/></div>
         <div class="review-stars" aria-label="5 estrellas">★★★★★</div>
         <p class="review-text" itemprop="reviewBody">"Fui a consulta con el Dr. González Saldívar por un dolor en la parte posterior de mi pierna derecha. Diagnóstico preciso, explicación muy clara del tratamiento a seguir. Excelente atención."</p>
         <div class="review-footer">
           <div class="review-avatar review-avatar--a">A</div>
           <div>
-            <p class="review-author" itemprop="author">Aldo Monroy</p>
+            <p class="review-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Aldo Monroy</span></p>
             <p class="review-date">jul 2023</p>
           </div>
         </div>
@@ -1918,12 +1942,14 @@
 
       <!-- Reseña 6: Omar Escobedo -->
       <article class="review-card reveal reveal-d3" itemscope itemtype="https://schema.org/Review">
+        <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Physician" hidden><meta itemprop="name" content="Dr. Juan Carlos González Saldívar"/><meta itemprop="url" content="https://www.drgonzalezsaldivar.com"/></div>
+        <div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating" hidden><meta itemprop="ratingValue" content="5"/><meta itemprop="bestRating" content="5"/></div>
         <div class="review-stars" aria-label="5 estrellas">★★★★★</div>
         <p class="review-text review-text--silent" itemprop="reviewBody">"Excelente atención y servicio."</p>
         <div class="review-footer">
           <div class="review-avatar review-avatar--o">O</div>
           <div>
-            <p class="review-author" itemprop="author">Omar Escobedo</p>
+            <p class="review-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Omar Escobedo</span></p>
             <p class="review-date">2024 · Local Guide</p>
           </div>
         </div>
@@ -2274,7 +2300,7 @@
 
 <!-- Floating WA (desktop) -->
 <a href="https://wa.me/528126555222?utm_source=sitio&utm_medium=organico&utm_campaign=home&utm_content=float&text=Hola%2C%20quisiera%20agendar%20una%20consulta." class="wa-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
-  <div class="wa-float-pulse" aria-hidden="true"></div>
+  <span class="wa-label">Escríbenos</span>
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
 </a>
 <script>
