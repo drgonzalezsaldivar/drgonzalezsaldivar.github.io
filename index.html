@@ -640,6 +640,17 @@
       padding: .2rem .65rem; border-radius: 50px; margin-bottom: .7rem;
     }
     .svc-badge::before { content: ''; display: inline-block; width: 5px; height: 5px; border-radius: 50%; background: rgba(255,255,255,.75); }
+    .svc-img-wrap { position: relative; }
+    .svc-card--last .svc-img-wrap { grid-row: 1; }
+    .svc-card--last .svc-img-wrap .svc-photo { margin-bottom: 0; }
+    .svc-tag-chip {
+      position: absolute; bottom: .8rem; left: .75rem;
+      background: rgba(8,18,40,.82); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+      border: 1px solid rgba(198,165,134,.3); border-radius: 100px;
+      padding: .28rem .75rem; font-size: .63rem; font-weight: 700;
+      color: rgba(255,255,255,.92); letter-spacing: .06em; text-transform: uppercase;
+      pointer-events: none; line-height: 1; white-space: nowrap;
+    }
 
     /* ── POR QUÉ ── */
     .why { background: var(--cream2); }
@@ -1099,7 +1110,7 @@
 
       .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 72px; }
       /* content-priority: text first, photo after — user sees H1+CTA without scrolling */
-      .hero-right { order: 2; height: 50vw; min-height: 200px; max-height: 260px; }
+      .hero-right { order: 2; height: 65vw; min-height: 260px; max-height: 380px; }
       .hero-left  { padding: 1.6rem 1.4rem 2.5rem; }
       /* Isotipo como watermark de fondo — NO tapa contenido */
       .hero-isotipo {
@@ -1133,8 +1144,8 @@
       .s-title { font-size: 1.75rem; }
 
       .about-grid { grid-template-columns: 1fr; gap: 2.5rem; align-items: start; }
-      .about-photos { max-width: 260px; margin: 0 auto; }
-      .about-photo-main { aspect-ratio: 4/5; flex: unset; width: 100%; }
+      .about-photos { width: 200px; margin: 0 auto; display: block; padding: 0; }
+      .about-photo-main { width: 200px; height: 200px; flex: unset; object-fit: cover; object-position: top center; border-radius: var(--r-lg); }
 
       .svc-header { grid-template-columns: 1fr; gap: 1rem; }
       .svc-grid   { grid-template-columns: 1fr 1fr; }
@@ -1203,7 +1214,7 @@
 
     @media (max-width: 480px) {
       .hero-h1   { font-size: 2rem; }
-      .hero-right { height: 44vw; min-height: 170px; max-height: 220px; }
+      .hero-right { height: 62vw; min-height: 230px; max-height: 320px; }
       .hero-btns { flex-direction: column; }
       .hero-btns a { width: 100%; justify-content: center; }
       .why-cards { grid-template-columns: 1fr; }
@@ -1712,7 +1723,10 @@
     </div>
     <div class="svc-grid">
       <article class="svc-card svc-card--featured reveal">
-        <picture><source srcset="img/img_11.webp" type="image/webp"/><img class="svc-photo" loading="lazy" src="img/img_11.webp" alt="Oncología Ortopédica — tumores de hueso y tejidos blandos"/></picture>
+        <div class="svc-img-wrap">
+          <picture><source srcset="img/img_11.webp" type="image/webp"/><img class="svc-photo" loading="lazy" src="img/img_11.webp" alt="Oncología Ortopédica — tumores de hueso y tejidos blandos"/></picture>
+          <span class="svc-tag-chip">Tumor óseo · Sarcoma</span>
+        </div>
         <span class="svc-badge">Alta Especialidad · Ortopedia Oncológica</span>
         <p class="svc-num">01 — Especialidad principal</p>
         <h3 class="svc-name"><a href="/oncologia-ortopedica" style="color:inherit;text-decoration:none;">Oncología Ortopédica</a></h3>
@@ -1720,36 +1734,51 @@
         <a href="/segunda-opinion-oncologica" class="svc-link">Segunda opinión oncológica →</a>
       </article>
       <article class="svc-card reveal reveal-d1">
-        <picture><source srcset="img/img_12.webp" type="image/webp"/><img class="svc-photo" loading="lazy" src="img/img_12.webp" alt="Artroscopia de rodilla y hombro en Monterrey"/></picture>
+        <div class="svc-img-wrap">
+          <picture><source srcset="img/img_12.webp" type="image/webp"/><img class="svc-photo" loading="lazy" src="img/img_12.webp" alt="Artroscopia de rodilla y hombro en Monterrey"/></picture>
+          <span class="svc-tag-chip">Rodilla · Hombro · Cadera</span>
+        </div>
         <p class="svc-num">02 — Cirugía mínimamente invasiva</p>
         <h3 class="svc-name">Artroscopia</h3>
         <p class="svc-desc">Rodilla, hombro y cadera. Lesiones de menisco, ligamento cruzado, manguito rotador y cartílago articular con técnica artroscópica de precisión.</p>
       </article>
       <article class="svc-card reveal reveal-d2">
-        <picture><source srcset="img/img_13.webp" type="image/webp"/><img class="svc-photo" loading="lazy" src="img/img_13.webp" alt="Traumatología y fracturas en Monterrey"/></picture>
+        <div class="svc-img-wrap">
+          <picture><source srcset="img/img_16.webp" type="image/webp"/><img class="svc-photo" loading="lazy" src="img/img_16.webp" alt="Traumatología y fracturas en Monterrey"/></picture>
+          <span class="svc-tag-chip">Fracturas · Diagnóstico</span>
+        </div>
         <p class="svc-num">03 — Traumatología</p>
         <h3 class="svc-name">Traumatología General</h3>
         <p class="svc-desc">Fracturas, luxaciones y lesiones musculoesqueléticas agudas. Manejo conservador y quirúrgico con los mejores resultados funcionales.</p>
       </article>
       <article class="svc-card reveal">
-        <picture><source srcset="img/img_14.webp" type="image/webp"/><img class="svc-photo" loading="lazy" src="img/img_14.webp" alt="Desgaste articular y reemplazo de rodilla en Monterrey"/></picture>
+        <div class="svc-img-wrap">
+          <picture><source srcset="img/img_14.webp" type="image/webp"/><img class="svc-photo" loading="lazy" src="img/img_14.webp" alt="Desgaste articular y reemplazo de rodilla en Monterrey"/></picture>
+          <span class="svc-tag-chip">Artrosis · Prótesis</span>
+        </div>
         <p class="svc-num">04 — Patología degenerativa</p>
         <h3 class="svc-name">Desgaste Articular</h3>
-        <p class="svc-desc">Artrosis de rodilla, cadera y hombro. Infiltraciones, plasma rico en plaquetas (PRP) y prótesis articulares cuando el caso lo requiere.</p>
+        <p class="svc-desc">Artrosis de rodilla, cadera y hombro. Infiltraciones de esteroides y ácido hialurónico, y prótesis articulares cuando el caso lo requiere.</p>
       </article>
       <article class="svc-card reveal reveal-d1">
-        <picture><source srcset="img/img_15.webp" type="image/webp"/><img class="svc-photo" loading="lazy" src="img/img_15.webp" alt="Columna vertebral y hernia de disco Monterrey"/></picture>
+        <div class="svc-img-wrap">
+          <picture><img class="svc-photo" loading="lazy" src="img/svc-hernia-disco.png" alt="Columna vertebral y hernia de disco Monterrey"/></picture>
+          <span class="svc-tag-chip">Lumbar · Cervical</span>
+        </div>
         <p class="svc-num">05 — Columna</p>
         <h3 class="svc-name"><a href="/hernia-disco" style="color:inherit;text-decoration:none;">Hernia de Disco · Patología de Columna</a></h3>
         <p class="svc-desc">Hernia de disco lumbar y cervical, lumbalgia crónica, estenosis espinal y lesiones de columna. Tratamiento integral con enfoque funcional.</p>
       </article>
       <article class="svc-card svc-card--last reveal reveal-d2">
-        <picture><source srcset="img/img_16.webp" type="image/webp"/><img class="svc-photo" loading="lazy" src="img/img_16.webp" alt="Infiltraciones articulares en Monterrey"/></picture>
+        <div class="svc-img-wrap">
+          <picture><source srcset="img/img_15.webp" type="image/webp"/><img class="svc-photo" loading="lazy" src="img/img_15.webp" alt="Infiltraciones articulares en Monterrey"/></picture>
+          <span class="svc-tag-chip">Sin cirugía · Esteroides</span>
+        </div>
         <div>
           <p class="svc-num">06 — Procedimientos</p>
-          <h3 class="svc-name">Infiltraciones y PRP</h3>
-          <p class="svc-desc">Infiltraciones de ácido hialurónico, corticosteroides y plasma rico en plaquetas para alivio del dolor y regeneración articular sin cirugía.</p>
-          <a href="https://wa.me/528126555222?text=Hola%2C%20quisiera%20información%20sobre%20infiltraciones%20y%20PRP." target="_blank" rel="noopener" class="svc-link">Consultar disponibilidad →</a>
+          <h3 class="svc-name">Infiltraciones Articulares</h3>
+          <p class="svc-desc">Infiltraciones de ácido hialurónico y corticosteroides para reducir la inflamación, aliviar el dolor y recuperar movilidad — sin pasar por quirófano.</p>
+          <a href="https://wa.me/528126555222?text=Hola%2C%20quisiera%20información%20sobre%20infiltraciones%20articulares." target="_blank" rel="noopener" class="svc-link">Consultar disponibilidad →</a>
         </div>
       </article>
     </div>
@@ -2278,7 +2307,7 @@
         <a href="#servicios">Rodilla y Cadera</a>
         <a href="#servicios">Hombro y Manguito</a>
         <a href="/hernia-disco">Hernia de Disco</a>
-        <a href="#servicios">Infiltraciones y PRP</a>
+        <a href="#servicios">Infiltraciones Articulares</a>
       </nav>
     </div>
     <div>
