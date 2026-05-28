@@ -1,11 +1,14 @@
 <!DOCTYPE html><html lang="es-MX"><head>
 <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Dolor de Rodilla Monterrey — Dr. González Saldívar | Ortopedista</title>
-<meta name="description" content="¿Dolor de rodilla en Monterrey? Ortopedista especialista en Contry y Zona Tec. Menisco, ligamentos, artritis, artroscopía. Agenda hoy. Cédula 9481533."/>
+<title>Reemplazo Articular Monterrey — Prótesis Rodilla y Cadera | Dr. González Saldívar</title>
+<meta name="description" content="Prótesis de rodilla y cadera en Monterrey. Ortopedista especialista en reemplazo articular. Sin lista de espera. Acepta GNP, AXA, MetLife. Plaza Contry. Cédula 9481533."/>
 <meta name="robots" content="noindex,nofollow"/>
 <link rel="icon" type="image/svg+xml" href="../favicon.svg"/>
+<!-- GTM -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PGBS76ZX');</script>
+<!-- Meta Pixel -->
 <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','891313025762477');fbq('track','PageView');</script>
+<!-- gclid attribution -->
 <script>
 (function(){var p=new URLSearchParams(location.search),g=p.get('gclid')||p.get('gbraid')||p.get('wbraid');if(!g)return;try{sessionStorage.setItem('_gclid',g);}catch(e){}function patch(){document.querySelectorAll('a[href*="wa.me"]').forEach(function(a){try{var u=new URL(a.href),t=u.searchParams.get('text')||'';u.searchParams.set('text',t+' [ref:'+g.slice(0,20)+']');a.href=u.toString();}catch(e){}});}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',patch);else patch();})();
 </script>
@@ -13,7 +16,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
-/* ── TOKENS (igual que index.html) ── */
 :root{
   --navy:#597288;--navy2:#3D5264;--blue:#4A6880;
   --gold:#C6A586;--gold-l:#B89070;--gold-xl:#7DBACC;
@@ -33,7 +35,6 @@ img{max-width:100%;display:block;}
 a{color:inherit;text-decoration:none;}
 ::selection{background:var(--gold);color:white;}
 
-/* SCROLL REVEAL */
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .65s var(--expo),transform .65s var(--expo);}
 .reveal.visible{opacity:1;transform:none;}
 .reveal-l{opacity:0;transform:translateX(-28px);transition:opacity .65s var(--expo),transform .65s var(--expo);}
@@ -42,29 +43,13 @@ a{color:inherit;text-decoration:none;}
 .reveal-r.visible{opacity:1;transform:none;}
 .d1{transition-delay:.1s;}.d2{transition-delay:.2s;}.d3{transition-delay:.3s;}.d4{transition-delay:.4s;}.d5{transition-delay:.5s;}.d6{transition-delay:.6s;}
 
-/* ── NAV — Floating Island (igual que index) ── */
-.lp-nav{
-  position:fixed;top:.85rem;left:50%;transform:translateX(-50%);
-  z-index:400;display:flex;align-items:center;justify-content:space-between;
-  width:min(1120px,calc(100vw - 1.4rem));
-  padding:.55rem .9rem .55rem 1.3rem;
-  background:rgba(240,242,242,.94);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
-  border-radius:50px;border:1px solid rgba(198,165,134,.16);
-  box-shadow:0 4px 32px rgba(26,38,48,.10),inset 0 1px 0 rgba(255,255,255,.65);
-  transition:box-shadow 500ms var(--spring);
-}
+/* NAV */
+.lp-nav{position:fixed;top:.85rem;left:50%;transform:translateX(-50%);z-index:400;display:flex;align-items:center;justify-content:space-between;width:min(1120px,calc(100vw - 1.4rem));padding:.55rem .9rem .55rem 1.3rem;background:rgba(240,242,242,.94);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-radius:50px;border:1px solid rgba(198,165,134,.16);box-shadow:0 4px 32px rgba(26,38,48,.10),inset 0 1px 0 rgba(255,255,255,.65);transition:box-shadow 500ms var(--spring);}
 .lp-nav img{height:40px;width:auto;}
-.nav-cta{
-  background:var(--green)!important;color:#fff!important;
-  padding:.48rem 1.2rem;border-radius:50px;
-  font-family:var(--FD);font-size:.76rem!important;font-weight:700!important;
-  display:inline-flex!important;align-items:center;gap:.4rem;
-  box-shadow:0 6px 20px rgba(37,211,102,.28);
-  transition:transform 280ms var(--spring),box-shadow 280ms;min-height:40px;
-}
+.nav-cta{background:var(--green)!important;color:#fff!important;padding:.48rem 1.2rem;border-radius:50px;font-family:var(--FD);font-size:.76rem!important;font-weight:700!important;display:inline-flex!important;align-items:center;gap:.4rem;box-shadow:0 6px 20px rgba(37,211,102,.28);transition:transform 280ms var(--spring),box-shadow 280ms;min-height:40px;}
 .nav-cta:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(37,211,102,.38);}
 
-/* FLOATING WA — desktop only */
+/* FLOATING WA */
 .wa-float{position:fixed;bottom:32px;right:24px;z-index:997;width:60px;height:60px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 32px rgba(37,211,102,.55);animation:waBounce 5s ease-in-out infinite;}
 .wa-float::before{content:'';position:absolute;inset:-6px;border-radius:50%;background:rgba(37,211,102,.28);animation:waPulse 2s infinite;}
 .wa-float::after{content:'';position:absolute;inset:-14px;border-radius:50%;background:rgba(37,211,102,.14);animation:waPulse 2s .75s infinite;}
@@ -74,13 +59,9 @@ a{color:inherit;text-decoration:none;}
 @keyframes waPulse{0%{transform:scale(1);opacity:.85;}70%{transform:scale(1.55);opacity:0;}100%{transform:scale(1.55);opacity:0;}}
 @keyframes waBounce{0%,100%{transform:translateY(0);}8%{transform:translateY(-7px);}16%{transform:translateY(0);}24%{transform:translateY(-3px);}32%{transform:translateY(0);}}
 
-/* ── HERO split (igual que index) ── */
+/* HERO */
 .hero{display:grid;grid-template-columns:1fr 1fr;min-height:100dvh;padding-top:80px;position:relative;overflow:hidden;}
-.hero-left{
-  display:flex;flex-direction:column;justify-content:center;
-  padding:4rem 3.5rem 4rem 5vw;
-  background:var(--navy);position:relative;overflow:hidden;
-}
+.hero-left{display:flex;flex-direction:column;justify-content:center;padding:4rem 3.5rem 4rem 5vw;background:var(--navy);position:relative;overflow:hidden;}
 .hero-left::before{content:'';position:absolute;top:-100px;right:-100px;width:520px;height:520px;background:radial-gradient(ellipse at 60% 40%,rgba(198,165,134,.18) 0%,transparent 65%);pointer-events:none;}
 .hero-left::after{content:'';position:absolute;bottom:-80px;left:-80px;width:360px;height:360px;background:radial-gradient(circle,rgba(61,82,100,.38) 0%,transparent 70%);pointer-events:none;}
 .hero-tag{display:inline-flex;align-items:center;gap:.5rem;background:rgba(198,165,134,.10);border:1px solid rgba(198,165,134,.22);color:var(--gold-xl);font-family:var(--FD);font-size:.64rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:.32rem .88rem;border-radius:50px;margin-bottom:1.4rem;width:fit-content;}
@@ -103,24 +84,9 @@ a{color:inherit;text-decoration:none;}
 .hero-schedule-label{font-size:.61rem;color:var(--gold-xl);font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.25rem;}
 .hero-schedule-val{font-size:.76rem;color:rgba(255,255,255,.62);}
 
-/* HERO RIGHT — carousel */
+/* HERO RIGHT */
 .hero-right{position:relative;overflow:hidden;background:var(--cream3);}
-.carousel{position:relative;width:100%;height:100%;}
-.carousel-track{position:relative;width:100%;height:100%;}
-.carousel-slide{position:absolute;inset:0;opacity:0;transition:opacity 1s var(--soft);}
-.carousel-slide.active{opacity:1;}
-.carousel-slide img{width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform 8s ease-out;}
-.carousel-slide.active img{transform:scale(1.04);}
-.carousel-slide img{transform:scale(1);}
-.carousel-overlay{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(12,8,2,.88) 0%,transparent 55%);padding:2.5rem 1.5rem 5rem;}
-.carousel-name{font-family:var(--FD);font-size:1rem;font-weight:500;color:#fff;margin-bottom:.1rem;}
-.carousel-sub{font-size:.64rem;color:var(--gold-xl);letter-spacing:.1em;text-transform:uppercase;}
-.carousel-dots{position:absolute;bottom:3.5rem;left:50%;transform:translateX(-50%);display:flex;gap:.4rem;z-index:10;}
-.carousel-dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.28);border:none;cursor:pointer;padding:0;transition:background 400ms var(--spring),transform 400ms var(--spring);min-width:6px;}
-.carousel-dot.active{background:var(--gold-xl);transform:scale(1.5);}
-.carousel-prev,.carousel-next{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.08);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.14);color:#fff;width:36px;height:36px;border-radius:50%;cursor:pointer;z-index:10;display:flex;align-items:center;justify-content:center;transition:background 250ms,transform 250ms var(--spring);font-size:1.2rem;padding:0;line-height:1;}
-.carousel-prev:hover,.carousel-next:hover{background:rgba(255,255,255,.18);}
-.carousel-prev{left:.8rem;}.carousel-next{right:.8rem;}
+.hero-right img{width:100%;height:100%;object-fit:cover;object-position:top center;}
 .hero-badge-star{position:absolute;top:1.3rem;right:1.3rem;z-index:20;background:rgba(240,242,242,.96);border-radius:var(--r-sm);padding:.48rem .82rem;box-shadow:0 8px 28px rgba(0,0,0,.18),inset 0 1px 0 rgba(255,255,255,.8);display:flex;align-items:center;gap:.45rem;border:1px solid rgba(198,165,134,.14);}
 .hero-badge-star-icon{color:#E8A020;font-size:.9rem;}
 .hero-badge-star p{font-size:.74rem;font-weight:700;color:var(--navy);line-height:1;}
@@ -130,7 +96,7 @@ a{color:inherit;text-decoration:none;}
 .hero-badge-avail-val{font-size:.95rem;font-weight:700;color:#fff;font-family:var(--FD);}
 .hero-badge-avail-sub{font-size:.59rem;color:rgba(255,255,255,.42);}
 
-/* ── TRUST BAR ── */
+/* TRUST BAR */
 .trust-bar{background:var(--cream);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:.85rem 5vw;display:flex;align-items:center;justify-content:center;gap:0;flex-wrap:wrap;}
 .trust-item{display:flex;align-items:center;gap:.48rem;padding:.35rem 1.6rem;position:relative;}
 .trust-item:not(:last-child)::after{content:'';position:absolute;right:0;top:20%;bottom:20%;width:1px;background:var(--border);}
@@ -141,7 +107,7 @@ a{color:inherit;text-decoration:none;}
 .trust-rating-num{font-weight:700;color:var(--dark);font-size:.71rem;}
 .trust-rating-lbl{color:var(--gray);font-size:.63rem;}
 
-/* ── SEGUROS BAR ── */
+/* SEGUROS BAR */
 .seguros-bar{background:var(--white);border-bottom:1px solid var(--border);padding:.9rem 5vw;display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:wrap;}
 .seguros-label{font-family:var(--FD);font-size:.65rem;font-weight:700;color:var(--gray);letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;}
 .seguros-logos{display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap;justify-content:center;}
@@ -149,7 +115,7 @@ a{color:inherit;text-decoration:none;}
 .seguros-logos img:hover{filter:grayscale(0);opacity:1;}
 .seguros-divider{width:1px;height:28px;background:var(--border);flex-shrink:0;}
 
-/* ── SECTION BASE ── */
+/* SECTION BASE */
 .section{padding:6rem 5vw;}
 .section-inner{max-width:1100px;margin:0 auto;}
 .s-tag{display:inline-flex;align-items:center;gap:.45rem;font-family:var(--FD);font-size:.68rem;font-weight:600;color:var(--gold);margin-bottom:1rem;letter-spacing:.1em;text-transform:uppercase;}
@@ -159,7 +125,7 @@ a{color:inherit;text-decoration:none;}
 .s-lead{font-size:.92rem;color:var(--gray);line-height:1.88;max-width:500px;}
 .divider{width:36px;height:1.5px;background:var(--gold);border-radius:2px;margin:1.4rem 0;opacity:.65;}
 
-/* ── CONDITIONS GRID ── */
+/* CONDITIONS GRID */
 .cond-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem;margin-top:2.5rem;}
 .cond-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r-lg);padding:1.5rem;display:flex;gap:1rem;align-items:flex-start;box-shadow:var(--sh3);transition:transform .3s var(--spring),box-shadow .3s;}
 .cond-card:hover{transform:translateY(-4px);box-shadow:var(--sh2);}
@@ -167,7 +133,15 @@ a{color:inherit;text-decoration:none;}
 .cond-card h3{font-family:var(--FD);font-size:.88rem;font-weight:600;color:var(--navy);margin-bottom:.3rem;}
 .cond-card p{font-size:.78rem;color:var(--gray);line-height:1.55;}
 
-/* ── ABOUT / DOCTOR ── */
+/* STEPS */
+.steps{counter-reset:step;}
+.step-item{display:flex;gap:1.5rem;margin-bottom:2rem;align-items:flex-start;}
+.step-num{counter-increment:step;min-width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;font-family:var(--FD);font-weight:700;font-size:1rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;position:relative;}
+.step-num::after{content:counter(step);}
+.step-content h3{font-family:var(--FD);font-size:.92rem;font-weight:600;color:var(--navy);margin-bottom:.35rem;}
+.step-content p{font-size:.84rem;color:var(--gray);line-height:1.65;}
+
+/* ABOUT */
 .about{background:var(--cream2);}
 .about-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:3rem;align-items:stretch;}
 .about-photos{position:relative;padding:.5rem;background:var(--cream2);border:1px solid var(--border);border-radius:calc(var(--r-xl) + .5rem);box-shadow:var(--sh1);display:flex;flex-direction:column;}
@@ -188,16 +162,7 @@ a{color:inherit;text-decoration:none;}
 .hosp-logos img{height:28px;width:auto;object-fit:contain;opacity:.6;filter:grayscale(1);transition:opacity .2s;}
 .hosp-logos img:hover{opacity:1;filter:grayscale(0);}
 
-/* ── SERVICES (navy bg) ── */
-.services{background:var(--navy);position:relative;overflow:hidden;padding:6rem 5vw;}
-.services::before{content:'';position:absolute;top:-200px;right:-200px;width:700px;height:700px;background:radial-gradient(circle,rgba(198,165,134,.06) 0%,transparent 60%);pointer-events:none;}
-.services .s-tag{color:var(--gold-xl);}
-.services .s-tag::before{background:var(--gold-xl);}
-.services .s-title{color:#fff;}
-.services .s-title em{color:var(--gold-xl);}
-.services .s-lead{color:rgba(255,255,255,.45);}
-
-/* ── TESTIMONIALS ── */
+/* TESTIMONIALS */
 .test-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.4rem;margin-top:2.5rem;}
 .test-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r-lg);padding:1.75rem;box-shadow:var(--sh3);transition:transform .3s var(--spring);}
 .test-card:hover{transform:translateY(-3px);}
@@ -209,7 +174,7 @@ a{color:inherit;text-decoration:none;}
 .test-date{font-size:.7rem;color:var(--gray);}
 .test-google{display:flex;align-items:center;gap:.35rem;margin-top:1rem;padding-top:.9rem;border-top:1px solid var(--border);font-family:var(--FD);font-size:.65rem;color:var(--gray);}
 
-/* ── FAQ ── */
+/* FAQ */
 .faq-list{max-width:700px;margin:2.5rem auto 0;}
 .faq-item{border:1px solid var(--border);border-radius:var(--r-md);background:var(--white);margin-bottom:.75rem;overflow:hidden;box-shadow:var(--sh3);}
 .faq-q{width:100%;text-align:left;display:flex;justify-content:space-between;align-items:center;padding:1.2rem 1.5rem;font-family:var(--FD);font-size:.88rem;font-weight:600;color:var(--navy);background:none;border:none;cursor:pointer;gap:1rem;transition:color .2s;}
@@ -222,7 +187,7 @@ a{color:inherit;text-decoration:none;}
 .faq-a-inner{padding:0 1.5rem 1.25rem;font-size:.86rem;color:var(--gray);line-height:1.75;}
 .faq-item.open .faq-a{max-height:300px;}
 
-/* ── CTA FINAL ── */
+/* CTA FINAL */
 .lp-cta{background:var(--navy);padding:6rem 5vw;text-align:center;position:relative;overflow:hidden;}
 .lp-cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(198,165,134,.08) 0%,transparent 60%);pointer-events:none;}
 .lp-cta h2{font-family:var(--FD);font-size:clamp(1.8rem,3vw,2.8rem);font-weight:700;color:#fff;margin-bottom:1rem;position:relative;}
@@ -256,7 +221,6 @@ a{color:inherit;text-decoration:none;}
   .mobile-bar{display:grid;}
   .wa-float{display:none;}
   .lp-nav{top:.5rem;}
-  .carousel-overlay{padding-bottom:4rem;}
   body{padding-bottom:calc(56px + env(safe-area-inset-bottom,0px));}
 }
 @media(max-width:640px){
@@ -264,7 +228,6 @@ a{color:inherit;text-decoration:none;}
   .trust-bar::-webkit-scrollbar{display:none;}
   .trust-item{flex-shrink:0;}
   .seguros-bar{gap:.8rem;}
-  .stat-row{grid-template-columns:repeat(3,1fr);}
 }
 @media(max-width:480px){
   .hero-h1{font-size:2rem;}
@@ -285,22 +248,22 @@ a{color:inherit;text-decoration:none;}
     <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .96h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91A16 16 0 0015.1 17.92l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
     Llamar
   </a>
-  <a href="https://wa.me/528126555222?text=Hola%2C%20tengo%20dolor%20de%20rodilla%20y%20quisiera%20agendar%20una%20consulta." class="mb-wa" target="_blank" rel="noopener">
+  <a href="https://wa.me/528126555222?text=Hola%2C+me+interesa+información+sobre+reemplazo+articular+(prótesis+de+rodilla+o+cadera).+Quisiera+agendar+una+consulta." class="mb-wa" target="_blank" rel="noopener">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     WhatsApp
   </a>
 </div>
 
 <!-- FLOATING WA -->
-<a href="https://wa.me/528126555222?text=Hola%2C%20tengo%20dolor%20de%20rodilla%20y%20quisiera%20agendar%20una%20consulta." class="wa-float" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+<a href="https://wa.me/528126555222?text=Hola%2C+me+interesa+información+sobre+reemplazo+articular+(prótesis+de+rodilla+o+cadera).+Quisiera+agendar+una+consulta." class="wa-float" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
   <span class="wa-label">Escríbenos</span>
   <svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
-<!-- NAV FLOATING ISLAND -->
+<!-- NAV -->
 <nav class="lp-nav">
   <a href="/"><img src="../img/gonzalez-saldivar-logo.svg" alt="Dr. González Saldívar" width="140" height="40"/></a>
-  <a href="https://wa.me/528126555222?text=Hola%2C%20tengo%20dolor%20de%20rodilla%20y%20quisiera%20agendar%20una%20consulta." class="nav-cta" target="_blank" rel="noopener">
+  <a href="https://wa.me/528126555222?text=Hola%2C+me+interesa+información+sobre+reemplazo+articular+(prótesis+de+rodilla+o+cadera).+Quisiera+agendar+una+consulta." class="nav-cta" target="_blank" rel="noopener">
     <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     Agendar Cita
   </a>
@@ -308,20 +271,19 @@ a{color:inherit;text-decoration:none;}
 
 <!-- HERO -->
 <section class="hero">
-  <!-- LEFT: content -->
   <div class="hero-left">
-    <div class="hero-tag">Ortopedista en Contry · Zona Tec · San Pedro</div>
-    <h1 class="hero-h1">Dolor de Rodilla en Monterrey — <em>Diagnóstico el Mismo Día</em></h1>
-    <p class="hero-spec">Ortopedista Especialista · Cédula 9481533</p>
-    <p class="hero-desc">No sigas aguantando. El dolor de rodilla tiene solución — desde menisco hasta artritis avanzada. El Dr. González Saldívar evalúa tu caso y te da un plan claro desde la primera consulta.</p>
+    <div class="hero-tag">Prótesis Rodilla · Cadera · Zona Contry · Tec · San Pedro</div>
+    <h1 class="hero-h1">Reemplazo Articular en Monterrey — <em>Prótesis Rodilla y Cadera</em></h1>
+    <p class="hero-spec">Ortopedista Especialista en Reemplazos · Cédula 9481533</p>
+    <p class="hero-desc">Cuando el dolor articular ya no responde a tratamiento conservador, la prótesis es la solución definitiva. El Dr. González Saldívar evalúa tu caso y te explica si es el momento indicado — sin prisas, sin presiones.</p>
     <ul class="hero-checks">
-      <li>Ortopedista especialista — no médico general</li>
-      <li>Diagnóstico por imagen interpretado en consultorio</li>
-      <li>Siempre buscamos el enfoque más conservador posible</li>
+      <li>Especialista — no médico general ni cirujano de columna</li>
+      <li>Prótesis de alta calidad con garantía de fabricante</li>
+      <li>Siempre evaluamos opciones conservadoras primero</li>
       <li>Acepta GNP, AXA, MAPFRE, MetLife y más</li>
     </ul>
     <div class="hero-btns">
-      <a href="https://wa.me/528126555222?text=Hola%2C%20tengo%20dolor%20de%20rodilla%20y%20quisiera%20agendar%20una%20consulta." class="btn-wa" target="_blank" rel="noopener">
+      <a href="https://wa.me/528126555222?text=Hola%2C+me+interesa+información+sobre+reemplazo+articular+(prótesis+de+rodilla+o+cadera).+Quisiera+agendar+una+consulta." class="btn-wa" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         Agendar por WhatsApp
       </a>
@@ -336,24 +298,8 @@ a{color:inherit;text-decoration:none;}
     </div>
   </div>
 
-  <!-- RIGHT: photo carousel -->
   <div class="hero-right">
-    <div class="carousel" id="heroCarousel">
-      <div class="carousel-track">
-        <div class="carousel-slide active"><img src="../img/CropOs-17.jpg" alt="Dr. González explorando rodilla de paciente" loading="eager"/></div>
-        <div class="carousel-slide"><img src="../img/CropOs-15.jpg" alt="Dr. González Saldívar evaluando articulación de rodilla" loading="lazy"/></div>
-        <div class="carousel-slide"><img src="../img/CropOs-18.jpg" alt="Exploración física de rodilla en consultorio" loading="lazy"/></div>
-        <div class="carousel-slide"><img src="../img/CropOs-16.jpg" alt="Dr. González revisando movilidad de rodilla" loading="lazy"/></div>
-        <div class="carousel-slide"><img src="../img/CropOs-19.jpg" alt="Ortopedista oncólogo Monterrey — consulta rodilla" loading="lazy"/></div>
-      </div>
-      <div class="carousel-overlay">
-        <p class="carousel-name">Dr. Juan Carlos González Saldívar</p>
-        <p class="carousel-sub">Ortopedista · Oncólogo Ortopédico · CMOT</p>
-      </div>
-      <button class="carousel-prev" aria-label="Anterior" onclick="carouselMove(-1)">‹</button>
-      <button class="carousel-next" aria-label="Siguiente" onclick="carouselMove(1)">›</button>
-      <div class="carousel-dots" id="carouselDots"></div>
-    </div>
+    <img src="../img/CropOs-17.jpg" alt="Dr. González Saldívar — Ortopedista especialista en reemplazo articular Monterrey" loading="eager"/>
     <div class="hero-badge-star">
       <span class="hero-badge-star-icon">★</span>
       <div><p>5.0 <span>Google Maps</span></p></div>
@@ -393,18 +339,96 @@ a{color:inherit;text-decoration:none;}
 <section class="section">
   <div class="section-inner">
     <div class="reveal">
-      <div class="s-tag">Tratamos</div>
-      <h2 class="s-title">¿Qué Causa tu Dolor de Rodilla?</h2>
+      <div class="s-tag">¿Cuándo se indica?</div>
+      <h2 class="s-title">Condiciones que Pueden Requerir <em>Reemplazo Articular</em></h2>
       <div class="divider"></div>
-      <p class="s-lead">El diagnóstico correcto es el primer paso. No todos los dolores de rodilla son iguales — y no todos requieren cirugía.</p>
+      <p class="s-lead">El reemplazo articular es el último recurso — siempre exploramos opciones conservadoras primero. Cuando el dolor limita tu vida diaria y otras alternativas se han agotado, la prótesis devuelve la movilidad.</p>
     </div>
     <div class="cond-grid">
-      <div class="cond-card reveal d1"><div class="cond-icon">🦴</div><div><h3>Lesión de Menisco</h3><p>Dolor al girar la rodilla, bloqueo articular, chasquido. Se trata con artroscopía de mínima invasión.</p></div></div>
-      <div class="cond-card reveal d2"><div class="cond-icon">⚡</div><div><h3>Rotura de Ligamento Cruzado</h3><p>Inestabilidad, rodilla "suelta". Reconstrucción artroscópica con injerto para retorno deportivo.</p></div></div>
-      <div class="cond-card reveal d3"><div class="cond-icon">🔬</div><div><h3>Artritis / Gonartrosis</h3><p>Desgaste del cartílago. Desde infiltraciones hasta prótesis total de rodilla según el caso.</p></div></div>
-      <div class="cond-card reveal d4"><div class="cond-icon">💉</div><div><h3>Bursitis y Tendinitis</h3><p>Inflamación de bolsas sinoviales o tendones. Infiltración dirigida y fisioterapia.</p></div></div>
-      <div class="cond-card reveal d5"><div class="cond-icon">🏃</div><div><h3>Condromalacia Rotuliana</h3><p>Dolor detrás de la rótula al subir escaleras. Frecuente en jóvenes y deportistas.</p></div></div>
-      <div class="cond-card reveal d6"><div class="cond-icon">🩹</div><div><h3>Fractura de Rótula</h3><p>Incapacidad de extender la rodilla. Fijación quirúrgica con rápida recuperación.</p></div></div>
+      <div class="cond-card reveal d1">
+        <div class="cond-icon">🦴</div>
+        <div>
+          <h3>Gonartrosis Avanzada (Rodilla)</h3>
+          <p>Desgaste severo del cartílago de rodilla. Dolor constante, deformidad en varo o valgo, incapacidad para subir escaleras. La prótesis total de rodilla restaura función y elimina dolor.</p>
+        </div>
+      </div>
+      <div class="cond-card reveal d2">
+        <div class="cond-icon">🔩</div>
+        <div>
+          <h3>Coxartrosis (Cadera)</h3>
+          <p>Artritis degenerativa de cadera. Dolor inguinal y glúteo, cojera, limitación para caminar más de una cuadra. El reemplazo total de cadera tiene tasa de éxito del 95% a 10 años.</p>
+        </div>
+      </div>
+      <div class="cond-card reveal d3">
+        <div class="cond-icon">🩸</div>
+        <div>
+          <h3>Necrosis Avascular</h3>
+          <p>Muerte del tejido óseo por falta de irrigación. Frecuente en cadera tras fractura o uso prolongado de corticoides. La prótesis es el tratamiento definitivo en estadios avanzados.</p>
+        </div>
+      </div>
+      <div class="cond-card reveal d4">
+        <div class="cond-icon">🔬</div>
+        <div>
+          <h3>Artritis Reumatoide Severa</h3>
+          <p>Destrucción articular por inflamación crónica. Cuando el tratamiento reumatológico ya no controla el daño estructural, el reemplazo elimina la articulación dañada.</p>
+        </div>
+      </div>
+      <div class="cond-card reveal d5">
+        <div class="cond-icon">🏥</div>
+        <div>
+          <h3>Fractura de Cadera Compleja</h3>
+          <p>Fracturas del cuello femoral en adultos mayores o con osteoporosis severa. La hemiprótesis o reemplazo total permite movilización temprana y recuperación más rápida.</p>
+        </div>
+      </div>
+      <div class="cond-card reveal d6">
+        <div class="cond-icon">🔄</div>
+        <div>
+          <h3>Revisión de Prótesis Fallida</h3>
+          <p>Aflojamiento aséptico, infección periprotésica o fractura periimplante. Cirugía de revisión de alta complejidad — especialidad del Dr. González Saldívar.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESO -->
+<section class="section" style="background:var(--cream2);">
+  <div class="section-inner">
+    <div class="reveal" style="max-width:600px;">
+      <div class="s-tag">Proceso</div>
+      <h2 class="s-title">¿Cómo es el Proceso de <em>Reemplazo Articular</em>?</h2>
+      <div class="divider"></div>
+      <p class="s-lead">De la evaluación a la recuperación, te acompañamos en cada etapa.</p>
+    </div>
+    <div style="margin-top:3rem;max-width:700px;" class="steps reveal">
+      <div class="step-item">
+        <div class="step-num"></div>
+        <div class="step-content">
+          <h3>Consulta de Evaluación</h3>
+          <p>Revisión completa de estudios de imagen, exploración física y análisis de tu nivel de actividad. Determinamos juntos si el reemplazo es la mejor opción para ti.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num"></div>
+        <div class="step-content">
+          <h3>Planeación Preoperatoria</h3>
+          <p>Selección del implante adecuado a tu anatomía. Coordinación con tu médico internista o cardiólogo si es necesario. Tramitación con tu aseguradora.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num"></div>
+        <div class="step-content">
+          <h3>Cirugía (2–3 horas)</h3>
+          <p>Técnica mínimamente invasiva cuando es posible. Anestesia regional o general según el caso. Hospitalización de 1–2 días. El Dr. González opera en Hospital Zambrano Hellión, Muguerza Sur, Muguerza Vidriera y Hospital Clinic.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num"></div>
+        <div class="step-content">
+          <h3>Rehabilitación y Seguimiento</h3>
+          <p>Caminata asistida desde el primer día postoperatorio. Fisioterapia supervisada. La mayoría de pacientes caminan sin bastón a las 6 semanas.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -414,16 +438,16 @@ a{color:inherit;text-decoration:none;}
   <div class="section-inner">
     <div class="about-grid">
       <div class="about-photos reveal-l">
-        <img class="about-photo-main" src="../img/dr-author-box.webp" alt="Dr. Juan Carlos González Saldívar — Ortopedista Monterrey"/>
+        <img class="about-photo-main" src="../img/dr-author-box.webp" alt="Dr. Juan Carlos González Saldívar — Especialista en reemplazo articular Monterrey"/>
       </div>
       <div class="reveal-r">
         <div class="s-tag">Tu Especialista</div>
         <h2 class="s-title">Dr. Juan Carlos González Saldívar</h2>
         <div class="divider"></div>
-        <p class="about-content" style="font-size:.9rem;line-height:1.95;color:var(--gray);margin-bottom:1rem;">Médico especialista en Ortopedia y Traumatología con subespecialidad en Oncología Ortopédica. Formado en el Hospital Christus Muguerza Alta Especialidad con fellowship en cirugía oncológica ósea. Atiende tanto patología degenerativa común — rodilla, cadera — como casos oncológicos complejos.</p>
+        <p class="about-content" style="font-size:.9rem;line-height:1.95;color:var(--gray);margin-bottom:1rem;">Médico especialista en Ortopedia y Traumatología con subespecialidad en Oncología Ortopédica. Formado en el Hospital Christus Muguerza Alta Especialidad. Realiza reemplazos de rodilla y cadera — tanto casos primarios como revisiones de prótesis fallidas — con técnica mínimamente invasiva.</p>
         <div class="stat-row">
           <div class="stat-box"><div class="stat-num counter" data-target="500">0</div><div class="stat-lbl">Pacientes</div></div>
-          <div class="stat-box"><div class="stat-num counter" data-target="6">0</div><div class="stat-lbl">Años exp.</div></div>
+          <div class="stat-box"><div class="stat-num counter" data-target="15">0</div><div class="stat-lbl">Años exp.</div></div>
           <div class="stat-box"><div class="stat-num">5.0★</div><div class="stat-lbl">Google</div></div>
         </div>
         <div class="about-creds">
@@ -433,12 +457,12 @@ a{color:inherit;text-decoration:none;}
         </div>
         <div class="hosp-logos">
           <img src="../img/hosp-muguerza.webp" alt="Hospital Muguerza" height="28"/>
-          <img src="../img/hosp-zambrano.webp" alt="Hospital Zambrano" height="28"/>
+          <img src="../img/hosp-zambrano.webp" alt="Hospital Zambrano Hellión" height="28"/>
           <img src="../img/hosp-doctos.webp" alt="Hospital Doctores" height="28"/>
           <img src="../img/hosp-clinic.webp" alt="Clínica" height="28"/>
         </div>
         <div style="margin-top:2rem;">
-          <a href="https://wa.me/528126555222?text=Hola%2C%20tengo%20dolor%20de%20rodilla%20y%20quisiera%20agendar%20una%20consulta." class="btn-wa" target="_blank" rel="noopener">
+          <a href="https://wa.me/528126555222?text=Hola%2C+me+interesa+información+sobre+reemplazo+articular+(prótesis+de+rodilla+o+cadera).+Quisiera+agendar+una+consulta." class="btn-wa" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             Agendar Consulta
           </a>
@@ -483,23 +507,39 @@ a{color:inherit;text-decoration:none;}
   <div class="section-inner">
     <div class="reveal" style="text-align:center;">
       <div class="s-tag" style="justify-content:center;display:inline-flex;">Preguntas Frecuentes</div>
-      <h2 class="s-title" style="text-align:center;">Todo Lo Que Debes Saber</h2>
+      <h2 class="s-title" style="text-align:center;">Lo Que Debes Saber sobre la Prótesis</h2>
     </div>
     <div class="faq-list">
-      <div class="faq-item reveal"><button class="faq-q" onclick="toggleFaq(this)">¿Cuánto dura la consulta inicial?<span class="faq-icon"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span></button><div class="faq-a"><div class="faq-a-inner">La primera consulta dura 40–60 minutos. Se revisan estudios previos, exploración física completa y se explica el diagnóstico y plan de tratamiento.</div></div></div>
-      <div class="faq-item reveal"><button class="faq-q" onclick="toggleFaq(this)">¿Acepta mi seguro médico?<span class="faq-icon"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span></button><div class="faq-a"><div class="faq-a-inner">Sí — GNP, AXA, MAPFRE, Allianz, MetLife, Seguros Monterrey y más. Confirma tu póliza al agendar por WhatsApp.</div></div></div>
-      <div class="faq-item reveal"><button class="faq-q" onclick="toggleFaq(this)">¿Necesito traer estudios previos?<span class="faq-icon"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span></button><div class="faq-a"><div class="faq-a-inner">Si tienes radiografías o resonancia magnética, tráelos. Si no, no te preocupes — el doctor puede solicitar los estudios necesarios en el hospital.</div></div></div>
-      <div class="faq-item reveal"><button class="faq-q" onclick="toggleFaq(this)">¿Toda rodilla operada necesita prótesis?<span class="faq-icon"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span></button><div class="faq-a"><div class="faq-a-inner">No. La gran mayoría son artroscópicas (mínima invasión). La prótesis se reserva para artritis severa cuando otras opciones se han agotado.</div></div></div>
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">¿Cuánto dura la cirugía de reemplazo?<span class="faq-icon"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Entre 1.5 y 3 horas dependiendo de la articulación y complejidad del caso. La hospitalización es de 1 a 2 días. La mayoría de los pacientes caminan con andadera el mismo día de la cirugía.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">¿Cuánto tiempo tarda la recuperación?<span class="faq-icon"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Regreso a actividades básicas en 4–6 semanas. Abandono del bastón alrededor de las 6 semanas. Recuperación completa entre 3 y 6 meses con fisioterapia supervisada. Conducción de automóvil entre 4 y 6 semanas.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">¿Cuánto dura una prótesis de rodilla o cadera?<span class="faq-icon"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Los implantes actuales de cerámica y polietileno de alta densidad tienen durabilidad demostrada de 20–25 años. Más del 90% de las prótesis siguen funcionando correctamente a los 15 años con seguimiento adecuado.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">¿Mi seguro médico cubre la cirugía?<span class="faq-icon"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+        <div class="faq-a"><div class="faq-a-inner">GNP, AXA, MAPFRE, Allianz, MetLife y Seguros Monterrey generalmente cubren el reemplazo articular cuando está bien indicado. Nosotros te ayudamos con la documentación para tu aseguradora. Confirma tu póliza al agendar.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">¿Toda articulación degenerada necesita prótesis?<span class="faq-icon"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+        <div class="faq-a"><div class="faq-a-inner">No. Muchos casos se manejan con infiltraciones, viscosuplementación o artroscopía. La prótesis se indica cuando el dolor es severo, limita actividades cotidianas, y las opciones conservadoras han fallado. La consulta define el camino correcto para tu caso.</div></div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- CTA FINAL -->
 <section class="lp-cta">
-  <h2 class="reveal">El dolor de rodilla no mejora solo — actúa hoy</h2>
-  <p class="reveal">Mientras más esperas, mayor el desgaste. Un diagnóstico temprano puede evitar la cirugía mayor.</p>
+  <h2 class="reveal">El dolor articular crónico tiene solución — evalúa tu caso hoy</h2>
+  <p class="reveal">La consulta define si el reemplazo es necesario o si existe otra alternativa. No hay compromiso — solo claridad sobre tu diagnóstico y opciones.</p>
   <div class="btns-center reveal">
-    <a href="https://wa.me/528126555222?text=Hola%2C%20tengo%20dolor%20de%20rodilla%20y%20quisiera%20agendar%20una%20consulta." class="btn-wa-lg" target="_blank" rel="noopener">
+    <a href="https://wa.me/528126555222?text=Hola%2C+me+interesa+información+sobre+reemplazo+articular+(prótesis+de+rodilla+o+cadera).+Quisiera+agendar+una+consulta." class="btn-wa-lg" target="_blank" rel="noopener">
       <svg width="20" height="20" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
       Agendar Ahora
     </a>
@@ -516,15 +556,6 @@ a{color:inherit;text-decoration:none;}
 </footer>
 
 <script>
-/* CAROUSEL */
-let current=0;
-const slides=document.querySelectorAll('.carousel-slide');
-const dotsContainer=document.getElementById('carouselDots');
-slides.forEach((_,i)=>{const d=document.createElement('button');d.className='carousel-dot'+(i===0?' active':'');d.setAttribute('aria-label','Slide '+(i+1));d.onclick=()=>goTo(i);dotsContainer.appendChild(d);});
-function goTo(n){slides[current].classList.remove('active');dotsContainer.children[current].classList.remove('active');current=(n+slides.length)%slides.length;slides[current].classList.add('active');dotsContainer.children[current].classList.add('active');}
-function carouselMove(dir){goTo(current+dir);}
-setInterval(()=>carouselMove(1),5000);
-
 /* SCROLL REVEAL */
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:.1});
 document.querySelectorAll('.reveal,.reveal-l,.reveal-r').forEach(el=>obs.observe(el));
