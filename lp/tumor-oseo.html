@@ -5,6 +5,23 @@
 <meta name="robots" content="noindex,nofollow"/>
 <link rel="icon" type="image/svg+xml" href="../favicon.svg"/>
 <!-- GTM -->
+<!-- Consent Mode v2 — DEBE ir ANTES de GTM -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{
+  'ad_storage':'denied','ad_user_data':'denied',
+  'ad_personalization':'denied','analytics_storage':'denied',
+  'functionality_storage':'denied','personalization_storage':'denied',
+  'security_storage':'granted','wait_for_update':500
+});
+gtag('set','ads_data_redaction',true);
+gtag('set','url_passthrough',true);
+(function(){
+  var c=localStorage.getItem('cookie_consent');
+  if(c==='granted'){gtag('consent','update',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted','analytics_storage':'granted','functionality_storage':'granted','personalization_storage':'granted'});}
+})();
+</script>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PGBS76ZX');</script>
 <!-- Meta Pixel -->
 <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','891313025762477');fbq('track','PageView');</script>
@@ -263,6 +280,24 @@ section{padding:5rem 5vw;}
   .hero-right{height:44vw;min-height:170px;}
 }
 </style>
+  <!-- TikTok Pixel Code Start -->
+  <script>
+  !function (w, d, t) {
+    w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=
+    ["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function()
+    {t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var
+    i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
+    var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n)
+    {var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=
+    [],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||
+    {};n=document.createElement("script")
+    ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")
+    [0];e.parentNode.insertBefore(n,e)};
+    ttq.load('D8D0JF3C77U8POE01ORG');
+    ttq.page();
+  }(window, document, 'ttq');
+  </script>
+  <!-- TikTok Pixel Code End -->
 </head>
 <body>
 <!-- GTM noscript -->
@@ -731,5 +766,51 @@ document.querySelectorAll('.faq-q').forEach(btn=>{
     Evaluación Urgente
   </a>
 </nav>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('a[href*="wa.me"]').forEach(function(a){
+    a.addEventListener('click',function(){
+      if(window.dataLayer){
+        window.dataLayer.push({
+          event:'wa_click',
+          page_path:location.pathname,
+          page_title:document.title
+        });
+      }
+    });
+  });
+});
+</script>
+
+<!-- ══ BANNER COOKIES — Consent Mode v2 ══ -->
+<div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:99999;background:#1A2630;color:#F0F2F2;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;box-shadow:0 -4px 24px rgba(0,0,0,.25);">
+  <p style="margin:0;font-size:.85rem;line-height:1.5;flex:1;min-width:200px;">
+    Usamos cookies para mejorar tu experiencia y medir el rendimiento de nuestros anuncios.
+    <a href="/privacidad.html" style="color:#C6A586;text-decoration:underline;">Política de privacidad</a>
+  </p>
+  <div style="display:flex;gap:.75rem;flex-shrink:0;">
+    <button id="cookie-deny" style="background:transparent;border:1px solid rgba(240,242,242,.3);color:#F0F2F2;padding:.5rem 1.1rem;border-radius:50px;font-size:.82rem;cursor:pointer;">Solo necesarias</button>
+    <button id="cookie-accept" style="background:#C6A586;border:none;color:#1A2630;padding:.5rem 1.4rem;border-radius:50px;font-size:.82rem;font-weight:700;cursor:pointer;">Aceptar todo</button>
+  </div>
+</div>
+<script>
+(function(){
+  var banner = document.getElementById('cookie-banner');
+  var stored = localStorage.getItem('cookie_consent');
+  if(!stored) banner.style.display = 'flex';
+  function grantAll(){
+    gtag('consent','update',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted','analytics_storage':'granted','functionality_storage':'granted','personalization_storage':'granted'});
+    localStorage.setItem('cookie_consent','granted');
+    banner.style.display = 'none';
+  }
+  function denyOptional(){
+    gtag('consent','update',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied','functionality_storage':'denied','personalization_storage':'denied'});
+    localStorage.setItem('cookie_consent','denied');
+    banner.style.display = 'none';
+  }
+  document.getElementById('cookie-accept').addEventListener('click', grantAll);
+  document.getElementById('cookie-deny').addEventListener('click', denyOptional);
+})();
+</script>
 </body>
 </html>
