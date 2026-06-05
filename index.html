@@ -1903,27 +1903,27 @@
     <div class="carousel" id="heroCarousel" aria-label="Galería del Dr. González Saldívar" role="region">
       <div class="carousel-track">
         <div class="carousel-slide active">
-          <img width="2001" height="3000" src="img/CropOs-39.webp" fetchpriority="high" alt="Dr. Juan Carlos González Saldívar — Ortopedista Oncológico Monterrey" style="object-position:top center;"/>
+          <img width="2001" height="3000" src="img/CropOs-39.webp" fetchpriority="high" decoding="async" alt="Dr. Juan Carlos González Saldívar — Ortopedista Oncológico Monterrey" style="object-position:top center;"/>
           <div class="carousel-overlay"><p class="carousel-name">Dr. Juan Carlos González Saldívar</p><p class="carousel-sub">Ortopedista Oncológico · Monterrey</p></div>
         </div>
         <div class="carousel-slide">
-          <img width="2001" height="3000" loading="lazy" src="img/CropOs-5.webp" alt="Dr. González Saldívar — Especialista en Ortopedia Oncológica" style="object-position:top center;"/>
+          <img width="2001" height="3000" loading="lazy" decoding="async" src="img/CropOs-5.webp" alt="Dr. González Saldívar — Especialista en Ortopedia Oncológica" style="object-position:top center;"/>
           <div class="carousel-overlay"><p class="carousel-name">Alta Especialidad Oncológica</p><p class="carousel-sub">Diagnóstico preciso · Plan real</p></div>
         </div>
         <div class="carousel-slide">
-          <img width="2001" height="3000" loading="lazy" src="img/CropOs-15.webp" alt="Dr. González Saldívar atendiendo paciente en consultorio" style="object-position:top center;"/>
+          <img width="2001" height="3000" loading="lazy" decoding="async" src="img/CropOs-15.webp" alt="Dr. González Saldívar atendiendo paciente en consultorio" style="object-position:top center;"/>
           <div class="carousel-overlay"><p class="carousel-name">Atención personalizada</p><p class="carousel-sub">Cada caso es único — así lo tratamos</p></div>
         </div>
         <div class="carousel-slide">
-          <img width="2001" height="3000" loading="lazy" src="img/CropOs-36.webp" alt="Dr. González Saldívar con bata médica" style="object-position:top center;"/>
+          <img width="2001" height="3000" loading="lazy" decoding="async" src="img/CropOs-36.webp" alt="Dr. González Saldívar con bata médica" style="object-position:top center;"/>
           <div class="carousel-overlay"><p class="carousel-name">Traumatología y Ortopedia</p><p class="carousel-sub">CorpOs Consultorio Articular · Monterrey</p></div>
         </div>
         <div class="carousel-slide">
-          <img width="2001" height="3000" loading="lazy" src="img/CropOs-55.webp" alt="Dr. González Saldívar en CorpOs Consultorio Articular" style="object-position:top center;"/>
+          <img width="2001" height="3000" loading="lazy" decoding="async" src="img/CropOs-55.webp" alt="Dr. González Saldívar en CorpOs Consultorio Articular" style="object-position:top center;"/>
           <div class="carousel-overlay"><p class="carousel-name">CorpOs Consultorio Articular</p><p class="carousel-sub">Plaza Contry · Monterrey, N.L.</p></div>
         </div>
         <div class="carousel-slide">
-          <img width="2001" height="3000" loading="lazy" src="img/CropOs-10.webp" alt="Dr. González Saldívar explicando diagnóstico a paciente" style="object-position:top center;"/>
+          <img width="2001" height="3000" loading="lazy" decoding="async" src="img/CropOs-10.webp" alt="Dr. González Saldívar explicando diagnóstico a paciente" style="object-position:top center;"/>
           <div class="carousel-overlay"><p class="carousel-name">Consulta con comunicación clara</p><p class="carousel-sub">Entiendes tu diagnóstico desde el primer día</p></div>
         </div>
       </div>
@@ -2087,6 +2087,7 @@
           class="about-photo-main"
           width="2001" height="3000"
           loading="lazy"
+          decoding="async"
         />
       </div>
       <div class="about-content reveal reveal-d1">
@@ -2901,12 +2902,6 @@ function toggleDrawerGroup(btn) {
     var countersEl = document.querySelector('.counters');
     if (countersEl) {
       obs.observe(countersEl);
-      // Trigger immediately if already visible
-      var rect = countersEl.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom > 0) {
-        runCounters();
-        obs.disconnect();
-      }
     }
   }
   // Ensure DOM is ready
