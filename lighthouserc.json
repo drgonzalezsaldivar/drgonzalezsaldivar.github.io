@@ -1,0 +1,19 @@
+{
+  "ci": {
+    "collect": {
+      "staticDistDir": ".",
+      "url": ["/index.html", "/rodilla.html", "/oncologia-ortopedica.html", "/blog/reemplazo-rodilla.html"],
+      "numberOfRuns": 1,
+      "settings": { "preset": "desktop", "chromeFlags": "--no-sandbox" }
+    },
+    "assert": {
+      "assertions": {
+        "categories:performance": ["warn", { "minScore": 0.8 }],
+        "categories:accessibility": ["warn", { "minScore": 0.9 }],
+        "categories:seo": ["warn", { "minScore": 0.95 }],
+        "total-byte-weight": ["warn", { "maxNumericValue": 1500000 }]
+      }
+    },
+    "upload": { "target": "filesystem", "outputDir": "./lhci-report" }
+  }
+}

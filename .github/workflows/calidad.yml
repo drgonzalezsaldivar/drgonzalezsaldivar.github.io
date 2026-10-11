@@ -1,0 +1,29 @@
+name: Calidad del sitio
+
+# Corre en cada PR. Solo avisa (warn), no bloquea el merge.
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  enlaces:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Enlaces internos e imágenes rotas
+        run: python3 scripts/check_links.py
+
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Lighthouse CI
+        run: npx --yes @lhci/cli@0.15.1 autorun
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: lighthouse-reportes
+          path: lhci-report
