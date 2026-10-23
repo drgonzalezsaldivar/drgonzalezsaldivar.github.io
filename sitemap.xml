@@ -104,7 +104,6 @@
   <!-- ── BLOG INDEX ── -->
   <url>
     <loc>https://www.drgonzalezsaldivar.com/blog</loc>
-    <lastmod>2026-05-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -112,43 +111,36 @@
   <!-- ── ARTÍCULOS DE BLOG ── -->
   <url>
     <loc>https://www.drgonzalezsaldivar.com/blog/reemplazo-rodilla</loc>
-    <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.drgonzalezsaldivar.com/blog/dolor-cadera-adultos-jovenes</loc>
-    <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.drgonzalezsaldivar.com/blog/tumores-oseos-benignos-malignos</loc>
-    <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.drgonzalezsaldivar.com/blog/biopsia-osea</loc>
-    <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.drgonzalezsaldivar.com/blog/hernia-disco</loc>
-    <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.drgonzalezsaldivar.com/blog/benigno-maligno</loc>
-    <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.drgonzalezsaldivar.com/blog/lesion-resonancia</loc>
-    <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

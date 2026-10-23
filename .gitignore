@@ -1,19 +1,43 @@
 # Backups
 index-backup.html
+assets/index-backup.html
 
 # Internal docs (not for production)
 CLAUDE.md
 DESIGN-SYSTEM.md
 LANDING-PAGE-REPORT.md
 estado_web_abril2026.md
+LAUNCH-SUMMARY.md
 
-# Archivos privados
-_originals/
-assets/
-LOGOTIPO PERSONAL/
-LOGOTIPOS SEGUROS/
-Logotipos hospitales/
-Sociedades/
+# Google Ads / Marketing docs (privados)
+GOOGLE-ADS-*
+GUIA-GOOGLE-ADS*
+GUIA-SETUP-GOOGLE-ADS*
+PLAN-GOOGLE-ADS-*
+COMPETITOR-INTELLIGENCE-REPORT.md
+CONFIGURACION-GOOGLE-ADS-PASO-A-PASO.html
+IMPLEMENTACION_PROGRESO.md
+MARKETING-FUNNEL-STRATEGY.html
+URLS_BLOG_OPTIMIZADAS.md
+analisis y pan seo jc.docx
+analisis y pan seo jc.docx.md
+gen_plan_v4.py
+
+# Internal assets and working folders (the public logos under assets/ stay tracked)
+assets/docs-marketing/
+assets/docs/
+/_originals/
+/audit/
+/funnel-architect-plugin/
+/LOGOTIPO PERSONAL/
+/LOGOTIPOS SEGUROS/
+/Logotipos hospitales/
+/Sociedades/
+/Servicios/
+
+# Claude Code / MCP local config (never publish)
+/.claude/
+.mcp.json
 
 # OS
 .DS_Store

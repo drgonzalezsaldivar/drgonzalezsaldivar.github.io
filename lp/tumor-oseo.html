@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="es-MX"><head>
 <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Tumor Óseo Monterrey — Oncólogo Ortopédico | Dr. González Saldívar</title>
-<meta name="description" content="¿Te encontraron un tumor óseo en Monterrey? Oncólogo ortopédico certificado CMOT. Evaluación urgente, biopsia y plan de tratamiento. Cédula 9481533."/>
+<meta name="description" content="¿Te encontraron un tumor óseo en Monterrey? Ortopedista certificado CMOT con alta especialidad en Ortopedia Oncológica. Evaluación urgente, biopsia y plan de tratamiento. Cédula 9481533."/>
 <meta name="robots" content="noindex,nofollow"/>
 <link rel="icon" type="image/svg+xml" href="../favicon.svg"/>
 <!-- GTM -->
@@ -241,13 +241,14 @@ section{padding:5rem 5vw;}
 
 /* SOCIEDADES */
 .socie-section{background:var(--cream2);padding:4rem 5vw;}
-.socie-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:2.5rem;}
+.socie-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(180px,100%),1fr));gap:1.5rem;margin-top:2.5rem;}
+.socie-name,.socie-type{overflow-wrap:anywhere;}
 .socie-card{background:#fff;border:1px solid var(--border);border-radius:var(--r-lg);padding:2rem 1.5rem;display:flex;flex-direction:column;align-items:center;gap:1rem;text-align:center;transition:transform .3s var(--soft),box-shadow .3s;}
 .socie-card:hover{transform:translateY(-4px);box-shadow:var(--sh2);}
 .socie-logo{height:72px;width:auto;object-fit:contain;max-width:140px;}
 .socie-name{font-family:var(--FD);font-size:.8rem;font-weight:700;color:var(--dark);line-height:1.4;}
 .socie-type{font-size:.72rem;color:var(--gray);margin-top:.15rem;}
-@media(max-width:700px){.socie-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:700px){.socie-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;}.socie-card{padding:1.2rem .8rem;}}
 
 /* MOBILE BAR */
 .mobile-bar-lp{display:none;position:fixed;bottom:0;left:0;right:0;z-index:998;grid-template-columns:1fr 1fr;border-top:1px solid rgba(0,0,0,.08);background:var(--cream);box-shadow:0 -4px 20px rgba(0,0,0,.12);padding-bottom:env(safe-area-inset-bottom,0px);}
@@ -341,7 +342,7 @@ section{padding:5rem 5vw;}
       <span>Oncología Ortopédica · Monterrey NL</span>
     </div>
     <h1 class="hero-h1">¿Te encontraron<br>un <em>Tumor Óseo</em>?<br>Actúa ya.</h1>
-    <p class="hero-desc">El tiempo importa. El Dr. González Saldívar —oncólogo ortopédico certificado CMOT en Monterrey— evalúa tu caso con prioridad para darte un diagnóstico certero y un plan de tratamiento claro.</p>
+    <p class="hero-desc">El tiempo importa. El Dr. González Saldívar —ortopedista certificado CMOT con alta especialidad en Ortopedia Oncológica, en Monterrey— evalúa tu caso con prioridad para darte un diagnóstico certero y un plan de tratamiento claro.</p>
     <div class="warning-box">
       <span class="warning-icon">⚠️</span>
       <p class="warning-text"><strong>Importante:</strong> Una biopsia de tumor óseo debe realizarla el mismo cirujano que operará. Una biopsia mal planeada puede comprometer la cirugía definitiva o la preservación del miembro.</p>
@@ -358,11 +359,11 @@ section{padding:5rem 5vw;}
     </p>
   </div>
   <div class="hero-right" aria-hidden="true">
-    <div class="carousel-slide active"><img src="../img/CropOs-33.jpg" alt="Dr. González Saldívar — Oncólogo Ortopédico Monterrey" loading="eager" decoding="async"/></div>
-    <div class="carousel-slide"><img src="../img/CropOs-36.jpg" alt="Dr. González Saldívar bata médica oncología" loading="lazy" decoding="async"/></div>
-    <div class="carousel-slide"><img src="../img/CropOs-43.jpg" alt="Dr. González en consulta oncológica con paciente" loading="lazy" decoding="async"/></div>
-    <div class="carousel-slide"><img src="../img/CropOs-39.jpg" alt="Dr. González Saldívar — especialista tumores óseos NL" loading="lazy" decoding="async"/></div>
-    <div class="carousel-slide"><img src="../img/CropOs-4.jpg" alt="Ortopedista oncólogo certificado CMOT Monterrey" loading="lazy" decoding="async"/></div>
+    <div class="carousel-slide active"><img width="1200" height="1799" src="../img/CropOs-33.webp" alt="Dr. González Saldívar — Oncólogo Ortopédico Monterrey" loading="eager" fetchpriority="high" decoding="async"/></div>
+    <div class="carousel-slide"><img width="1200" height="1799" src="../img/CropOs-36.webp" alt="Dr. González Saldívar bata médica oncología" loading="lazy" decoding="async"/></div>
+    <div class="carousel-slide"><img width="1200" height="1798" src="../img/CropOs-43.webp" alt="Dr. González en consulta oncológica con paciente" loading="lazy" decoding="async"/></div>
+    <div class="carousel-slide"><img width="1200" height="1799" src="../img/CropOs-39.webp" alt="Dr. González Saldívar — especialista tumores óseos NL" loading="lazy" decoding="async"/></div>
+    <div class="carousel-slide"><img width="1200" height="1799" src="../img/CropOs-4.webp" alt="Ortopedista oncólogo certificado CMOT Monterrey" loading="lazy" decoding="async"/></div>
     <div class="carousel-dots" id="carouselDots"></div>
   </div>
 </section>
@@ -379,13 +380,13 @@ section{padding:5rem 5vw;}
     <div class="trust-icon">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
     </div>
-    +8 Años en Tumores Óseos
+    Formación en ortopedia 2017–2023
   </div>
   <div class="trust-item">
     <div class="trust-icon">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
     </div>
-    Cirugía con Conservación de Miembro
+    Cirugía ortopédica y tumoral
   </div>
   <div class="trust-item">
     <div class="trust-icon">
@@ -445,24 +446,7 @@ section{padding:5rem 5vw;}
 </section>
 
 <!-- STATS -->
-<div class="stats-bar">
-  <div class="stat-item reveal">
-    <div class="stat-num"><span class="count" data-target="8">0</span><span>+</span></div>
-    <div class="stat-label">Años en oncología ortopédica</div>
-  </div>
-  <div class="stat-item reveal reveal-d1">
-    <div class="stat-num"><span class="count" data-target="300">0</span><span>+</span></div>
-    <div class="stat-label">Cirugías oncológicas realizadas</div>
-  </div>
-  <div class="stat-item reveal reveal-d2">
-    <div class="stat-num"><span class="count" data-target="92">0</span><span>%</span></div>
-    <div class="stat-label">Conservación de miembro</div>
-  </div>
-  <div class="stat-item reveal reveal-d3">
-    <div class="stat-num"><span>5–7</span></div>
-    <div class="stat-label">Días resultado biopsia</div>
-  </div>
-</div>
+<div class="stats-bar"><div class="stat-item reveal "><div class="stat-num"><span>Desde 2017</span></div><div class="stat-label">Trayectoria clínica en Traumatología y Ortopedia</div></div><div class="stat-item reveal reveal-d1"><div class="stat-num"><span>Biopsia</span></div><div class="stat-label">Planeación diagnóstica y valoración individualizada</div></div><div class="stat-item reveal reveal-d2"><div class="stat-num"><span>Cirugía</span></div><div class="stat-label">Cirugía ortopédica y tumoral</div></div><div class="stat-item reveal reveal-d3"><div class="stat-num"><span>Tec Salud</span></div><div class="stat-label">Alta especialidad en Ortopedia Oncológica</div></div></div>
 
 <!-- PROCESO -->
 <section class="proceso-section">
@@ -512,20 +496,20 @@ section{padding:5rem 5vw;}
       </div>
       <div class="split-content">
         <span class="section-label">El especialista correcto</span>
-        <h2 class="section-title">Referencia en <em>Oncología Ortopédica</em> en el noreste de México</h2>
-        <p style="color:var(--gray);line-height:1.75;font-size:.97rem;">No todos los ortopedistas tratan tumores óseos. Se requiere una sub-especialidad específica en oncología musculoesquelética. El Dr. González Saldívar dedicó su formación y carrera entera a este campo.</p>
+        <h2 class="section-title">Alta especialidad en <em>Ortopedia Oncológica</em> en Monterrey</h2>
+        <p style="color:var(--gray);line-height:1.75;font-size:.97rem;">No todos los ortopedistas tratan tumores óseos; se requiere formación específica en oncología musculoesquelética. El Dr. González Saldívar realizó su especialidad en Traumatología y Ortopedia en el Hospital Christus Muguerza (2017–2021, aval UDEM) y su alta especialidad en Ortopedia Oncológica en Tec Salud (2021–2023).</p>
         <div class="creds-list">
           <div class="cred-item">
             <div class="cred-dot"></div>
-            <p class="cred-text"><strong>Certificado por el Consejo Mexicano de Ortopedia y Traumatología (CMOT)</strong> — máxima certificación en la especialidad.</p>
+            <p class="cred-text"><strong>Certificación por el Consejo Mexicano de Ortopedia y Traumatología (CMOT)</strong>.</p>
           </div>
           <div class="cred-item">
             <div class="cred-dot"></div>
-            <p class="cred-text"><strong>Sub-especialidad en Oncología Ortopédica</strong> en centros de referencia de México y el extranjero.</p>
+            <p class="cred-text"><strong>Alta especialidad en Ortopedia Oncológica</strong> realizada en Tec Salud (2021–2023), tras la especialidad en Traumatología y Ortopedia en el Hospital Christus Muguerza.</p>
           </div>
           <div class="cred-item">
             <div class="cred-dot"></div>
-            <p class="cred-text"><strong>Pionero en cirugía de conservación de miembro</strong> en Nuevo León con técnicas de reconstrucción avanzada.</p>
+            <p class="cred-text"><strong>Cirugía de conservación de miembro</strong> con técnicas de reconstrucción avanzada.</p>
           </div>
         </div>
         <a href="https://wa.me/528126555222?text=Hola%2C%20me%20encontraron%20un%20tumor%20%C3%B3seo%20y%20quisiera%20una%20evaluaci%C3%B3n%20urgente." class="btn-urgente" style="align-self:flex-start;margin-top:.5rem;" target="_blank" rel="noopener">
@@ -539,8 +523,8 @@ section{padding:5rem 5vw;}
 <!-- SOCIEDADES -->
 <section class="socie-section">
   <div style="max-width:1120px;margin:0 auto;">
-    <span class="section-label reveal">Membresías y certificaciones</span>
-    <h2 class="section-title reveal reveal-d1">Miembro de sociedades <em>internacionales</em></h2>
+    <span class="section-label reveal">Membresías y sociedades</span>
+    <h2 class="section-title reveal reveal-d1">Miembro de sociedades <em>médicas</em></h2>
     <div class="socie-grid">
       <div class="socie-card reveal reveal-d1">
         <img src="../img/asociaciones/femecot.webp" alt="FEMECOT" class="socie-logo" loading="lazy"/>
@@ -560,54 +544,58 @@ section{padding:5rem 5vw;}
         <img src="../img/asociaciones/slatme.svg" alt="SLATME" class="socie-logo" loading="lazy"/>
         <div>
           <p class="socie-name">SLATME</p>
-          <p class="socie-type">Sociedad Latinoamericana de Tumores Músculo-Esqueléticos</p>
+          <p class="socie-type">Sociedad Latinoamericana de Tumores Musculoesqueléticos</p>
         </div>
       </div>
       <div class="socie-card reveal reveal-d4">
         <img src="../img/asociaciones/smoose.svg" alt="SMOOSE" class="socie-logo" loading="lazy"/>
         <div>
           <p class="socie-name">SMOOSE</p>
-          <p class="socie-type">Sociedad Mexicana de Oncología Ortopédica y Sarcomas del Esqueleto</p>
+          <p class="socie-type">Sociedad de oncología musculoesquelética</p>
+        </div>
+      </div>
+      <div class="socie-card reveal reveal-d4">
+        <div>
+          <p class="socie-name">Colegio de Ortopedia y Traumatología de Nuevo León, A.C.</p>
+          <p class="socie-type">Membresía</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TESTIMONIALS — pendiente reviews reales -->
+<!-- TESTIMONIALS — reseñas de Google; comparación literal pendiente salvo Martín Infante -->
 <section class="testimonials-section">
   <div style="max-width:1120px;margin:0 auto;">
     <span class="section-label reveal">Lo que dicen los pacientes</span>
     <h2 class="section-title reveal reveal-d1">Opiniones de <em>pacientes reales</em></h2>
     <div class="testimonials-grid reveal reveal-d2">
       <div class="testi-card">
-        <div class="testi-stars"><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span></div>
-        <p class="testi-text">"Agradezco a Dios por permitirnos conocer al doctor Juan Carlos. Operó a mi hija de un tumor en su brazo derecho, le puso un injerto que ya tiene unido a su hueso y ya lleva el 90% de la funcionalidad. Es muy humano, paciente y un excelente ser humano."</p>
+        <p class="testi-text">"Agradezco a Dios por permitirnos conocer al doctor Juan Carlos, opero a mi hija de un tumor en su brazo derecho le puso un injerto que ya lo tiene unido a su hueso y ya lleva el 90% de la funcionalidad de su brazo y gracias a dios y ala profesionalidad del doctor ella va recuperándose favorablemente, es muy humano y paciente le da una excelente atención es un excelente doctor y ser humano"</p>
         <div class="testi-author">
           <div class="testi-avatar" style="background:#597288;">M</div>
-          <div><div class="testi-name">Martín Infante</div><div class="testi-detail">Hace 3 días · Google Maps</div></div>
+          <div><div class="testi-name">Martín Infante</div></div>
         </div>
-        <div class="testi-google"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>Reseña verificada en Google</div>
+        <div class="testi-google"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>Reseña de Google</div>
       </div>
       <div class="testi-card">
-        <div class="testi-stars"><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span></div>
         <p class="testi-text">"¡Excelente! Trato profesional y humano, sus explicaciones claras y precisas, muy acertado en tiempos de diagnóstico y pronósticos de rehabilitación."</p>
         <div class="testi-author">
           <div class="testi-avatar" style="background:#c5221f;">L</div>
-          <div><div class="testi-name">Lucy Zapata</div><div class="testi-detail">mar 2023 · Google Maps</div></div>
+          <div><div class="testi-name">Lucy Zapata</div></div>
         </div>
-        <div class="testi-google"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>Reseña verificada en Google</div>
+        <div class="testi-google"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>Reseña de Google</div>
       </div>
       <div class="testi-card">
-        <div class="testi-stars"><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span></div>
         <p class="testi-text">"La atención del Doc. ha sido muy buena. Me ha dado mucha claridad en lo que es la lesión y cómo será la recuperación. 100% recomendado."</p>
         <div class="testi-author">
           <div class="testi-avatar" style="background:#e37400;">H</div>
-          <div><div class="testi-name">Hector Moreira</div><div class="testi-detail">mar 2023 · Google Maps</div></div>
+          <div><div class="testi-name">Hector Moreira</div></div>
         </div>
-        <div class="testi-google"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>Reseña verificada en Google</div>
+        <div class="testi-google"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>Reseña de Google</div>
       </div>
     </div>
+    <p style="text-align:center;margin:1.4rem 0 0;"><a href="https://www.google.com/maps?cid=12008720924106928391" target="_blank" rel="noopener" style="color:var(--dark,#1A2630);font-weight:600;font-size:.95rem;text-decoration:underline;text-decoration-color:var(--gold,#C6A586);text-underline-offset:3px;">Ver reseñas en Google →</a></p>
   </div>
 </section>
 
@@ -651,7 +639,7 @@ section{padding:5rem 5vw;}
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
           </span>
         </button>
-        <div class="faq-a"><p>Desde la primera consulta hasta el diagnóstico histopatológico completo: aproximadamente 2 semanas. Consulta inicial → biopsia (3–5 días después) → resultado (5–7 días) → consulta de seguimiento con plan de tratamiento.</p></div>
+        <div class="faq-a"><p>El tiempo depende de cada caso. El proceso incluye: consulta inicial → biopsia → resultado histopatológico → consulta de seguimiento con plan de tratamiento.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">
@@ -689,7 +677,7 @@ section{padding:5rem 5vw;}
   <div style="position:relative;z-index:2;max-width:640px;margin:0 auto;">
     <span class="section-label reveal" style="justify-content:center;color:rgba(198,165,134,.8);">No esperes</span>
     <h2 class="reveal reveal-d1">El tiempo es crítico.<br>Contacta hoy.</h2>
-    <p class="reveal reveal-d2">Una evaluación temprana marca la diferencia entre conservar o no el miembro afectado. Tenemos citas prioritarias para casos oncológicos en Monterrey y área metropolitana.</p>
+    <p class="reveal reveal-d2">La evaluación temprana permite planear mejor las opciones de tratamiento. Tenemos citas prioritarias para casos oncológicos en Monterrey y área metropolitana.</p>
     <div class="cta-btns reveal reveal-d3">
       <a href="https://wa.me/528126555222?text=Hola%2C%20me%20encontraron%20un%20tumor%20%C3%B3seo%20y%20quisiera%20una%20evaluaci%C3%B3n%20urgente." class="btn-urgente" target="_blank" rel="noopener">
         🚨 Evaluación Urgente por WhatsApp
