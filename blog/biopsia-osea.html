@@ -2028,7 +2028,30 @@ src="https://www.facebook.com/tr?id=891313025762477&ev=PageView&noscript=1" alt=
   </div>
   <p class="f-disc">La información de este sitio tiene fines informativos y no sustituye la consulta médica. Para diagnóstico y tratamiento, consulte directamente al especialista.</p>
 </footer>
-<script>const toggle=document.querySelector('.n-toggle');const links=document.querySelector('.n-links');if(toggle)toggle.addEventListener('click',()=>links?.classList.toggle('open'));</script>
+<script>var navToggle, navDrawer;
+function closeDrawer() {
+  if (!navDrawer) return;
+  navDrawer.classList.remove('open');
+  navToggle.classList.remove('open');
+  navToggle.setAttribute('aria-expanded','false');
+  document.body.style.overflow = '';
+}
+function toggleDrawerGroup(btn) {
+  btn.closest('.drawer-group').classList.toggle('open');
+}
+(function initNav() {
+  navToggle = document.getElementById('navToggle');
+  navDrawer  = document.getElementById('navDrawer');
+  if (!navToggle || !navDrawer) return;
+  navToggle.addEventListener('click', function() {
+    var isOpen = navDrawer.classList.toggle('open');
+    navToggle.classList.toggle('open', isOpen);
+    navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+  navDrawer.addEventListener('click', function(e) { if (e.target === navDrawer) closeDrawer(); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeDrawer(); });
+})();</script>
 
 <script>
   window.addEventListener('scroll', () => {

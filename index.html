@@ -3018,7 +3018,8 @@ document.querySelectorAll('.faq-header').forEach(function(h) {
 });
 
 /* ── MORE REVIEWS ── */
-document.getElementById('btnMoreReviews').addEventListener('click', function() {
+var btnMoreReviews = document.getElementById('btnMoreReviews');
+if (btnMoreReviews) btnMoreReviews.addEventListener('click', function() {
   var hidden = document.querySelectorAll('.review-card.hidden');
   hidden.forEach(function(c) { c.classList.remove('hidden'); });
   this.style.display = 'none';
