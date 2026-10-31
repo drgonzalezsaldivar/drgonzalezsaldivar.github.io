@@ -1,0 +1,42 @@
+/* Correcciones de accesibilidad compartidas (contraste WCAG AA). Se carga al final de <head> en cada página. */
+
+/* Botones verdes de WhatsApp: texto e icono oscuros (blanco sobre #25D366 = 1.98:1; oscuro = 7.8:1) */
+.btn-wa, .btn-wa-lg, .btn-wa-big, .cta-wa-btn, .blog-cta-btn, .team-cta-wa, .btn-oncology-urgent,
+.mob-wa, .mb-wa, .wa-float, .author-box-cta, a[style*="25D366" i], a[style*="var(--green)" i] {
+  color: #0B2A14 !important;
+}
+.btn-wa svg, .btn-wa-lg svg, .btn-wa-big svg, .cta-wa-btn svg, .blog-cta-btn svg, .team-cta-wa svg,
+.btn-oncology-urgent svg, .mob-wa svg, .mb-wa svg, .wa-float svg, .author-box-cta svg, a[style*="25D366" i] svg, a[style*="var(--green)" i] svg {
+  fill: #0B2A14 !important;
+}
+.mob-wa *, .mb-wa *, .btn-wa *, .btn-wa-lg *, .btn-wa-big *, .cta-wa-btn *, .team-cta-wa * {
+  color: inherit !important; opacity: 1 !important;
+}
+
+/* Botones "Agendar cita" del menú (acero #597288): texto blanco puro (4.46:1 -> 5.0:1) */
+.nav-cta, .n-cta { color: #fff !important; }
+
+/* Pie de página oscuro (plantilla con .f-links): texto legible (antes 1.6–3.3:1) */
+.f-brand p, .f-copy, .f-disc, .f-links a, .f-col-title, .f-logo-sub { color: rgba(255,255,255,.72) !important; opacity: 1 !important; }
+.f-links a:hover { color: #7DBACC !important; }
+.f-col-title, .f-logo-sub { font-size: .66rem !important; }
+.f-copy, .f-disc { font-size: .7rem !important; }
+.f-links a { display: inline-block; padding: .25rem 0; }
+.f-social a { border-color: rgba(255,255,255,.3) !important; color: rgba(255,255,255,.75) !important; }
+.f-copy a { opacity: 1 !important; }
+
+/* Pie de página sobre fondo acero (plantilla con .f-col): blanco (3.47:1 -> 5.0:1) */
+footer .f-col a, footer .f-brand p, footer .f-bottom, footer .f-bottom * { color: #fff !important; }
+footer .f-col a { padding: .25rem 0; }
+footer .f-col a:hover { color: #fff !important; text-decoration: underline; }
+
+/* Pies claros con opacidad reducida */
+footer[style*="opacity"], footer.blog-footer { opacity: 1 !important; }
+footer[style*="opacity"], footer[style*="opacity"] a, .blog-footer p, .blog-footer a { color: #4A5560 !important; }
+
+/* Pie de las landings */
+.lp-footer p { color: rgba(240,242,242,.75) !important; }
+.lp-footer p a { opacity: 1 !important; }
+
+/* Etiqueta del botón flotante de WhatsApp al pasar el cursor (blanco sobre #25A244 = 3.3:1) */
+.wa-label { color: #062010 !important; }

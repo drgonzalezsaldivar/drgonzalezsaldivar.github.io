@@ -1557,6 +1557,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       .f-disc { text-align: left; max-width: 100%; }
 
       .wa-float    { display: none !important; }
+      /* Burbuja de Biby por encima de la barra fija (evita taparle el botón Llamar) */
+      #bl-webchat-button { bottom: calc(84px + env(safe-area-inset-bottom, 0px)) !important; }
+      .f-bottom { padding-bottom: calc(1rem + 72px); } /* el último texto del pie queda sobre la burbuja */
       body         { padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px)); }
       .mobile-bar  {
         display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 600;
@@ -1765,6 +1768,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }(window, document, 'ttq');
   </script>
   <!-- TikTok Pixel Code End -->
+<link rel="stylesheet" href="/a11y.css"/>
 </head>
 <body>
 
@@ -1781,12 +1785,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- ══ MOBILE CTA BAR ══ -->
 <div class="mobile-bar" role="navigation" aria-label="Contacto rápido">
-  <a href="tel:+528183877237" class="mob-call" aria-label="Llamar al consultorio">
+  <a href="tel:+528183877237" class="mob-call">
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
     <span class="mob-label">Llamar</span>
     <span class="mob-sub">818 387-7237</span>
   </a>
-  <a href="https://wa.me/528126555222?utm_source=sitio&utm_medium=organico&utm_campaign=home&utm_content=nav-mobile&text=Hola%2C%20quisiera%20agendar%20una%20consulta." target="_blank" rel="noopener" class="mob-wa" aria-label="WhatsApp">
+  <a href="https://wa.me/528126555222?utm_source=sitio&utm_medium=organico&utm_campaign=home&utm_content=nav-mobile&text=Hola%2C%20quisiera%20agendar%20una%20consulta." target="_blank" rel="noopener" class="mob-wa">
     <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
     <span class="mob-label">WhatsApp</span>
     <span class="mob-sub">Agendar cita</span>
@@ -2484,7 +2488,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- Botón ver todas en Google -->
     <div style="text-align:center;margin-top:2.5rem;">
       <a href="https://www.google.com/maps?cid=12008720924106928391" target="_blank" rel="noopener"
-         class="btn-google-reviews" aria-label="Ver todas las reseñas en Google">
+         class="btn-google-reviews" aria-label="Ver reseñas en Google">
         <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" style="flex-shrink:0;">
           <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
           <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
@@ -2824,7 +2828,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </footer>
 
 <!-- Floating WA (desktop) -->
-<a href="https://wa.me/528126555222?utm_source=sitio&utm_medium=organico&utm_campaign=home&utm_content=float&text=Hola%2C%20quisiera%20agendar%20una%20consulta." class="wa-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+<a href="https://wa.me/528126555222?utm_source=sitio&utm_medium=organico&utm_campaign=home&utm_content=float&text=Hola%2C%20quisiera%20agendar%20una%20consulta." class="wa-float" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
   <span class="wa-label">Escríbenos</span>
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
 </a>
