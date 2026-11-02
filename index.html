@@ -573,9 +573,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       display: flex; align-items: center; gap: .45rem;
       border: 1px solid rgba(198,165,134,.14);
     }
-    .hero-badge-star-icon { color: #E8A020; font-size: .9rem; }
-    .hero-badge-star p { font-size: .74rem; font-weight: 700; color: var(--navy); line-height: 1; }
-    .hero-badge-star span { font-size: .59rem; color: var(--gray); }
+    .hero-badge-star { text-decoration: none; align-items: flex-start; max-width: 15.5rem; padding: .55rem .85rem; }
+    .hero-badge-star > svg { flex-shrink: 0; margin-top: .12rem; }
+    .hero-badge-star-icon { color: #B06D00; font-size: .85rem; letter-spacing: .04em; margin-right: .35rem; }
+    .hero-badge-star p { font-size: .82rem; font-weight: 700; color: #1f1f1f; line-height: 1.2; margin: 0; }
+    .hero-badge-star div > span { display: block; font-size: .72rem; color: #3c4043; line-height: 1.35; }
+    .hero-badge-star:focus-visible { opacity: 1; outline: 2px solid var(--navy2); outline-offset: 2px; }
+    .hero-badge-star .hero-badge-star-date { font-size: .68rem; color: #5f6368; margin-top: .1rem; }
 
     .hero-badge-price {
       position: absolute; bottom: 7rem; left: -1rem; z-index: 20;
@@ -643,9 +647,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .trust-item svg { width: 14px; height: 14px; stroke: var(--gold); flex-shrink: 0; fill: none; stroke-width: 1.8; }
     .trust-item span { font-size: .71rem; font-weight: 500; color: var(--navy); }
     .trust-rating { background: var(--cream2); border-radius: 50px; padding: .22rem .75rem; display: flex; align-items: center; gap: .32rem; border: 1px solid var(--border); }
-    .trust-rating-star { color: #E8A020; font-size: .78rem; }
-    .trust-rating-num  { font-weight: 700; color: var(--dark); font-size: .71rem; }
-    .trust-rating-lbl  { color: var(--gray); font-size: .63rem; }
+    .trust-rating { text-decoration: none; }
+    .trust-rating-star { color: #B06D00; font-size: .78rem; }
+    .trust-rating-num  { font-weight: 700; color: var(--dark); font-size: .75rem; }
+    .trust-rating-lbl  { color: #4A5560; font-size: .7rem; }
     .trust-insurers { flex-wrap: wrap; gap: .35rem .5rem; }
     .trust-insurers svg { align-self: center; flex-shrink: 0; }
     .trust-insurer-chips { display: flex; gap: .22rem; flex-wrap: wrap; align-items: center; }
@@ -1466,6 +1471,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       .trust-item { flex-shrink: 0; padding: .35rem 1.2rem; }
       .trust-item:not(:last-child)::after { display: none; }
       .trust-item span { font-size: .68rem; }
+      .trust-rating { order: -1; flex-shrink: 0; } /* la reputación en Google queda visible al inicio de la barra */
     }
 
     /* ── COUNTERS MOBILE ── */
@@ -1506,7 +1512,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         bottom: 5rem; left: .8rem;
         font-size: .85rem;
       }
-      .hero-badge-star  { top: 1rem; right: 1rem; }
+      .hero-badge-star  { top: .6rem; right: .6rem; padding: .45rem .7rem; } /* no toca la insignia de precio */
       .hero-h1 { font-size: 2.2rem; line-height: 1.08; }
       .hero-desc { display: block !important; font-size: .82rem; line-height: 1.8; margin-bottom: 1.4rem; }
       .hero-schedule { display: none; }
@@ -1604,6 +1610,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       .team-cta-wa { padding: .48rem .85rem; font-size: .72rem; }
       .f-main { grid-template-columns: 1fr; }
       .f-brand { grid-column: auto; }
+    }
+
+    @media (max-width: 380px) {
+      .hero-badge-price { bottom: 4rem; } /* pantallas muy angostas: la insignia de precio no toca la tarjeta de reseñas */
     }
 
     /* Reduced motion */
@@ -1915,13 +1925,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <!-- RIGHT: Carousel -->
   <div class="hero-right">
-    <div class="hero-badge-star" aria-label="Reseñas de pacientes en Google">
-      <span class="hero-badge-star-icon" aria-hidden="true">★</span>
+    <!-- Reputación en Google: mismas cifras verificadas que #resenas y la barra de confianza (5.0 · 35 opiniones, 30-oct-2026).
+         Al actualizar, cambiar los 3 lugares: .hero-badge-star, .trust-rating y la insignia de #resenas. Sin marcado AggregateRating/Review. -->
+    <a class="hero-badge-star" href="https://www.google.com/maps?cid=12008720924106928391" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
       <div>
-        <p>Reseñas en Google</p>
-<span>Opiniones de pacientes</span>
+        <p><span class="hero-badge-star-icon" aria-hidden="true">★★★★★</span><span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;">Calificación </span><strong>5.0</strong><span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;"> de 5,</span></p>
+        <span>35 opiniones de pacientes en Google</span>
+        <span class="hero-badge-star-date">Consultado el 30 de octubre de 2026</span>
       </div>
-    </div>
+    </a>
     <div class="hero-badge-price">
       <div class="hero-badge-price-label">Consulta desde</div>
       <div class="hero-badge-price-val">$1,200 MXN</div>
@@ -1986,7 +1999,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <span style="font-size:.72rem;color:var(--gray);">+más</span>
     </div>
   </div>
-  <a class="trust-rating" href="https://www.google.com/maps?cid=12008720924106928391" target="_blank" rel="noopener"><span class="trust-rating-lbl">Reseñas de pacientes en Google</span></a>
+  <a class="trust-rating" href="https://www.google.com/maps?cid=12008720924106928391" target="_blank" rel="noopener"><span class="trust-rating-star" aria-hidden="true">★</span><span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;">Calificación </span><span class="trust-rating-num">5.0</span><span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;"> de 5,</span><span class="trust-rating-lbl">35 opiniones en Google · consultado el 30 oct 2026</span></a>
 </div>
 
 <!-- ══ COUNTERS ══ -->
