@@ -282,6 +282,12 @@
     .eeat-badge-info p:not(:first-child) { font-size: .78rem; color: var(--gray); }
     .eeat-badge-stars { margin-left: auto; text-align: right; flex-shrink: 0; }
     .eeat-badge-stars p { font-size: .7rem; color: var(--gray); margin: 0; }
+    .eeat-badge-info p, .eeat-badge-info p:not(:first-child), .eeat-badge-stars p { color: var(--navy2); }
+    @media (max-width: 480px) {
+      .eeat-badge { flex-wrap: wrap; }
+      .eeat-badge-info { flex: 1 1 8rem; min-width: 0; }
+      .eeat-badge-stars { margin-left: 0; text-align: left; width: 100%; }
+    }
 
     /* ── DOCTOR QUOTE ── */
     .doctor-quote {
@@ -666,6 +672,7 @@
           <p>Dr. Juan Carlos González Saldívar</p>
           <p>Cirujano Ortopedista · Alta Especialidad en Ortopedia Oncológica</p>
           <p>Especialista en diagnóstico y tratamiento de tumores óseos</p>
+          <p style="color:var(--navy2);">Cédula Prof. 9481533 · Cédula Esp. 12293070 · <a href="/dr-gonzalez-saldivar" style="color:var(--navy2);text-decoration:underline;text-underline-offset:2px;">Ver perfil profesional</a></p>
         </div>
         <div class="eeat-badge-stars"><p><a href="https://www.google.com/maps?cid=12008720924106928391" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Reseñas en Google</a></p></div>
       </div>
@@ -869,6 +876,9 @@
         </ul>
         <p>
           Lo más importante que puedes hacer si te detectaron una lesión ósea es <strong>no autodiagnosticarte ni quedarte con la duda</strong>. La gran mayoría de las lesiones óseas son benignas — pero las pocas que no lo son requieren acción rápida y especializada.
+        </p>
+        <p>
+          Para profundizar: el artículo sobre <a href="/blog/biopsia-osea" style="color:var(--navy2);text-decoration:underline;text-underline-offset:2px;">biopsia ósea: cuándo se necesita y cómo se planifica</a>, la página de <a href="/oncologia-ortopedica" style="color:var(--navy2);text-decoration:underline;text-underline-offset:2px;">ortopedia oncológica en Monterrey</a> y la información sobre <a href="/segunda-opinion-oncologica" style="color:var(--navy2);text-decoration:underline;text-underline-offset:2px;">segunda opinión oncológica</a>.
         </p>
 
         <div class="tags-bar">
