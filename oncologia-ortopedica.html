@@ -414,6 +414,15 @@
       .trust-item { flex-shrink: 0; }
     }
     @media (max-width: 480px) {
+      /* Trust bar C1: cuadrícula compacta de 2 columnas, 5 elementos visibles, sin scroll horizontal */
+      .trust-bar{display:grid!important;grid-template-columns:1fr 1fr;gap:.3rem .6rem;overflow:visible!important;padding:.6rem 1rem!important;align-items:center;justify-items:stretch}
+      .trust-item{padding:.1rem .2rem!important;min-width:0;flex-shrink:1;gap:.35rem!important;align-items:flex-start}
+      .trust-item::after{display:none!important}
+      .trust-item span{font-size:.68rem!important;line-height:1.3}
+      .trust-rating{order:4;white-space:normal!important;border-radius:12px!important;padding:.3rem .55rem!important;text-align:center;justify-content:center;min-width:0;flex-shrink:1!important}
+      .trust-rating-lbl{font-size:.66rem!important;line-height:1.25}
+      .trust-bar>.trust-item:nth-child(4){order:5;grid-column:1/-1}
+      .trust-insurer-chips{gap:.3rem}.trust-insurer-chips img{height:15px!important}.trust-insurer-chips span{font-size:.62rem!important}
       .conditions-grid { grid-template-columns: 1fr; }
       .cta-box { padding: 2rem 1.4rem; }
       .hero-btns { flex-direction: column; }
@@ -479,7 +488,7 @@
     <span class="mob-label">Llamar</span>
     <span class="mob-sub">818 387-7237</span>
   </a>
-  <a href="https://wa.me/528126555222?text=Hola%2C%20me%20detectaron%20algo%20en%20el%20hueso%20y%20quisiera%20saber%20qu%C3%A9%20sigue." target="_blank" rel="noopener" class="mob-wa">
+  <a href="https://wa.me/528126555222?text=Hola%2C%20quisiera%20solicitar%20una%20valoraci%C3%B3n%20especializada." target="_blank" rel="noopener" class="mob-wa">
     <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
     <span class="mob-label">WhatsApp</span>
     <span class="mob-sub">Agendar cita</span>
@@ -508,7 +517,7 @@
     <li><a href="/#resenas">Reseñas</a></li>
     <li><a href="/#contacto">Contacto</a></li>
     <li><a href="segunda-opinion-oncologica" class="nav-segunda">Segunda Opinión</a></li>
-    <li><a href="https://wa.me/528126555222?text=Hola%2C%20me%20detectaron%20algo%20en%20el%20hueso%20y%20quisiera%20saber%20qu%C3%A9%20sigue." target="_blank" rel="noopener" class="nav-cta">Agendar cita</a></li>
+    <li><a href="https://wa.me/528126555222?text=Hola%2C%20quisiera%20solicitar%20una%20valoraci%C3%B3n%20especializada." target="_blank" rel="noopener" class="nav-cta">Agendar cita</a></li>
   </ul>
   <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navDrawer">
     <span></span><span></span><span></span>
@@ -534,7 +543,7 @@
     <a href="/#resenas" onclick="closeDrawer()">Reseñas</a>
     <a href="/#contacto" onclick="closeDrawer()">Contacto</a>
     <a href="segunda-opinion-oncologica" class="nav-segunda" onclick="closeDrawer()">Segunda Opinión Oncológica</a>
-    <a href="https://wa.me/528126555222?text=Hola%2C%20me%20detectaron%20algo%20en%20el%20hueso%20y%20quisiera%20saber%20qu%C3%A9%20sigue." target="_blank" rel="noopener" class="nav-cta" onclick="closeDrawer()">Agendar cita por WhatsApp</a>
+    <a href="https://wa.me/528126555222?text=Hola%2C%20quisiera%20solicitar%20una%20valoraci%C3%B3n%20especializada." target="_blank" rel="noopener" class="nav-cta" onclick="closeDrawer()">Agendar cita por WhatsApp</a>
   </div>
 </div>
 
@@ -548,20 +557,19 @@
     </nav>
     <div class="hero-tag">Alta Especialidad · Tec Salud · Cédula 12293070</div>
     <h1 class="hero-h1">Oncología Ortopédica en Monterrey — Tumores Óseos y Casos Complejos</h1>
-    <p class="hero-desc">Si te detectaron una lesión ósea, tienes diagnóstico de tumor, sarcoma o metástasis, o buscas segunda opinión antes de operar: aquí recibes una valoración especializada con diagnóstico claro y plan de tratamiento personalizado. Alta Especialidad realizada en Tec Salud.</p>
+    <p class="hero-desc">Si te detectaron una lesión ósea, tienes diagnóstico de tumor, sarcoma o metástasis, o buscas segunda opinión antes de operar: aquí recibes una valoración especializada para revisar tus estudios y definir los siguientes pasos. Alta Especialidad realizada en Tec Salud.</p>
     <div class="hero-pills">
       <span class="hero-pill gold">Alta Especialidad en Ortopedia Oncológica · Tec Salud</span>
       <span class="hero-pill">Preservación de extremidad</span>
     </div>
     <div class="hero-btns">
-      <a href="https://wa.me/528126555222?text=Hola%2C%20me%20detectaron%20algo%20en%20el%20hueso%20y%20quisiera%20enviar%20mis%20estudios%20para%20orientaci%C3%B3n." target="_blank" rel="noopener" class="btn-wa">
+      <a href="https://wa.me/528126555222?text=Hola%2C%20quisiera%20solicitar%20una%20valoraci%C3%B3n%20especializada%20y%20enviar%20mis%20estudios." target="_blank" rel="noopener" class="btn-wa">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-        Enviar estudios por WhatsApp 24/7
+        Enviar mis estudios por WhatsApp
       </a>
       <a href="segunda-opinion-oncologica" class="btn-outline">Segunda opinión →</a>
     </div>
-    <!-- PENDIENTE DE CONFIRMACIÓN OPERATIVA: "Los casos oncológicos se canalizan para revisión prioritaria" (no ampliar ni prometer tiempos) -->
-    <p style="font-size:.72rem;color:rgba(255,255,255,.96);margin-top:.6rem;line-height:1.6;">Puedes compartir radiografías, resonancia, tomografía o reportes. Jessy, nuestra asistente virtual, está disponible las 24 horas para ayudarte a gestionar tu cita. No proporciona atención médica inmediata ni sustituye a los servicios de urgencias. Los casos oncológicos se canalizan para revisión prioritaria.</p>
+    <p style="font-size:.72rem;color:rgba(255,255,255,.96);margin-top:.6rem;line-height:1.6;">Puedes compartir radiografías, resonancia, tomografía o reportes. Jessy, nuestra asistente virtual, te ayuda a solicitar tu cita por WhatsApp. No proporciona atención médica inmediata ni sustituye a los servicios de urgencias.</p>
   </div>
   <div class="hero-isotipo" aria-hidden="true">
     <div class="hero-isotipo-inner">
@@ -633,7 +641,7 @@
       <div class="alert-box">
         <p>Algunos síntomas de las lesiones óseas pueden confundirse con molestias musculares, lesiones deportivas o desgaste articular. La mayoría de los dolores musculoesqueléticos no se deben a un tumor, pero ciertos hallazgos merecen una evaluación especializada.</p>
       </div>
-      <h3 style="font-size:1rem;color:var(--navy2);margin-top:1.8rem;">Solicita una valoración prioritaria si presentas:</h3>
+      <h3 style="font-size:1rem;color:var(--navy2);margin-top:1.8rem;">Solicita una valoración especializada si presentas:</h3>
       <ul class="symptoms-list" style="margin-top:.9rem;">
         <li>Dolor óseo persistente sin una causa clara, especialmente si aumenta progresivamente o te despierta por la noche.</li>
         <li>Una masa o aumento de volumen que está creciendo.</li>
@@ -701,7 +709,7 @@
           <svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
         <h3>Biopsias y segunda opinión</h3>
-        <p>Biopsia percutánea guiada por imagen y segunda opinión oncológica antes de decidir cirugía, amputación o tratamiento. La planificación del trayecto es crucial para no comprometer la cirugía definitiva.</p>
+        <p>Biopsia percutánea guiada por imagen, cuando está indicada, y segunda opinión oncológica antes de decidir un tratamiento. Cuando una lesión requiere biopsia, es importante planificarla junto con el equipo tratante para no limitar las opciones posteriores de tratamiento.</p>
         <span class="svc-link">Solicitar segunda opinión →</span>
       </a>
     </div>
@@ -724,7 +732,7 @@
       </div>
       <div style="background:white;border:1px solid var(--border);border-radius:var(--r-md);padding:1.3rem 1.4rem;">
         <h3 style="font-family:var(--FD);font-size:.9rem;font-weight:700;color:var(--navy);margin-bottom:.45rem;">¿Debo hacerme biopsia de inmediato?</h3>
-        <p style="font-size:.8rem;color:var(--gray);line-height:1.7;">No siempre. Primero se revisa la localización, la imagen y la historia clínica. Una biopsia mal planificada puede comprometer opciones quirúrgicas posteriores — el orden del diagnóstico importa.</p>
+        <p style="font-size:.8rem;color:var(--gray);line-height:1.7;">No siempre. Primero se revisa la localización, la imagen y la historia clínica. Cuando una lesión requiere biopsia, se indica y se planifica junto con el equipo tratante para no limitar las opciones posteriores de tratamiento.</p>
       </div>
       <div style="background:white;border:1px solid var(--border);border-radius:var(--r-md);padding:1.3rem 1.4rem;">
         <h3 style="font-family:var(--FD);font-size:.9rem;font-weight:700;color:var(--navy);margin-bottom:.45rem;">¿Necesito cirugía?</h3>
@@ -736,7 +744,7 @@
       </div>
     </div>
     <div style="text-align:center;margin-top:2rem;" class="reveal">
-      <a href="https://wa.me/528126555222?text=Hola%2C%20tengo%20dudas%20sobre%20una%20lesi%C3%B3n%20%C3%B3sea%20y%20quisiera%20orientaci%C3%B3n." target="_blank" rel="noopener" class="btn-wa" style="display:inline-flex;">
+      <a href="https://wa.me/528126555222?text=Hola%2C%20quisiera%20solicitar%20una%20valoraci%C3%B3n%20especializada." target="_blank" rel="noopener" class="btn-wa" style="display:inline-flex;">
         <svg viewBox="0 0 24 24" aria-hidden="true" style="width:16px;height:16px;fill:white;flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
         Enviar estudios o hacer una pregunta por WhatsApp
       </a>
@@ -792,15 +800,15 @@
       <div class="step-item reveal reveal-d2">
         <div class="step-num"></div>
         <div class="step-content">
-          <h4>Biopsia percutánea o abierta planificada</h4>
-          <p>Cuando la imagen no es concluyente o se requiere confirmación histológica, se planifica la biopsia de forma que no comprometa la cirugía definitiva.</p>
+          <h4>Biopsia, cuando está indicada</h4>
+          <p>Cuando se requiere confirmación histológica, la biopsia se indica y planifica según la lesión, los estudios y el plan de tratamiento, junto con el equipo tratante.</p>
         </div>
       </div>
       <div class="step-item reveal">
         <div class="step-num"></div>
         <div class="step-content">
-          <h4>Estadificación y junta multidisciplinaria</h4>
-          <p>Los casos malignos se presentan en junta con oncología médica, radio-oncología y patología para definir el mejor plan de tratamiento.</p>
+          <h4>Estadificación y coordinación multidisciplinaria</h4>
+          <p>En los casos malignos, el plan se discute y coordina con otros especialistas, como oncología médica, radio-oncología y patología, según cada caso.</p>
         </div>
       </div>
       <div class="step-item reveal reveal-d1">
@@ -814,9 +822,20 @@
         <div class="step-num"></div>
         <div class="step-content">
           <h4>Seguimiento oncológico periódico</h4>
-          <p>Control con imagen a los 3, 6 y 12 meses. Coordinación con el equipo de oncología médica para el seguimiento oncológico completo.</p>
+          <p>Los controles con imagen se programan de forma individual, según el tipo de lesión, el tratamiento realizado y la evolución. Coordinación con el equipo de oncología médica para el seguimiento oncológico completo.</p>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- PACIENTES REFERIDOS -->
+<section class="content-section" aria-labelledby="h2-referidos" style="padding-top:2rem;padding-bottom:2rem;">
+  <div class="content-inner">
+    <div class="reveal" style="background:white;border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:var(--r-md);padding:1.5rem 1.6rem;max-width:760px;margin:0 auto;">
+      <h2 id="h2-referidos" style="font-family:var(--FD);font-size:1.15rem;font-weight:700;color:var(--navy);margin-bottom:.6rem;">¿Tu médico te recomendó una valoración por oncología ortopédica?</h2>
+      <p style="font-size:.88rem;color:var(--gray);line-height:1.8;margin-bottom:1rem;">Atendemos pacientes referidos por otros especialistas. Durante la consulta revisamos tus estudios y antecedentes para definir los siguientes pasos. Cuando se requiere una biopsia o tratamiento, su planificación se coordina con el equipo tratante.</p>
+      <a href="https://wa.me/528126555222?text=Hola%2C+quiero+agendar+consulta+de+oncolog%C3%ADa+ortop%C3%A9dica" target="_blank" rel="noopener" class="btn-wa">Agendar valoración</a>
     </div>
   </div>
 </section>
@@ -899,7 +918,7 @@
       <h2>¿Te detectaron algo en el hueso?</h2>
       <p style="color:#fff;">Solicita una valoración especializada para revisar tu caso y conocer los siguientes pasos.</p>
       <div class="hero-btns" style="justify-content:center;">
-        <a href="https://wa.me/528126555222?text=Hola%2C%20me%20detectaron%20algo%20en%20el%20hueso%20y%20quisiera%20saber%20qu%C3%A9%20sigue." target="_blank" rel="noopener" class="btn-wa">
+        <a href="https://wa.me/528126555222?text=Hola%2C%20quisiera%20solicitar%20una%20valoraci%C3%B3n%20especializada." target="_blank" rel="noopener" class="btn-wa">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
           Consultar por WhatsApp
         </a>
@@ -965,7 +984,7 @@
 </footer>
 
 <!-- Floating WA -->
-<a href="https://wa.me/528126555222?text=Hola%2C%20me%20detectaron%20algo%20en%20el%20hueso%20y%20quisiera%20saber%20qu%C3%A9%20sigue." class="wa-float" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+<a href="https://wa.me/528126555222?text=Hola%2C%20quisiera%20solicitar%20una%20valoraci%C3%B3n%20especializada." class="wa-float" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
   <div class="wa-float-pulse" aria-hidden="true"></div>
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
 </a>
