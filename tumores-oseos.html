@@ -51,7 +51,7 @@
   }
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Cómo se diagnostica un tumor óseo?","acceptedAnswer":{"@type":"Answer","text":"El diagnóstico de un tumor óseo combina imagen (radiografía, resonancia magnética, TAC) con análisis de laboratorio y, frecuentemente, biopsia histológica. La resonancia magnética es el estudio más completo para evaluar la extensión local del tumor. La biopsia confirma el tipo celular y determina si es benigno o maligno."}},{"@type":"Question","name":"¿Duele siempre un tumor óseo?","acceptedAnswer":{"@type":"Answer","text":"No siempre. Muchos tumores óseos benignos son asintomáticos y se descubren de forma incidental en estudios de imagen. Los tumores malignos frecuentemente producen dolor progresivo, especialmente nocturno, que no mejora con el reposo. Un bulto visible o palpable sin dolor también debe evaluarse."}},{"@type":"Question","name":"¿Cuánto tiempo tarda el diagnóstico de un tumor óseo?","acceptedAnswer":{"@type":"Answer","text":"El tiempo del proceso diagnóstico depende de la complejidad del caso. Incluye consulta inicial, solicitud de imagen avanzada, posible biopsia y resultado histopatológico. En casos urgentes o de alta sospecha maligna, el proceso se acelera para no retrasar el tratamiento."}}]}
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Cómo se diagnostica un tumor óseo?","acceptedAnswer":{"@type":"Answer","text":"El diagnóstico de un tumor óseo combina imagen (radiografía, resonancia magnética, TAC) con análisis de laboratorio y, frecuentemente, biopsia histológica. La resonancia magnética es el estudio más completo para evaluar la extensión local del tumor. La biopsia confirma el tipo celular y determina si es benigno o maligno."}},{"@type":"Question","name":"¿Duele siempre un tumor óseo?","acceptedAnswer":{"@type":"Answer","text":"No siempre. Muchos tumores óseos benignos son asintomáticos y se descubren de forma incidental en estudios de imagen. Los tumores malignos frecuentemente producen dolor progresivo, especialmente nocturno, que no mejora con el reposo. Un bulto visible o palpable sin dolor también debe evaluarse."}},{"@type":"Question","name":"¿Cuánto tiempo tarda el diagnóstico de un tumor óseo?","acceptedAnswer":{"@type":"Answer","text":"El tiempo del proceso diagnóstico depende de cada caso e incluye consulta inicial, imagen avanzada si se requiere, biopsia cuando está indicada y resultado histopatológico. Los tiempos varían y el plan se define de forma individual."}}]}
   </script>
 
   <!-- Google Tag Manager -->
@@ -312,6 +312,15 @@
       .trust-item{flex-shrink:0;}
     }
     @media(max-width:480px){
+      /* Trust bar C1: cuadrícula compacta de 2 columnas, 5 elementos visibles, sin scroll horizontal */
+      .trust-bar{display:grid!important;grid-template-columns:1fr 1fr;gap:.3rem .6rem;overflow:visible!important;padding:.6rem 1rem!important;align-items:center;justify-items:stretch}
+      .trust-item{padding:.1rem .2rem!important;min-width:0;flex-shrink:1;gap:.35rem!important;align-items:flex-start}
+      .trust-item::after{display:none!important}
+      .trust-item span{font-size:.68rem!important;line-height:1.3}
+      .trust-rating{order:4;white-space:normal!important;border-radius:12px!important;padding:.3rem .55rem!important;text-align:center;justify-content:center;min-width:0;flex-shrink:1!important}
+      .trust-rating-lbl{font-size:.66rem!important;line-height:1.25}
+      .trust-bar>.trust-item:nth-child(4){order:5;grid-column:1/-1}
+      .trust-insurer-chips{gap:.3rem}.trust-insurer-chips img{height:15px!important}.trust-insurer-chips span{font-size:.62rem!important}
       .conditions-grid{grid-template-columns:1fr;}
       .cta-box{padding:2rem 1.4rem;}
       .hero-btns{flex-direction:column;}
@@ -373,7 +382,7 @@
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
     <span class="mob-label">Llamar</span><span class="mob-sub">818 387-7237</span>
   </a>
-  <a href="https://wa.me/528126555222?text=Hola%2C%20me%20detectaron%20un%20tumor%20en%20el%20hueso%20y%20quisiera%20agendar%20una%20consulta%20urgente." target="_blank" rel="noopener" class="mob-wa">
+  <a href="https://wa.me/528126555222?text=Hola%2C%20quisiera%20solicitar%20una%20valoraci%C3%B3n%20especializada." target="_blank" rel="noopener" class="mob-wa">
     <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
     <span class="mob-label">WhatsApp</span><span class="mob-sub">Agendar cita</span>
   </a>
@@ -398,7 +407,7 @@
     <li><a href="/#resenas">Reseñas</a></li>
     <li><a href="/#contacto">Contacto</a></li>
     <li><a href="/segunda-opinion-oncologica" class="nav-segunda">Segunda Opinión</a></li>
-    <li><a href="https://wa.me/528126555222?text=Hola%2C%20me%20detectaron%20un%20tumor%20en%20el%20hueso%20y%20quisiera%20agendar%20una%20consulta%20urgente." target="_blank" rel="noopener" class="nav-cta">Agendar cita</a></li>
+    <li><a href="https://wa.me/528126555222?text=Hola%2C%20quisiera%20solicitar%20una%20valoraci%C3%B3n%20especializada." target="_blank" rel="noopener" class="nav-cta">Agendar cita</a></li>
   </ul>
   <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navDrawer">
     <span></span><span></span><span></span>
@@ -412,7 +421,7 @@
     <a href="/#resenas" onclick="closeDrawer()">Reseñas</a>
     <a href="/#contacto" onclick="closeDrawer()">Contacto</a>
     <a href="/segunda-opinion-oncologica" class="nav-segunda" onclick="closeDrawer()">Segunda Opinión Oncológica</a>
-    <a href="https://wa.me/528126555222?text=Hola%2C%20me%20detectaron%20un%20tumor%20en%20el%20hueso%20y%20quisiera%20agendar%20una%20consulta%20urgente." target="_blank" rel="noopener" class="nav-cta" onclick="closeDrawer()">Agendar por WhatsApp</a>
+    <a href="https://wa.me/528126555222?text=Hola%2C%20quisiera%20solicitar%20una%20valoraci%C3%B3n%20especializada." target="_blank" rel="noopener" class="nav-cta" onclick="closeDrawer()">Agendar por WhatsApp</a>
   </div>
 </div>
 
@@ -433,13 +442,13 @@
       <span class="hero-pill">Biopsia percutánea guiada</span>
     </div>
     <div class="hero-btns">
-      <a href="https://wa.me/528126555222?text=Hola%2C%20me%20detectaron%20una%20lesi%C3%B3n%20en%20el%20hueso%20y%20quisiera%20enviar%20mis%20estudios%20para%20orientaci%C3%B3n." target="_blank" rel="noopener" class="btn-wa">
+      <a href="https://wa.me/528126555222?text=Hola%2C%20quisiera%20solicitar%20una%20valoraci%C3%B3n%20especializada%20y%20enviar%20mis%20estudios." target="_blank" rel="noopener" class="btn-wa">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-        Enviar estudios por WhatsApp 24/7
+        Enviar mis estudios por WhatsApp
       </a>
       <a href="/segunda-opinion-oncologica" class="btn-outline">Segunda opinión →</a>
     </div>
-    <p style="font-size:.72rem;color:rgba(255,255,255,.42);margin-top:.6rem;line-height:1.6;">Puedes compartir radiografías, resonancia, tomografía o reportes médicos antes de tu cita.</p>
+    <p style="font-size:.72rem;color:rgba(255,255,255,.42);margin-top:.6rem;line-height:1.6;">Puedes compartir radiografías, resonancia, tomografía o reportes médicos antes de tu cita. WhatsApp es para solicitar tu cita; no es un servicio de urgencias.</p>
   </div>
   <div class="hero-isotipo" aria-hidden="true">
     <div class="hero-isotipo-inner">
@@ -486,7 +495,7 @@
       <h2 class="s-title" id="h2-alert">Si ya tienes imagen con <em>lesión ósea</em></h2>
       <div class="divider"></div>
       <div class="alert-box">
-        <p><strong>No esperes.</strong> Si tienes una resonancia magnética o TAC que muestra una lesión ósea sin diagnóstico claro, la estadificación temprana cambia los resultados. El Dr. González Saldívar puede orientarte desde la primera consulta.</p>
+        <p><strong>Si ya tienes una imagen con lesión ósea,</strong> solicita una valoración especializada para entender tus estudios y definir los siguientes pasos. El Dr. González Saldívar puede orientarte desde la primera consulta.</p>
       </div>
       <p style="font-size:.9rem;color:var(--gray);line-height:1.88;max-width:700px;">Los tumores óseos son un grupo amplio de lesiones que van desde quistes completamente benignos hasta sarcomas de alta malignidad. El diagnóstico diferencial requiere experiencia en imagen musculoesquelética y conocimiento oncológico especializado — no todo lo que se ve en el hueso es cáncer, pero todo merece evaluación apropiada.</p>
     </div>
@@ -554,9 +563,9 @@
       <h2 class="s-title">Dr. Juan Carlos González Saldívar</h2>
       <div class="divider"></div>
       <p>Alta especialidad en Ortopedia Oncológica realizada en Tec Salud. Diagnóstico diferencial entre tumores benignos y malignos, biopsia guiada y tratamiento quirúrgico especializado en Monterrey.</p>
-      <p>Un bulto en el hueso o dolor nocturno inexplicable merece evaluación rápida por un especialista. Agenda hoy.</p>
+      <p>Un bulto en el hueso o dolor nocturno inexplicable merece una evaluación médica. Agenda tu valoración.</p>
       <div style="margin-top:1rem;">
-        <a href="https://wa.me/528126555222?text=Hola%2C+quiero+consulta+por+tumor+%C3%B3seo" target="_blank" rel="noopener" class="btn-wa" style="width:fit-content;">
+        <a href="https://wa.me/528126555222?text=Hola%2C%20quisiera%20solicitar%20una%20valoraci%C3%B3n%20especializada." target="_blank" rel="noopener" class="btn-wa" style="width:fit-content;">
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.554 4.122 1.523 5.855L.057 23.886a.5.5 0 00.611.625l6.218-1.633A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.034-1.385l-.361-.215-3.738.98.999-3.648-.235-.374A9.818 9.818 0 1112 21.818z"/></svg> Agendar consulta
         </a>
       </div>
@@ -575,9 +584,9 @@
     <div class="steps-list">
       <div class="step-item reveal"><div class="step-num"></div><div class="step-content"><h4>TAC y Resonancia Magnética</h4><p>La RM con contraste define la extensión local del tumor, su relación con vasos, nervios y compartimentos anatómicos. La TAC muestra la matriz tumoral y la reacción perióstica.</p></div></div>
       <div class="step-item reveal reveal-d1"><div class="step-num"></div><div class="step-content"><h4>Gammagrafía ósea</h4><p>Evalúa la actividad metabólica del tumor y ayuda a detectar otras lesiones óseas. En algunos casos se complementa con PET-CT para estadificación sistémica.</p></div></div>
-      <div class="step-item reveal reveal-d2"><div class="step-num"></div><div class="step-content"><h4>Biopsia percutánea guiada por imagen</h4><p>Procedimiento clave. Se planifica el trayecto para no contaminar compartimentos que comprometan la cirugía definitiva. El análisis histopatológico confirma el diagnóstico.</p></div></div>
-      <div class="step-item reveal"><div class="step-num"></div><div class="step-content"><h4>Estadificación y junta multidisciplinaria</h4><p>Los tumores malignos requieren estadificación completa (pulmón, hígado, nódulos) y junta con oncología médica para definir el plan de tratamiento óptimo.</p></div></div>
-      <div class="step-item reveal reveal-d1"><div class="step-num"></div><div class="step-content"><h4>Cirugía o seguimiento</h4><p>Según el diagnóstico: vigilancia activa, curetaje + relleno, resección marginal o amplia con reconstrucción. El objetivo siempre es preservar la función sin comprometer la oncología.</p></div></div>
+      <div class="step-item reveal reveal-d2"><div class="step-num"></div><div class="step-content"><h4>Biopsia percutánea guiada por imagen</h4><p>Cuando una lesión requiere biopsia, se indica y se planifica junto con el equipo tratante para no limitar las opciones posteriores de tratamiento. El análisis histopatológico confirma el diagnóstico.</p></div></div>
+      <div class="step-item reveal"><div class="step-num"></div><div class="step-content"><h4>Estadificación y coordinación multidisciplinaria</h4><p>Los tumores malignos requieren estadificación completa (pulmón, hígado, nódulos) y coordinación con oncología médica y otros especialistas para definir el plan de tratamiento.</p></div></div>
+      <div class="step-item reveal reveal-d1"><div class="step-num"></div><div class="step-content"><h4>Cirugía o seguimiento</h4><p>Según el diagnóstico: vigilancia activa, curetaje + relleno, resección marginal o amplia con reconstrucción. En cada caso se busca preservar la función de forma compatible con un tratamiento oncológico adecuado.</p></div></div>
     </div>
   </div>
 </section>
@@ -597,7 +606,7 @@
       </div>
       <div style="background:white;border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:var(--r-md);padding:1.3rem 1.4rem;">
         <h3 style="font-family:var(--FD);font-size:.9rem;font-weight:700;color:var(--navy);margin-bottom:.45rem;">¿Necesito biopsia de inmediato?</h3>
-        <p style="font-size:.8rem;color:var(--gray);line-height:1.7;">No siempre es el primer paso. Primero se revisa la imagen, la localización y el contexto clínico. Una biopsia mal planificada puede comprometer opciones quirúrgicas futuras — el orden importa.</p>
+        <p style="font-size:.8rem;color:var(--gray);line-height:1.7;">No siempre es el primer paso. Primero se revisa la imagen, la localización y el contexto clínico. Cuando una lesión requiere biopsia, se indica y se planifica junto con el equipo tratante para no limitar las opciones posteriores de tratamiento.</p>
       </div>
       <div style="background:white;border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:var(--r-md);padding:1.3rem 1.4rem;">
         <h3 style="font-family:var(--FD);font-size:.9rem;font-weight:700;color:var(--navy);margin-bottom:.45rem;">¿Me van a operar?</h3>
@@ -609,9 +618,9 @@
       </div>
     </div>
     <div style="text-align:center;margin-top:2rem;" class="reveal">
-      <a href="https://wa.me/528126555222?text=Hola%2C%20me%20detectaron%20una%20lesi%C3%B3n%20en%20el%20hueso.%20Quisiera%20orientaci%C3%B3n%20sobre%20el%20siguiente%20paso." target="_blank" rel="noopener" class="btn-wa" style="display:inline-flex;">
+      <a href="https://wa.me/528126555222?text=Hola%2C%20quisiera%20solicitar%20una%20valoraci%C3%B3n%20especializada." target="_blank" rel="noopener" class="btn-wa" style="display:inline-flex;">
         <svg viewBox="0 0 24 24" aria-hidden="true" style="width:16px;height:16px;fill:white;flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-        Enviar estudios o preguntar por WhatsApp 24/7
+        Enviar mis estudios o preguntar por WhatsApp
       </a>
       <p style="font-size:.72rem;color:var(--gray);margin-top:.5rem;">Puedes escribir aunque aún no tengas todos los estudios.</p>
     </div>
@@ -633,7 +642,7 @@
       </div>
       <div class="faq-item" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">
         <div class="faq-header"><p>¿Cuánto tiempo tarda el diagnóstico?</p><div class="faq-icon" aria-hidden="true"></div></div>
-        <div class="faq-body"><p>El tiempo del proceso diagnóstico depende de cada caso: consulta inicial → imagen avanzada → biopsia → resultado histopatológico. En casos de alta sospecha maligna, se acelera el proceso para no retrasar el tratamiento.</p></div>
+        <div class="faq-body"><p>El tiempo del proceso diagnóstico depende de cada caso e incluye consulta inicial, imagen avanzada si se requiere, biopsia cuando está indicada y resultado histopatológico. Los tiempos varían y el plan se define de forma individual.</p></div>
       </div>
     </div>
   </div>
@@ -663,11 +672,11 @@
   <div class="content-inner">
     <div class="cta-box reveal">
       <h2>¿Tienes estudios con lesión ósea sin diagnóstico claro?</h2>
-      <p>Envíanos tus imágenes por WhatsApp y te orientamos sobre el siguiente paso.</p>
+      <p>Envíanos tus estudios por WhatsApp para solicitar tu valoración; la interpretación se realiza en consulta.</p>
       <div class="hero-btns" style="justify-content:center;">
-        <a href="https://wa.me/528126555222?text=Hola%2C%20me%20detectaron%20un%20tumor%20en%20el%20hueso%20y%20quisiera%20agendar%20una%20consulta%20urgente." target="_blank" rel="noopener" class="btn-wa">
+        <a href="https://wa.me/528126555222?text=Hola%2C%20quisiera%20solicitar%20una%20valoraci%C3%B3n%20especializada." target="_blank" rel="noopener" class="btn-wa">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-          Consultar ahora
+          Agendar valoración
         </a>
         <a href="/segunda-opinion-oncologica" class="btn-outline">Segunda opinión →</a>
       </div>
@@ -698,7 +707,7 @@
   </div>
 </footer>
 
-<a href="https://wa.me/528126555222?text=Hola%2C%20me%20detectaron%20un%20tumor%20en%20el%20hueso%20y%20quisiera%20agendar%20una%20consulta%20urgente." class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+<a href="https://wa.me/528126555222?text=Hola%2C%20quisiera%20solicitar%20una%20valoraci%C3%B3n%20especializada." class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
   <div class="wa-float-pulse" aria-hidden="true"></div>
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
 </a>
