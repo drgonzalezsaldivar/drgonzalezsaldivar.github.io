@@ -330,6 +330,7 @@
       .route-origin{min-width:auto;}
     }
     @media (max-width:480px){
+      .insurance-opinion-grid { grid-template-columns: 1fr !important; }
       /* Trust bar: cuadrícula 2 columnas (sin scroll horizontal oculto; reseñas en fila completa) */
       .trust-bar { display: grid; grid-template-columns: 1fr 1fr; gap: .35rem .5rem; overflow: visible; padding: .75rem 1rem; justify-items: start; align-items: center; }
       .trust-item { padding: .2rem .3rem; min-width: 0; flex-shrink: 1; }
@@ -727,7 +728,7 @@
       <h2 class="s-title" id="sp-servicios-h2">Segunda opinión oncológica y <em>aseguradoras principales</em></h2>
       <div class="divider"></div>
     </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:1.5rem;" class="reveal">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:1.5rem;" class="reveal insurance-opinion-grid">
       <div style="background:white;border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:var(--r-md);padding:1.3rem 1.4rem;">
         <h3 style="font-family:var(--FD);font-size:.9rem;font-weight:700;color:var(--navy);margin-bottom:.45rem;">Segunda opinión oncológica</h3>
         <p style="font-size:.8rem;color:var(--gray);line-height:1.7;">Si tienes diagnóstico de tumor óseo, sarcoma o metástasis, o te recomendaron cirugía y tienes dudas — recibe una revisión especializada presencial o por videoconsulta, con reporte escrito.</p>
