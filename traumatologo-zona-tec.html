@@ -285,6 +285,11 @@
       .price-highlight{flex-direction:column;gap:.6rem;}
     }
     @media (max-width:480px){
+      /* Trust bar: cuadrícula 2 columnas (sin scroll horizontal oculto; reseñas en fila completa) */
+      .trust-bar { display: grid; grid-template-columns: 1fr 1fr; gap: .35rem .5rem; overflow: visible; padding: .75rem 1rem; justify-items: start; align-items: center; }
+      .trust-item { padding: .2rem .3rem; min-width: 0; flex-shrink: 1; }
+      .trust-item::after { display: none; }
+      .trust-rating { grid-column: 1 / -1; justify-self: center; white-space: nowrap; flex-shrink: 0; }
       .conditions-grid{grid-template-columns:1fr;}
       .cta-box{padding:2rem 1.4rem;}
       .hero-btns{flex-direction:column;}
