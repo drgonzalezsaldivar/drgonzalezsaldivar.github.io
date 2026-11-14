@@ -459,6 +459,19 @@
     .doctor-text { display: flex; flex-direction: column; justify-content: center; gap: 1rem; }
     .doctor-text p { font-size: .9rem; color: var(--gray); line-height: 1.9; }
     @media (max-width: 960px) { .doctor-grid { grid-template-columns: 1fr; gap: 2rem; } .doctor-photo-wrap { max-width: 240px; margin: 0 auto; aspect-ratio: 3/4; } }
+
+    /* ── Paquete CRO 1 ── legibilidad móvil */
+    @media (max-width: 960px) {
+      .mob-sub { font-size: .72rem; opacity: .9; }
+    }
+    @media (max-width: 640px) {
+      .hero-tag { font-size: .72rem; }
+      .hero-pills { margin-bottom: 1.2rem; }
+      .hero-pill { font-size: .7rem; padding: .28rem .62rem; color: rgba(255,255,255,.92); }
+      .hero-pill.gold { color: #fff; }
+      .breadcrumb { font-size: .78rem; color: rgba(255,255,255,.78); }
+      .breadcrumb a { color: rgba(255,255,255,.78); display: inline-block; padding: .45rem .1rem; margin: -.45rem 0; }
+    }
   </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Physician","name":"Dr. Juan Carlos González Saldívar","description":"Especialista en Traumatología y Ortopedia con alta especialidad en Ortopedia Oncológica. Especialista en Rodilla en Monterrey.","url":"https://www.drgonzalezsaldivar.com","telephone":"+528126555222","address":{"@type":"PostalAddress","streetAddress":"Plaza Contry Local D-13, Av. Eugenio Garza Sada 3551","addressLocality":"Monterrey","addressRegion":"Nuevo León","postalCode":"64860","addressCountry":"MX"},"medicalSpecialty":["https://schema.org/Musculoskeletal","https://schema.org/Surgical"],"sameAs":["https://www.instagram.com/dr.gonzalezsaldivar","https://www.facebook.com/share/1GpdN4JcKY/"],"hospitalAffiliation":[{"@type":"Hospital","name":"Hospital Zambrano Hellion TecSalud","url":"https://www.hospitalzambranohellion.com.mx"},{"@type":"Hospital","name":"Christus Muguerza Hospital Alta Especialidad","url":"https://www.christusmuguerza.com.mx"},{"@type":"Hospital","name":"Doctors Hospital Auna"}],"hasMap":"https://www.google.com/maps?cid=12008720924106928391","geo":{"@type":"GeoCoordinates","latitude":25.6400866,"longitude":-100.283659}}</script>
   <!-- TikTok Pixel Code Start -->
@@ -590,7 +603,7 @@
       </a>
       <a href="tel:+528183877237" class="btn-outline">Llamar al consultorio</a>
     </div>
-    <p style="font-size:.72rem;color:rgba(255,255,255,.42);margin-top:.6rem;line-height:1.6;">Puedes llevar o enviar radiografías, resonancia o estudios previos. Si no tienes, en consulta se indica qué necesitas.</p>
+    <p style="font-size:.8rem;color:rgba(255,255,255,.78);margin-top:.6rem;line-height:1.6;">Puedes llevar o enviar radiografías, resonancia o estudios previos. Si no tienes, en consulta se indica qué necesitas.</p>
   </div>
   <div class="hero-isotipo" aria-hidden="true">
     <svg viewBox="0 0 584 1203" fill="none" xmlns="http://www.w3.org/2000/svg">
