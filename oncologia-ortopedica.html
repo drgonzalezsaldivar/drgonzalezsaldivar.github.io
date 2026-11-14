@@ -454,6 +454,22 @@
       .doctor-photo-wrap { max-width: 280px; margin: 0 auto; aspect-ratio: 3/4; }
     }
 
+
+    /* ── Paquete CRO 1 ── legibilidad móvil e isotipo como marca de agua */
+    @media (max-width: 960px) {
+      /* La animación global del isotipo anulaba su opacidad de marca de agua (.05) */
+      .inner-hero .hero-isotipo { animation: none; }
+      .mob-sub { font-size: .72rem; opacity: .9; }
+    }
+    @media (max-width: 640px) {
+      .hero-tag { font-size: .72rem; }
+      .hero-pills { margin-bottom: .8rem; }
+      .hero-btns { margin-top: .8rem; }
+      .hero-pill { font-size: .7rem; padding: .28rem .62rem; color: rgba(255,255,255,.92); }
+      .hero-pill.gold { color: #fff; }
+      .breadcrumb { font-size: .78rem; color: rgba(255,255,255,.78); }
+      .breadcrumb a { color: rgba(255,255,255,.78); display: inline-block; padding: .45rem .1rem; margin: -.45rem 0; }
+    }
   </style>
   <!-- TikTok Pixel Code Start -->
   <script>
@@ -569,7 +585,7 @@
       </a>
       <a href="segunda-opinion-oncologica" class="btn-outline">Segunda opinión →</a>
     </div>
-    <p style="font-size:.72rem;color:rgba(255,255,255,.96);margin-top:.6rem;line-height:1.6;">Puedes compartir radiografías, resonancia, tomografía o reportes. Jessy, nuestra asistente virtual, te ayuda a solicitar tu cita por WhatsApp. No proporciona atención médica inmediata ni sustituye a los servicios de urgencias.</p>
+    <p style="font-size:.8rem;color:rgba(255,255,255,.96);margin-top:.6rem;line-height:1.6;">Puedes compartir radiografías, resonancia, tomografía o reportes. Jessy, nuestra asistente virtual, te ayuda a solicitar tu cita por WhatsApp. No proporciona atención médica inmediata ni sustituye a los servicios de urgencias.</p>
   </div>
   <div class="hero-isotipo" aria-hidden="true">
     <div class="hero-isotipo-inner">
@@ -729,10 +745,12 @@
       <div style="background:white;border:1px solid var(--border);border-radius:var(--r-md);padding:1.3rem 1.4rem;">
         <h3 style="font-family:var(--FD);font-size:.9rem;font-weight:700;color:var(--navy);margin-bottom:.45rem;">¿Toda lesión ósea es cáncer?</h3>
         <p style="font-size:.8rem;color:var(--gray);line-height:1.7;">No. La mayoría son benignas. Pero una lesión sospechosa debe evaluarse con estudios adecuados y criterio especializado — no basta con una radiografía y un médico general.</p>
+        <p style="margin-top:.2rem;font-size:.76rem;line-height:1.5;"><a href="/blog/benigno-maligno" style="display:inline-block;padding:.4rem .1rem;font-weight:700;color:var(--navy2);text-decoration:underline;text-decoration-color:rgba(89,114,136,.45);text-underline-offset:3px;">Leer: tumor óseo benigno vs maligno →</a></p>
       </div>
       <div style="background:white;border:1px solid var(--border);border-radius:var(--r-md);padding:1.3rem 1.4rem;">
         <h3 style="font-family:var(--FD);font-size:.9rem;font-weight:700;color:var(--navy);margin-bottom:.45rem;">¿Debo hacerme biopsia de inmediato?</h3>
         <p style="font-size:.8rem;color:var(--gray);line-height:1.7;">No siempre. Primero se revisa la localización, la imagen y la historia clínica. Cuando una lesión requiere biopsia, se indica y se planifica junto con el equipo tratante para no limitar las opciones posteriores de tratamiento.</p>
+        <p style="margin-top:.2rem;font-size:.76rem;line-height:1.5;"><a href="/blog/biopsia-osea" style="display:inline-block;padding:.4rem .1rem;font-weight:700;color:var(--navy2);text-decoration:underline;text-decoration-color:rgba(89,114,136,.45);text-underline-offset:3px;">Leer: biopsia ósea, cómo se planea →</a></p>
       </div>
       <div style="background:white;border:1px solid var(--border);border-radius:var(--r-md);padding:1.3rem 1.4rem;">
         <h3 style="font-family:var(--FD);font-size:.9rem;font-weight:700;color:var(--navy);margin-bottom:.45rem;">¿Necesito cirugía?</h3>
@@ -741,6 +759,7 @@
       <div style="background:white;border:1px solid var(--border);border-radius:var(--r-md);padding:1.3rem 1.4rem;">
         <h3 style="font-family:var(--FD);font-size:.9rem;font-weight:700;color:var(--navy);margin-bottom:.45rem;">¿Qué estudios debo enviar o llevar?</h3>
         <p style="font-size:.8rem;color:var(--gray);line-height:1.7;">Radiografías, resonancia magnética, tomografía, PET/CT o gammagrama si los tienes, y el reporte médico previo. Si no tienes estudios aún, en consulta se indica cuáles son necesarios.</p>
+        <p style="margin-top:.2rem;font-size:.76rem;line-height:1.5;"><a href="/blog/lesion-resonancia" style="display:inline-block;padding:.4rem .1rem;font-weight:700;color:var(--navy2);text-decoration:underline;text-decoration-color:rgba(89,114,136,.45);text-underline-offset:3px;">Leer: una lesión en la resonancia, qué significa →</a></p>
       </div>
     </div>
     <div style="text-align:center;margin-top:2rem;" class="reveal">
