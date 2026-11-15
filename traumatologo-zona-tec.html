@@ -329,6 +329,22 @@
       .hero-h1 { margin-bottom: .7rem; }
       .hero-btns { margin-top: .8rem; }
     }
+
+    /* ── Paquete CRO 2B: bloque del doctor ── */
+    .doctor-creds{margin:.15rem 0 .5rem}
+    .doctor-creds ul{list-style:none;margin:0;padding:0;display:grid;gap:.4rem}
+    .doctor-creds li{position:relative;padding-left:1.05rem;font-size:.82rem;line-height:1.5;font-weight:600;color:var(--navy2)}
+    .doctor-creds li::before{content:"";position:absolute;left:0;top:.55em;width:.42rem;height:.42rem;border-radius:50%;background:var(--gold)}
+    .doctor-creds li.doctor-cred-alta{margin-top:.2rem;padding-top:.5rem;border-top:1px solid var(--border,#C9D3D4);font-weight:500}
+    .doctor-creds li.doctor-cred-alta::before{top:calc(.5rem + .55em);border-radius:1px;background:transparent;border:2px solid var(--gold)}
+    .doctor-profile-link{display:inline-block;margin-top:.1rem;padding:.8rem 0;font-size:.85rem;font-weight:600;color:var(--navy2);text-decoration:underline;text-underline-offset:3px}
+    @media (max-width:960px){
+      .doctor-block{padding:3rem 5vw}
+      .doctor-grid{gap:1.5rem}
+      .doctor-photo-wrap{max-width:260px;margin:0 auto;aspect-ratio:3/4}
+      .doctor-text{gap:.8rem}
+      .doctor-text .divider{margin:0}
+    }
   </style>
   <!-- TikTok Pixel Code Start -->
   <script>
@@ -451,7 +467,7 @@
 <div class="trust-bar" role="complementary">
   <div class="trust-item">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-    <span>Cédula de especialista 12293070</span>
+    <span>Cédula de especialidad: 12293070</span>
   </div>
   <div class="trust-item">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -585,13 +601,21 @@
 <div class="doctor-block" aria-label="El especialista">
   <div class="doctor-grid">
     <div class="doctor-photo-wrap reveal">
-      <img src="img/CropOs-56.webp" loading="lazy" alt="Dr. González Saldívar en recepción de CorpOs, traumatólogo zona Tec Monterrey" width="1200" height="1800"/>
+      <img src="img/CropOs-56.webp" srcset="img/CropOs-56-800.webp 800w, img/CropOs-56.webp 1200w" sizes="(max-width:960px) 260px, 320px" loading="lazy" decoding="async" alt="Dr. González Saldívar en recepción de CorpOs, traumatólogo zona Tec Monterrey" width="1200" height="1800"/>
     </div>
     <div class="doctor-text reveal reveal-d1">
       <p class="s-tag">Traumatólogo zona Tec de Monterrey</p>
       <h2 class="s-title">Dr. Juan Carlos González Saldívar</h2>
       <div class="divider"></div>
-      <p>Traumatólogo y Ortopedista con alta especialidad en ortopedia oncológica. Atención de fracturas, lesiones deportivas, luxaciones y patologías musculoesqueléticas en zona Tec / Contry / Colinas de San Jerónimo.</p>
+      <div class="doctor-creds">
+        <ul>
+          <li>Cédula profesional: 9481533</li>
+          <li>Cédula de especialidad: 12293070</li>
+          <li class="doctor-cred-alta">Alta Especialidad en Ortopedia Oncológica · Tec Salud</li>
+        </ul>
+        <a class="doctor-profile-link" href="/dr-gonzalez-saldivar">Ver trayectoria y credenciales completas →</a>
+      </div>
+      <p>Especialista en Ortopedia y Traumatología con alta especialidad en ortopedia oncológica. Atención de fracturas, lesiones deportivas, luxaciones y patologías musculoesqueléticas en zona Tec / Contry / Colinas de San Jerónimo.</p>
       <p>Consultorio propio, sin tiempos de espera de urgencias hospitalarias. Escríbenos y te ayudamos a agendar tu cita.</p>
       <div style="margin-top:1rem;">
         <a href="https://wa.me/528126555222?text=Hola%2C+quiero+agendar+consulta+en+zona+Tec+Monterrey" target="_blank" rel="noopener" class="btn-wa" style="width:fit-content;">

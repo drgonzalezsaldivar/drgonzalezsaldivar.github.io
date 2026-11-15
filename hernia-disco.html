@@ -201,6 +201,22 @@ footer{background:var(--navy);color:rgba(240,242,242,.7);padding:4rem 5vw 2rem;}
       .trust-bar { display: grid; grid-template-columns: 1fr 1fr; overflow: visible; justify-content: stretch; gap: 0; }
       .trust-item:nth-child(2n) { border-right: 0; }
     }
+
+    /* ── Paquete CRO 2B: bloque del doctor ── */
+    .doctor-creds{margin:.15rem 0 .5rem}
+    .doctor-creds ul{list-style:none;margin:0;padding:0;display:grid;gap:.4rem}
+    .doctor-creds li{position:relative;padding-left:1.05rem;font-size:.82rem;line-height:1.5;font-weight:600;color:var(--navy2)}
+    .doctor-creds li::before{content:"";position:absolute;left:0;top:.55em;width:.42rem;height:.42rem;border-radius:50%;background:var(--gold)}
+    .doctor-creds li.doctor-cred-alta{margin-top:.2rem;padding-top:.5rem;border-top:1px solid var(--border,#C9D3D4);font-weight:500}
+    .doctor-creds li.doctor-cred-alta::before{top:calc(.5rem + .55em);border-radius:1px;background:transparent;border:2px solid var(--gold)}
+    .doctor-profile-link{display:inline-block;margin-top:.1rem;padding:.8rem 0;font-size:.85rem;font-weight:600;color:var(--navy2);text-decoration:underline;text-underline-offset:3px}
+    @media (max-width:960px){
+      .doctor-block{padding:3rem 5vw}
+      .doctor-grid{gap:1.5rem}
+      .doctor-photo-wrap{max-width:260px;margin:0 auto;aspect-ratio:3/4}
+      .doctor-text{gap:.8rem}
+      .doctor-text .divider{margin:0}
+    }
   </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Physician","name":"Dr. Juan Carlos González Saldívar","description":"Especialista en Traumatología y Ortopedia con alta especialidad en Ortopedia Oncológica. Especialista en Hernia de Disco en Monterrey.","url":"https://www.drgonzalezsaldivar.com","telephone":"+528126555222","address":{"@type":"PostalAddress","streetAddress":"Plaza Contry Local D-13, Av. Eugenio Garza Sada 3551","addressLocality":"Monterrey","addressRegion":"Nuevo León","postalCode":"64860","addressCountry":"MX"},"medicalSpecialty":["https://schema.org/Musculoskeletal","https://schema.org/Surgical"],"sameAs":["https://www.instagram.com/dr.gonzalezsaldivar","https://www.facebook.com/share/1GpdN4JcKY/"],"hospitalAffiliation":[{"@type":"Hospital","name":"Hospital Zambrano Hellion TecSalud","url":"https://www.hospitalzambranohellion.com.mx"},{"@type":"Hospital","name":"Christus Muguerza Hospital Alta Especialidad","url":"https://www.christusmuguerza.com.mx"},{"@type":"Hospital","name":"Doctors Hospital Auna"}],"hasMap":"https://www.google.com/maps?cid=12008720924106928391","geo":{"@type":"GeoCoordinates","latitude":25.6400866,"longitude":-100.283659}}</script>
   <!-- TikTok Pixel Code Start -->
@@ -310,7 +326,7 @@ footer{background:var(--navy);color:rgba(240,242,242,.7);padding:4rem 5vw 2rem;}
 <div class="trust-bar" role="complementary" aria-label="Credenciales">
   <div class="trust-item">
     <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-    Cédula profesional 9481533
+    Cédula profesional: 9481533
   </div>
   <div class="trust-item">
     <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
@@ -513,13 +529,21 @@ footer{background:var(--navy);color:rgba(240,242,242,.7);padding:4rem 5vw 2rem;}
 <div class="doctor-block" aria-label="El especialista">
   <div class="doctor-grid">
     <div class="doctor-photo-wrap reveal">
-      <img src="img/CropOs-12.webp" loading="lazy" alt="Dr. González Saldívar explicando anatomía de columna vertebral" width="1200" height="1800"/>
+      <img src="img/CropOs-12.webp" srcset="img/CropOs-12-800.webp 800w, img/CropOs-12.webp 1200w" sizes="(max-width:960px) 260px, 320px" loading="lazy" decoding="async" alt="Dr. González Saldívar explicando anatomía de columna vertebral" width="1200" height="1800"/>
     </div>
     <div class="doctor-text reveal reveal-d1">
       <p class="s-tag">Tu especialista en columna</p>
       <h2 class="s-title">Dr. Juan Carlos González Saldívar</h2>
       <div class="divider"></div>
-      <p>Ortopedista que atiende patología de columna: hernia discal lumbar y cervical, estenosis espinal, lumbalgia crónica y radiculopatía. Cédula de especialista 12293070 (Ortopedia y Traumatología); certificado por CMOT.</p>
+      <div class="doctor-creds">
+        <ul>
+          <li>Cédula profesional: 9481533</li>
+          <li>Cédula de especialidad: 12293070</li>
+          <li class="doctor-cred-alta">Alta Especialidad en Ortopedia Oncológica · Tec Salud</li>
+        </ul>
+        <a class="doctor-profile-link" href="/dr-gonzalez-saldivar">Ver trayectoria y credenciales completas →</a>
+      </div>
+      <p>Ortopedista que atiende patología de columna: hernia discal lumbar y cervical, estenosis espinal, lumbalgia crónica y radiculopatía. Certificado por CMOT.</p>
       <p>Muchas hernias de disco mejoran sin cirugía. El objetivo es orientarte hacia la opción adecuada para tu caso, sin rodeos.</p>
       <div style="margin-top:1rem;">
         <a href="https://wa.me/528126555222?text=Hola%2C%20tengo%20dolor%20de%20columna%20y%20quisiera%20agendar%20una%20consulta." target="_blank" rel="noopener" class="btn-wa" style="width:fit-content;">
@@ -592,7 +616,7 @@ footer{background:var(--navy);color:rgba(240,242,242,.7);padding:4rem 5vw 2rem;}
   <div class="f-main">
     <div class="f-brand">
       <div class="f-logo"><img src="img/gonzalez-saldivar-logo.svg" alt="Dr. González Saldívar" width="140" height="38"/></div>
-      <p>Ortopedia y Oncología Ortopédica en Monterrey. Cédula profesional 9481533 (Médico Cirujano) · Cédula de especialista 12293070 (Ortopedia y Traumatología). CMOT Certificado.</p>
+      <p>Ortopedia y Oncología Ortopédica en Monterrey. Cédula profesional: 9481533 · Cédula de especialidad: 12293070. CMOT Certificado.</p>
     </div>
     <div class="f-col">
       <h4>Padecimientos</h4>
@@ -621,7 +645,7 @@ footer{background:var(--navy);color:rgba(240,242,242,.7);padding:4rem 5vw 2rem;}
     </div>
   </div>
   <div class="f-bottom">
-    <span class="f-cedula">Cédula profesional 9481533</span>
+    <span class="f-cedula">Cédula profesional: 9481533</span>
     <span>© 2026 CorpOs Consultorio Articular. Todos los derechos reservados.</span>
   </div>
 </footer>
