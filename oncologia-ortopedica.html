@@ -474,6 +474,22 @@
     @media (max-width: 380px) {
       .hero-tag { letter-spacing: .12em; }
     }
+
+    /* ── Paquete CRO 2B: bloque del doctor ── */
+    .doctor-creds{margin:.15rem 0 .5rem}
+    .doctor-creds ul{list-style:none;margin:0;padding:0;display:grid;gap:.4rem}
+    .doctor-creds li{position:relative;padding-left:1.05rem;font-size:.82rem;line-height:1.5;font-weight:600;color:var(--navy2)}
+    .doctor-creds li::before{content:"";position:absolute;left:0;top:.55em;width:.42rem;height:.42rem;border-radius:50%;background:var(--gold)}
+    .doctor-creds li.doctor-cred-alta{margin-top:.2rem;padding-top:.5rem;border-top:1px solid var(--border,#C9D3D4);font-weight:500}
+    .doctor-creds li.doctor-cred-alta::before{top:calc(.5rem + .55em);border-radius:1px;background:transparent;border:2px solid var(--gold)}
+    .doctor-profile-link{display:inline-block;margin-top:.1rem;padding:.8rem 0;font-size:.85rem;font-weight:600;color:var(--navy2);text-decoration:underline;text-underline-offset:3px}
+    @media (max-width:960px){
+      .doctor-block{padding:3rem 5vw}
+      .doctor-grid{gap:1.5rem}
+      .doctor-photo-wrap{max-width:260px;margin:0 auto;aspect-ratio:3/4}
+      .doctor-text{gap:.8rem}
+      .doctor-text .divider{margin:0}
+    }
   </style>
   <!-- TikTok Pixel Code Start -->
   <script>
@@ -575,7 +591,7 @@
       <span class="breadcrumb-sep">›</span>
       <span>Oncología Ortopédica</span>
     </nav>
-    <div class="hero-tag">Cédula de especialista 12293070 · Ortopedia y Traumatología</div>
+    <div class="hero-tag">Cédula de especialidad: 12293070 · Ortopedia y Traumatología</div>
     <h1 class="hero-h1">Oncología Ortopédica en Monterrey — Tumores Óseos y Casos Complejos</h1>
     <p class="hero-desc">Si te detectaron una lesión ósea, tienes diagnóstico de tumor, sarcoma o metástasis, o buscas segunda opinión antes de operar: aquí recibes una valoración especializada para revisar tus estudios y definir los siguientes pasos. Alta Especialidad realizada en Tec Salud.</p>
     <div class="hero-pills">
@@ -610,7 +626,7 @@
 <div class="trust-bar" role="complementary" aria-label="Credenciales">
   <div class="trust-item">
     <svg viewBox="0 0 24 24" fill="none" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-    <span>Cédula de especialista 12293070</span>
+    <span>Cédula de especialidad: 12293070</span>
   </div>
   <div class="trust-item">
     <svg viewBox="0 0 24 24" fill="none" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -779,13 +795,21 @@
 <div class="doctor-block" aria-label="El especialista">
   <div class="doctor-grid">
     <div class="doctor-photo-wrap reveal">
-      <img src="img/CropOs-36.webp" loading="lazy" alt="Dr. Juan Carlos González Saldívar, ortopedista oncólogo en Monterrey" width="1200" height="1800"/>
+      <img src="img/CropOs-36.webp" srcset="img/CropOs-36-800.webp 800w, img/CropOs-36.webp 1200w" sizes="(max-width:960px) 260px, 320px" loading="lazy" decoding="async" alt="Dr. Juan Carlos González Saldívar, ortopedista oncólogo en Monterrey" width="1200" height="1800"/>
     </div>
     <div class="doctor-text reveal reveal-d1">
       <p class="s-tag">Tu especialista en oncología ortopédica</p>
       <h2 class="s-title">Dr. Juan Carlos González Saldívar</h2>
       <div class="divider"></div>
-      <p>Médico especialista en Traumatología y Ortopedia, con alta especialidad en Ortopedia Oncológica realizada en Tec Salud. Diagnóstico y tratamiento de tumores óseos, sarcomas y metástasis óseas en Monterrey.</p>
+      <div class="doctor-creds">
+        <ul>
+          <li>Cédula profesional: 9481533</li>
+          <li>Cédula de especialidad: 12293070</li>
+          <li class="doctor-cred-alta">Alta Especialidad en Ortopedia Oncológica · Tec Salud</li>
+        </ul>
+        <a class="doctor-profile-link" href="/dr-gonzalez-saldivar">Ver trayectoria y credenciales completas →</a>
+      </div>
+      <p>Médico especialista en Ortopedia y Traumatología, con alta especialidad en Ortopedia Oncológica realizada en Tec Salud. Diagnóstico y tratamiento de tumores óseos, sarcomas y metástasis óseas en Monterrey.</p>
       <p>Una valoración oportuna con un especialista ayuda a definir los siguientes pasos de tu caso. Agenda tu consulta.</p>
       <div style="margin-top:1rem;">
         <a href="https://wa.me/528126555222?text=Hola%2C+quiero+agendar+consulta+de+oncolog%C3%ADa+ortop%C3%A9dica" target="_blank" rel="noopener" class="btn-wa" style="width:fit-content;">
@@ -959,7 +983,7 @@
     <div class="f-brand">
       <span class="f-logo">Dr. González Saldívar</span>
       <span class="f-logo-sub">CorpOs · Consultorio Articular</span>
-      <p>Ortopedista Oncólogo en Monterrey. Cédula profesional 9481533 (Médico Cirujano) · Cédula de especialista 12293070 (Ortopedia y Traumatología). Plaza Contry, Av. Garza Sada 3551, Local D-13.</p>
+      <p>Ortopedista Oncólogo en Monterrey. Cédula profesional: 9481533 · Cédula de especialidad: 12293070. Plaza Contry, Av. Garza Sada 3551, Local D-13.</p>
       <div class="f-social">
         <a href="https://www.instagram.com/dr.gonzalezsaldivar?igsh=MWtxbW93M3Z3ZmxlcA==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
